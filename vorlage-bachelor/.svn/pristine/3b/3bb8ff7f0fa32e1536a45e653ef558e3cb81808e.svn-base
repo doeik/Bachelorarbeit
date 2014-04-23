@@ -1,0 +1,18 @@
+\chapter*{}
+\thispagestyle{empty}
+
+\begin{center}
+  \vspace{-3cm}
+  \fbox{\parbox[c][12cm][c]{12cm}{\centering Hier die H\"ulle\\[1cm]mit der CD/DVD einkleben}}
+\end{center}
+
+\vfill
+
+\textbf{Diese CD enthält:}
+\begin{itemize}
+ \item eine \emph{pdf}-Version der vorliegenden Bachelorarbeit
+ \item die \LaTeX- und Grafik-Quelldateien der vorliegenden Bachelorarbeit samt aller verwendeten Skripte
+ \item \textbf{[anpassen]} die Quelldateien der im Rahmen der Bachelorarbeit erstellten Software XYZ
+ \item \textbf{[anpassen]} den zur Auswertung verwendeten Datensatz
+ \item die Websites der verwendeten Internetquellen
+\end{itemize}

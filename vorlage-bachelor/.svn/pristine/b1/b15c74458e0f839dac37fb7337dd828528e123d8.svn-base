@@ -1,0 +1,3286 @@
+; BibTeXFile 
+; Automatically generated at Tue May 11 16:37:59 2004
+; with Perl/XML by Holger Fuessler
+
+; Start of entry Bae2001a
+
+@InProceedings{ Bae2001a,
+	author               =	 {Sang Ho Bae and Sung-Ju Lee and Mario Gerla},
+	title                =	 {{Multicast Protocol Implementation and Validation in an Ad hoc Network Testbed}},
+	year                 =	 {2001},
+	pages                =	 {3196--3200},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the IEEE International Conference on Communications (ICC)},
+	address              =	 {Helsinki, Finland}
+}
+
+; Start of entry Bai2003a
+
+@InProceedings{ Bai2003a,
+	author               =	 {Fan Bai and Narayanan Sadagopan and Ahmed Helmy},
+	title                =	 {{IMPORTANT: A framework to systematically analyze the Impact of Mobility on Performance of RouTing protocols for Adhoc NeTworks}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Balakrishnan1997a
+
+@Article{ Balakrishnan1997a,
+	author               =	 {Hari Balakrishnan and Venkata N. Padmanabhan and Srinivasan Seshan and Randy H. Katz},
+	title                =	 {{A comparison of mechanisms for improving TCP performance over wireless links}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {1997},
+	volume               =	 {5},
+	number               =	 {6},
+	pages                =	 {756--769},
+	month                =	 {December}
+}
+
+; Start of entry Balakrishnan1999a
+
+@Article{ Balakrishnan1999a,
+	author               =	 {Hari Balakrishnan and Venkata N. Padmanabhan and Randy H. Katz},
+	title                =	 {{The effects of asymmetry on TCP performance}},
+	journal              =	 {Mobile Networks and Applications},
+	year                 =	 {1999},
+	volume               =	 {4},
+	number               =	 {3},
+	pages                =	 {219--241},
+	month                =	 {October}
+}
+
+; Start of entry Bana2001a
+
+@InProceedings{ Bana2001a,
+	author               =	 {Soheila V. Bana and Pravin Varaiya},
+	title                =	 {{Space Division Multiple Access (SDMA) for Robust Ad Hoc Vehicle Communication Networks}},
+	year                 =	 {2001},
+	booktitle            =	 {IEEE Fourth International Conference of Intelligent Transportation Systems}
+}
+
+; Start of entry Bansal2003a
+
+@InProceedings{ Bansal2003a,
+	author               =	 {Nikhil Bansal and Liu Zhen},
+	title                =	 {{Capacity, Delay and Mobility in Wireless Ad-Hoc Networks}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Bao2002a
+
+@InProceedings{ Bao2002a,
+	author               =	 {Lichun Bao},
+	title                =	 {{Hybrid Channel Access Scheduling in Ad Hoc Networks}},
+	year                 =	 {2002},
+	month                =	 {November},
+	booktitle            =	 {Proceedings of IEEE Tenth International Conference on Network Protocols (ICNP)},
+	address              =	 {Paris, France}
+}
+
+; Start of entry Bao2002b
+
+@InProceedings{ Bao2002b,
+	author               =	 {Lichun Bao and J. J. Garcia-Luna-Aceves},
+	title                =	 {{Transmission scheduling in ad hoc networks with directional antennas}},
+	year                 =	 {2002},
+	pages                =	 {48--58},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the eigth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '02)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Barrett2002a
+
+@InProceedings{ Barrett2002a,
+	author               =	 {Chris Barrett and Achia Marathe and Madhav V. Marathe and Martin Drozda},
+	title                =	 {{Characterizing the interaction between routing and MAC protocols in ad-hoc networks}},
+	year                 =	 {2002},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the third ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '02)},
+	address              =	 {Lausanne, Switzerland}
+}
+
+; Start of entry Barriere2001a
+
+@InProceedings{ Barriere2001a,
+	author               =	 {Lali Barri{\`{e}}re and Pierre Fraigniaud and Lata Narayanan},
+	title                =	 {{Robust position-based routing in wireless Ad Hoc networks with unstable transmission ranges}},
+	year                 =	 {2001},
+	pages                =	 {19--27},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of the fifth international workshop on Discrete algorithms and methods for mobile computing and communications (DIAL-M '01)},
+	address              =	 {Rome, Italy}
+}
+
+; Start of entry Basagni1998a
+
+@InProceedings{ Basagni1998a,
+	author               =	 {Stefano Basagni and Imrich Chlamtac and Violet R. Syrotiuk and Barry A. Woodward},
+	title                =	 {{A Distance Routing Effect Algorithm for Mobility (DREAM)}},
+	year                 =	 {1998},
+	pages                =	 {76--84},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the fourth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '98)},
+	address              =	 {Dallas, Texas}
+}
+
+; Start of entry Basagni1999a
+
+@InProceedings{ Basagni1999a,
+	author               =	 {Stefano Basagni and Imrich Chlamtac and Violet R. Syrotiuk},
+	title                =	 {{Dynamic source routing for ad hoc networks using the global positioning system}},
+	year                 =	 {1999},
+	pages                =	 {301--305},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of IEEE Wireless Communications and Networking Conference (WCNC '99)},
+	address              =	 {New Orleans, LA}
+}
+
+; Start of entry Basagni2000a
+
+@InProceedings{ Basagni2000a,
+	author               =	 {Stefano Basagni and Imrich Chlamtac and Violet R. Syrotiuk and Rodeen Talebi},
+	title                =	 {{On-Demand Location Aware Multicast (OLAM) for Ad Hoc Networks}},
+	year                 =	 {2000},
+	volume               =	 {3},
+	pages                =	 {1323--1328},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the IEEE Wireless Communications and Networking Conference '00},
+	address              =	 {Chicago, IL}
+}
+
+; Start of entry Basagni2001a
+
+@Article{ Basagni2001a,
+	author               =	 {Stefano Basagni and Imrich Chlamtac and Violet R. Syrotiuk},
+	title                =	 {{Location aware, dependable multicast for mobile ad hoc networks}},
+	journal              =	 {Computer Networks},
+	year                 =	 {2001},
+	volume               =	 {36},
+	number               =	 {5--6},
+	pages                =	 {659--670},
+	month                =	 {August}
+}
+
+; Start of entry Bellur1999a
+
+@InProceedings{ Bellur1999a,
+	author               =	 {Bhargav Bellur and Richard G. Ogier},
+	title                =	 {{A Reliable, Efficient Topology Broadcast Protocol for Dynamic Networks}},
+	year                 =	 {1999},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 18th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 1999)},
+	address              =	 {New York City, New York}
+}
+
+; Start of entry Bentley2000a
+
+@Book{ Bentley2000a,
+	author               =	 {Jon Bentley},
+	title                =	 {{Programming Pearls}},
+	year                 =	 {2000},
+	publisher            =	 {Addison-Wesley},
+	edition              =	 {2nd}
+}
+
+; Start of entry Bettstetter2001a
+
+@Article{ Bettstetter2001a,
+	author               =	 {Christian Bettstetter},
+	title                =	 {{Mobility Modeling in Wireless Networks: Categorization, Smooth Movement, and Border Effects}},
+	journal              =	 {ACM SIGMOBILE Mobile Computing and Communications Review (MC2R)},
+	year                 =	 {2001},
+	volume               =	 {5},
+	number               =	 {3},
+	pages                =	 {55--67},
+	month                =	 {July}
+}
+
+; Start of entry Bettstetter2002a
+
+@InProceedings{ Bettstetter2002a,
+	author               =	 {Christian Bettstetter},
+	title                =	 {{On the minimum node degree and connectivity of a wireless multihop network}},
+	year                 =	 {2002},
+	pages                =	 {80--91},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the third ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '02)},
+	address              =	 {Lausanne, Switzerland}
+}
+
+; Start of entry Bettstetter2003a
+
+@Article{ Bettstetter2003a,
+	author               =	 {Christian Bettstetter and Hannes Hartenstein and Xavier P{\'{e}}rez-Costa},
+	title                =	 {{Stochastic Properties of the Random Waypoint Mobility Model}},
+	journal              =	 {ACM/Kluwer Wireless Networks, Special Issue on Modeling \& Analysis of Mobile Networks},
+	year                 =	 {2003},
+	volume               =	 {9},
+	number               =	 {2?}
+}
+
+; Start of entry Bharghavan1994a
+
+@InProceedings{ Bharghavan1994a,
+	author               =	 {Vaduvur Bharghavan and Alan Demers and Scott Shenker and Lixia Zhang},
+	title                =	 {{MACAW: a media access protocol for wireless LAN's}},
+	year                 =	 {1994},
+	pages                =	 {212--225},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the conference on Communications architectures, protocols and applications (SIGCOMM '94)},
+	address              =	 {London, United Kingdom}
+}
+
+; Start of entry Biswas2004a
+
+@Article{ Biswas2004a,
+	author               =	 {Sanjit Biswas and Robert Morris},
+	title                =	 {{Opportunistic Routing in Multi-Hop Wireless Networks}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {2004},
+	volume               =	 {34},
+	number               =	 {1},
+	pages                =	 {69--74},
+	month                =	 {January}
+}
+
+; Start of entry Blazevic2000a
+
+@InProceedings{ Blazevic2000a,
+	author               =	 {Ljubica Bla{\v{z}}evi{\'{c}} and Silvia Giordano and Jean-Yves LeBoudec},
+	title                =	 {{Self-Organizing Wide-Area Routing}},
+	year                 =	 {2000},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of SCI 2000/ISAS 2000},
+	address              =	 {Orlando}
+}
+
+; Start of entry Blazevic2001a
+
+@InProceedings{ Blazevic2001a,
+	author               =	 {Ljubica Bla{\v{z}}evi{\'{c}} and Silvia Giordano and Jean-Yves LeBoudec},
+	title                =	 {{Self Organized Routing in Wide Area Mobile Ad-hoc Networks}},
+	year                 =	 {2001},
+	month                =	 {November},
+	booktitle            =	 {Proceedings of IEEE Symposium on Ad-Hoc Wireless Networks (Globecom 2001)},
+	address              =	 {San Antonio, Texas}
+}
+
+; Start of entry Blazevic2002a
+
+@PhdThesis{ Blazevic2002a,
+	author               =	 {Ljubica Bla{\v{z}}evi{\'{c}}},
+	title                =	 {{Scalable Routing Protocols with Applications to Mobility}},
+	year                 =	 {2002},
+	month                =	 {February},
+	school               =	 {Swiss Federal Institute of Technology (EPFL)}
+}
+
+; Start of entry Bloom1970a
+
+@Article{ Bloom1970a,
+	author               =	 {Burton H. Bloom},
+	title                =	 {{Space/Time Trade-offs in Hash Coding with Allowable Errors}},
+	journal              =	 {Communications of the ACM},
+	year                 =	 {1970},
+	volume               =	 {13},
+	number               =	 {7},
+	pages                =	 {422--426},
+	month                =	 {July}
+}
+
+; Start of entry Blum2003a
+
+@TechReport{ Blum2003a,
+	author               =	 {Brian Blum and Tian He and Sang Son and Jack Stankovic},
+	title                =	 {{IGF: A State-Free Robust Communication Protocol for Wireless Sensor Networks}},
+	year                 =	 {2003},
+	number               =	 {CS-2003-11},
+	institution          =	 {Department of Computer Science, University of Virginia}
+}
+
+; Start of entry Boppana2001a
+
+@InProceedings{ Boppana2001a,
+	author               =	 {Rajendra V. Boppana and Satyadeva P. Konduru},
+	title                =	 {{An Adaptive Distance Vector Routing Algorithms for Mobile, Ad Hoc Networks}},
+	year                 =	 {2001},
+	pages                =	 {1753--1762},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the 20th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2001)},
+	address              =	 {Anchorage, Alaska}
+}
+
+; Start of entry Borisov2001a
+
+@InProceedings{ Borisov2001a,
+	author               =	 {Nikita Borisov and Ian Goldberg and David Wagner},
+	title                =	 {{Intercepting Mobile Communications: The Insecurity of 802.11}},
+	year                 =	 {2001},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of the seventh annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '01)},
+	address              =	 {Rome, Italy}
+}
+
+; Start of entry Bose1999a
+
+@InProceedings{ Bose1999a,
+	author               =	 {Prosenjit Bose and Pat Morin and Ivan Stojmenovic and Jorge Urrutia},
+	title                =	 {{Routing with guaranteed delivery in ad hoc Wireless Networks}},
+	year                 =	 {1999},
+	pages                =	 {48--55},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the 3rd international workshop on Discrete algorithms and methods for mobile computing and communications (DIAL-M '99)},
+	address              =	 {Seattle, WS}
+}
+
+; Start of entry Braden2003a
+
+@Article{ Braden2003a,
+	author               =	 {Robert Braden and Ted Faber and Mark Handley},
+	title                =	 {{From Protocol Stack to Protocol Heap - Role-Based Architecture}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {2003},
+	volume               =	 {33},
+	number               =	 {1},
+	pages                =	 {17--22},
+	month                =	 {January}
+}
+
+; Start of entry Braginsky2002a
+
+@InProceedings{ Braginsky2002a,
+	author               =	 {David Braginsky and Deborah Estrin},
+	title                =	 {{Rumor routing algorthim for sensor networks}},
+	year                 =	 {2002},
+	pages                =	 {22--31},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the first ACM international workshop on Wireless sensor networks and applications (WSNA 2002)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Briesemeister2000a
+
+@InProceedings{ Briesemeister2000a,
+	author               =	 {Linda Briesemeister and G{\"{u}}nter Hommel},
+	title                =	 {{Role-Based Multicast in Highly Mobile but Sparsely Connected Ad Hoc Networks}},
+	year                 =	 {2000},
+	pages                =	 {45--50},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the first ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '00)},
+	address              =	 {Boston, Massachusetts}
+}
+
+; Start of entry Broch1998a
+
+@InProceedings{ Broch1998a,
+	author               =	 {Josh Broch and David A. Maltz and David B. Johnson and Yih-Chun Hu and Jorjeta G. Jetcheva},
+	title                =	 {{A Performance Comparison of Multi-Hop Wireless Ad Hoc Network Routing Protocols}},
+	year                 =	 {1998},
+	pages                =	 {85--97},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the fourth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '98)},
+	address              =	 {Dallas, Texas}
+}
+
+; Start of entry Broder2002a
+
+@Misc{ Broder2002a,
+	author               =	 {Andrei Broder and Michael Mitzenmacher},
+	title                =	 {{Network Applications of Bloom Filters: A Survey}},
+	year                 =	 {2002}
+}
+
+; Start of entry Brown1988a
+
+@Article{ Brown1988a,
+	author               =	 {Randy Brown},
+	title                =	 {{Calendar queues: a fast 0(1) priority queue implementation for the simulation event set problem}},
+	journal              =	 {Communications of the ACM},
+	year                 =	 {1988},
+	volume               =	 {31},
+	number               =	 {10},
+	pages                =	 {1220--1227}
+}
+
+; Start of entry Cali1998a
+
+@InProceedings{ Cali1998a,
+	author               =	 {Frederico Cal{\`{i}} and Marco Conti and Enrico Gregory},
+	title                =	 {{IEEE 802.11 Wireless LAN: Capacity Analysis and Protocol Enhancement}},
+	year                 =	 {1998},
+	pages                =	 {142--149},
+	month                =	 {April/May},
+	booktitle            =	 {Proceedings of the 17th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 1998)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Camp2002a
+
+@InProceedings{ Camp2002a,
+	author               =	 {Tracy Camp and Jeff Boleng and Brad Williams and Lucas Wilcox and William Navidi},
+	title                =	 {{Performance Comparison of Two Location Based Routing Protocols for Ad Hoc Networks}},
+	year                 =	 {2002},
+	pages                =	 {1678--1687},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the 21st Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2002)},
+	address              =	 {New York City, New York}
+}
+
+; Start of entry Camp2002b
+
+@InProceedings{ Camp2002b,
+	author               =	 {Tracy Camp and Jeff Boleng and Lucas Wilcox},
+	title                =	 {{Location Information Services in Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	pages                =	 {3318--3324},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the IEEE International Conference on Communications (ICC)},
+	address              =	 {New York City, New York}
+}
+
+; Start of entry Camp2002c
+
+@Article{ Camp2002c,
+	author               =	 {Tracy Camp and Jeff Boleng and Vanessa Davies},
+	title                =	 {{A Survey of Mobility Models for Ad Hoc Network Research}},
+	journal              =	 {Wireless Communication \& Mobile Computing (WCMC): Special issue on Mobile Ad Hoc Networking: Research, Trends and Applications},
+	year                 =	 {2002},
+	volume               =	 {2},
+	number               =	 {5},
+	pages                =	 {483--502}
+}
+
+; Start of entry Capkun2002a
+
+@Article{ Capkun2002a,
+	author               =	 {Srdjan Capkun and Maher Hamdi and Jean-Pierre Hubaux},
+	title                =	 {{GPS-free positioning in mobile ad hoc networks}},
+	journal              =	 {Cluster Computing Journal},
+	year                 =	 {2002},
+	volume               =	 {5},
+	number               =	 {2}
+}
+
+; Start of entry Cavin2002a
+
+@InProceedings{ Cavin2002a,
+	author               =	 {David Cavin and Yoav Sasson and Andr{\'{e}} Schiper},
+	title                =	 {{On the Accuracy of MANET Simulators}},
+	year                 =	 {2002},
+	pages                =	 {38--43},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the Workshop on Principles of Mobile Computing (POMC'02)}
+}
+
+; Start of entry Chandran1998a
+
+@InProceedings{ Chandran1998a,
+	author               =	 {Kartik Chandran and Sudarshan Raghunathan and S. Venkatesan and Ravi Prakash},
+	title                =	 {{A Feedback Based Scheme for Improving TCP Performance in Ad-Hoc Wireless Networks}},
+	year                 =	 {2002},
+	pages                =	 {472--479},
+	month                =	 {May},
+	booktitle            =	 {Proceedings of the The 18th International Conference on Distributed Computing Systems (ICDCS 1998)},
+	address              =	 {Amsterdam, The Netherlands}
+}
+
+; Start of entry Chen2001a
+
+@InProceedings{ Chen2001a,
+	author               =	 {Benjie Chen and Kyle Jamieson and Hari Balakrishnan and Robert Morris},
+	title                =	 {{Span: An Energy-Efficient Coordination Algorithm for Topology Maintenance in Ad Hoc Wireless Networks}},
+	year                 =	 {2001},
+	pages                =	 {61--69},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of the seventh annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '01)},
+	address              =	 {Rome, Italy}
+}
+
+; Start of entry Chen2002a
+
+@InProceedings{ Chen2002a,
+	author               =	 {Kai Chen and Klara Nahrstedt},
+	title                =	 {{Effective Location-Guided Tree Construction Algorithms for Small Group Multicast in MANET}},
+	year                 =	 {2002},
+	pages                =	 {1192--1201},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the 21st Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2002)},
+	address              =	 {New York City, New York}
+}
+
+; Start of entry Chiang1997a
+
+@InProceedings{ Chiang1997a,
+	author               =	 {Ching-Chuan Chiang and Mario Gerla and Lixia Zhang},
+	title                =	 {{Shared Tree Wireless Network Multicast}},
+	year                 =	 {1997},
+	pages                =	 {28--33},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the 6th IEEE International Conference on Computer Communications and Networks (ICCCN '97)},
+	address              =	 {Las Vegas}
+}
+
+; Start of entry Chiang1998a
+
+@Article{ Chiang1998a,
+	author               =	 {Ching-Chuan Chiang and Mario Gerla and Lixia Zhang},
+	title                =	 {{Forwarding Group Multicast Protocol (FGMP) for Multihop, Mobile Wireless Networks}},
+	journal              =	 {ACM-Baltzer Journal of Cluster Computing: Special Issue on Mobile Computing},
+	year                 =	 {1998},
+	volume               =	 {1},
+	number               =	 {2},
+	pages                =	 {187--196},
+	month                =	 {December}
+}
+
+; Start of entry Clark1990a
+
+@InProceedings{ Clark1990a,
+	author               =	 {David D. Clark and David L. Tennenhouse},
+	title                =	 {{Architectural Considerations for a New Generation of Protocols}},
+	year                 =	 {1990},
+	pages                =	 {200--208},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the conference on Communications architectures and protocols (SIGCOMM '90)},
+	address              =	 {Philadelphia, PA}
+}
+
+; Start of entry Clausen2001a
+
+@Misc{ Clausen2001a,
+	author               =	 {Thomas Clausen and Philippe Jacquet and Anis Laouiti and Pascale Minet and Paul Muhlethaler and Amir Quayyum and Laurent Viennot},
+	title                =	 {{Optimized Link State Routing Protocol}},
+	year                 =	 {2001},
+	month                =	 {October},
+	howpublished         =	 {Internet Draft, draft-ietf-manet-olsr-05.txt, work in progress}
+}
+
+; Start of entry Cordeiro2003a
+
+@Article{ Cordeiro2003a,
+	author               =	 {Carlos de Morais Cordeiro and Hrishikesh Gossain and Dharma P. Agrawal},
+	title                =	 {{Multicast over Wireless Mobile Ad Hoc Networks: Present and Future Directions}},
+	journal              =	 {IEEE Network},
+	year                 =	 {2003},
+	volume               =	 {17},
+	number               =	 {1}
+}
+
+; Start of entry Cormen2001a
+
+@Book{ Cormen2001a,
+	author               =	 {Thomas H. Cormen and Charles E. Leiserson and Ronald L. Rivest and Clifford Stein},
+	title                =	 {{Introduction to Algorithms}},
+	year                 =	 {2001},
+	publisher            =	 {MIT press}
+}
+
+; Start of entry Corson1995a
+
+@Article{ Corson1995a,
+	author               =	 {M. Scott Corson and Stephen G. Batsell},
+	title                =	 {{A Reservation-Based Multicast (RBM) Routing Protocol for Mobile Networks: Initial Route Construction Phase}},
+	journal              =	 {ACM Journal on Wireless Networks},
+	year                 =	 {1995},
+	volume               =	 {1},
+	number               =	 {4},
+	pages                =	 {427--450}
+}
+
+; Start of entry Corson1999a
+
+@Misc{ Corson1999a,
+	author               =	 {Scott Corson and Joseph Macker},
+	title                =	 {{Mobile Ad hoc Networking ({MANET}): Routing Protocol Performance Issues and Evaluation Considerations}},
+	year                 =	 {1999},
+	month                =	 {January},
+	howpublished         =	 {IETF, RFC 2501}
+}
+
+; Start of entry Crowcroft2002a
+
+@Book{ Crowcroft2002a,
+	author               =	 {John Crowcroft and Iain Phillips},
+	title                =	 {{{TCP/IP} and Linux Protocol Implementation}},
+	year                 =	 {2002},
+	publisher            =	 {John Wiley \& Sons}
+}
+
+; Start of entry Dai2004a
+
+@Article{ Dai2004a,
+	author               =	 {Hui Dai and Richard Han},
+	title                =	 {{TSync: a lightweight bidirectional time synchronization service for wireless sensor networks}},
+	journal              =	 {ACM SIGMOBILE Mobile Computing and Communications Review (MC2R)},
+	year                 =	 {2004},
+	volume               =	 {8},
+	number               =	 {1},
+	pages                =	 {125--139},
+	month                =	 {January}
+}
+
+; Start of entry Das2000a
+
+@InProceedings{ Das2000a,
+	author               =	 {Samir R. Das and Charles E. Perkins and Elizabeth M. Royer},
+	title                =	 {{Performance Comparison of Two On-demand Routing Protocols for Ad Hoc Networks}},
+	year                 =	 {2000},
+	pages                =	 {3--12},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 19th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2000)},
+	address              =	 {Tel Aviv, Israel}
+}
+
+; Start of entry Das2002a
+
+@InProceedings{ Das2002a,
+	author               =	 {Subir Kumar Das and B. S. Manoj and C. Siva Ram Murthy},
+	title                =	 {{A Dynamic Core Based Multicast Routing Protocol for Ad hoc Wireless Networks}},
+	year                 =	 {2002},
+	pages                =	 {24--35},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the third ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '02)},
+	address              =	 {Lausanne, Switzerland}
+}
+
+; Start of entry Datta2001a
+
+@InProceedings{ Datta2001a,
+	author               =	 {Susanta Datta and Ivan Stojmenovic and Jie Wu},
+	title                =	 {{Internal node and shortcut based routing with guaranteed delivery in wireless networks}},
+	year                 =	 {2001},
+	pages                =	 {461--466},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the IEEE International Conference on Distributed Computing and Systems Workshop},
+	address              =	 {Phoenix, AR}
+}
+
+; Start of entry DeCouto2001a
+
+@TechReport{ DeCouto2001a,
+	author               =	 {Douglas S. J. DeCouto and Robert Morris},
+	title                =	 {{Location Proxies and Intermediate Node Forwarding for Practical Geographic Forwarding}},
+	year                 =	 {2001},
+	number               =	 {MIT-LCS-TR-824},
+	month                =	 {June},
+	institution          =	 {MIT}
+}
+
+; Start of entry DeCouto2003a
+
+@Article{ DeCouto2003a,
+	author               =	 {Douglas S. J. DeCouto and Daniel Aguayo and Benjamin A. Chambers and Robert Morris},
+	title                =	 {{Performance of multihop wireless networks: shortest path is not enough}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {2003},
+	volume               =	 {33},
+	number               =	 {1},
+	pages                =	 {82--88}
+}
+
+; Start of entry DeCouto2003b
+
+@InProceedings{ DeCouto2003b,
+	author               =	 {Douglas S. J. DeCouto and Daniel Aguayo and John Bicket and Robert Morris},
+	title                =	 {{A high-throughput path metric for multi-hop wireless routing}},
+	year                 =	 {2003},
+	pages                =	 {134--146},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the ninth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '03)},
+	address              =	 {San Diego, California}
+}
+
+; Start of entry Deering1996a
+
+@Article{ Deering1996a,
+	author               =	 {Stephen Deering and Deborah Estrin and Dino Farinacci and Van Jacobson and Ching-Gung Liu and Liming Wei},
+	title                =	 {{The PIM Architecture for Wide-Area Multicast Routing}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {1996},
+	volume               =	 {4},
+	number               =	 {2},
+	pages                =	 {153--162},
+	month                =	 {April}
+}
+
+; Start of entry Devarapalli2001a
+
+@InProceedings{ Devarapalli2001a,
+	author               =	 {Vijay Devarapalli and Deepinder Sidhu},
+	title                =	 {{MZR: A Multicast Protocol for Mobile Ad Hoc Networks}},
+	year                 =	 {2001},
+	volume               =	 {3},
+	pages                =	 {886--891},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the IEEE International Conference on Communications (ICC)},
+	address              =	 {Helsinki, Finland}
+}
+
+; Start of entry Diestel2000a
+
+@Book{ Diestel2000a,
+	author               =	 {Reinhard Diestel},
+	title                =	 {{Graph Theory}},
+	year                 =	 {2000},
+	address              =	 {New York},
+	publisher            =	 {Springer-Verlag},
+	edition              =	 {Electronic Edition}
+}
+
+; Start of entry Diestel2000b
+
+@Book{ Diestel2000b,
+	author               =	 {Reinhard Diestel},
+	title                =	 {{Graphentheorie}},
+	year                 =	 {2000},
+	address              =	 {Heidelberg},
+	publisher            =	 {Springer-Verlag},
+	edition              =	 {Elektronische Ausgabe}
+}
+
+; Start of entry Dousse2003a
+
+@InProceedings{ Dousse2003a,
+	author               =	 {Olivier Dousse and Fran{\c c}ois Baccelli and Patrick Thiran},
+	title                =	 {{Impact of Interferences on Connectivity in Ad Hoc Networks}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Dubois-Ferriere2003a
+
+@InProceedings{ Dubois-Ferriere2003a,
+	author               =	 {Henri Dubois-Ferri{\`{e}}re and Matthias Grossglauser and Martin Vetterli},
+	title                =	 {{Age Matters: Efficient Route Discovery in Mobile Ad Hoc Networks Using Encounter Ages}},
+	year                 =	 {2003},
+	pages                =	 {257--266},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the fourth ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '03)},
+	address              =	 {Annapolis, Maryland}
+}
+
+; Start of entry Dyer2001a
+
+@InProceedings{ Dyer2001a,
+	author               =	 {Thomas D. Dyer and Rajendra V. Boppana},
+	title                =	 {{A comparison of TCP performance over three routing protocols for mobile ad hoc networks}},
+	year                 =	 {2001},
+	pages                =	 {56--66},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Elaarag2002a
+
+@Article{ Elaarag2002a,
+	author               =	 {Hala Elaarag},
+	title                =	 {{Improving TCP performance over mobile networks}},
+	journal              =	 {ACM Computing Surveys (CSUR)},
+	year                 =	 {2002},
+	volume               =	 {34},
+	number               =	 {3},
+	pages                =	 {357--374}
+}
+
+; Start of entry Enkelmann2003a
+
+@InProceedings{ Enkelmann2003a,
+	author               =	 {Wilfried Enkelmann},
+	title                =	 {{FleetNet - Applications for Inter-Vehicle Communication}},
+	year                 =	 {2003},
+	pages                =	 {162--167},
+	month                =	 {June},
+	booktitle            =	 {Proc. of IEEE Intelligent Vehicles Symposium (IV2003)},
+	address              =	 {Columbus, OH}
+}
+
+; Start of entry Erickson2000a
+
+@Article{ Erickson2000a,
+	author               =	 {K. Bruce Erickson and Richard E. Ladner and Anthony Lamarca},
+	title                =	 {{Optimizing static calendar queues}},
+	journal              =	 {ACM Transactions on Modelling and Computer Simulation (TOMACS)},
+	year                 =	 {2000},
+	volume               =	 {10},
+	number               =	 {3},
+	pages                =	 {179--214}
+}
+
+; Start of entry Fall1996a
+
+@Article{ Fall1996a,
+	author               =	 {Kevin Fall and Sally Floyd},
+	title                =	 {{Simulation-based comparisons of Tahoe, Reno and SACK TCP}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {1996},
+	volume               =	 {26},
+	number               =	 {3},
+	month                =	 {July}
+}
+
+; Start of entry Farago2002a
+
+@InProceedings{ Farago2002a,
+	author               =	 {Andr{\'{a}}s Farag{\'{o}}},
+	title                =	 {{Scalable Analysis and Design of Ad Hoc Networks Via Random Graph Theory}},
+	year                 =	 {2002},
+	pages                =	 {43--50},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the sixth international workshop on Discrete algorithms and methods for mobile computing and communications (DIAL-M '02)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Feigenbaum2002a
+
+@InProceedings{ Feigenbaum2002a,
+	author               =	 {Joan Feigenbaum and Scott Shenker},
+	title                =	 {{Distributed algorithmic mechanism design: recent results and future directions}},
+	year                 =	 {2002},
+	pages                =	 {1--13},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the sixth international workshop on Discrete algorithms and methods for mobile computing and communications (DIAL-M '02)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Ferguson2003a
+
+@Book{ Ferguson2003a,
+	author               =	 {Niels Ferguson and Bruce Schneier},
+	title                =	 {{Practical Cryptography}},
+	year                 =	 {2003},
+	publisher            =	 {Wiley Publishing, Inc.}
+}
+
+; Start of entry Finn1987a
+
+@TechReport{ Finn1987a,
+	author               =	 {Gregory G. Finn},
+	title                =	 {{Routing and addressing problems in large metropolitan-scale internetworks}},
+	year                 =	 {1987},
+	number               =	 {ISI/RR-87-180},
+	month                =	 {March},
+	institution          =	 {ISI}
+}
+
+; Start of entry Floyd1994a
+
+@Article{ Floyd1994a,
+	author               =	 {Sally Floyd and Van Jacobson},
+	title                =	 {{The synchronization of periodic routing messages}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {1994},
+	volume               =	 {2},
+	number               =	 {2},
+	pages                =	 {122--136},
+	month                =	 {April}
+}
+
+; Start of entry Franz2003a
+
+@Misc{ Franz2003a,
+	author               =	 {Walter Franz and Christian Maih{\"{o}}fer},
+	title                =	 {{Geographical Addressing and Forwarding in FleetNet}},
+	year                 =	 {2003},
+	howpublished         =	 {Whitepaper, available at http://www.fleetnet.de}
+}
+
+; Start of entry Franz2004a
+
+@InProceedings{ Franz2004a,
+	author               =	 {Walter Franz and Christian Wagner and Christian Maih{\"{o}}fer and Hannes Hartenstein},
+	title                =	 {{FleetNet: Platform for Inter-Vehicle Communications}},
+	year                 =	 {2004},
+	pages                =	 {29--36},
+	month                =	 {March},
+	booktitle            =	 {1st International Workshop on Intelligent Transportation},
+	address              =	 {Hamburg, Germany}
+}
+
+; Start of entry Fu2002a
+
+@InProceedings{ Fu2002a,
+	author               =	 {Zhenghua Fu and Xiaoqiao Meng and Songwu Lu},
+	title                =	 {{How Bad TCP Can Perform In Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of the Seventh IEEE Symposium on Computers and Communications (ISCC '02)},
+	address              =	 {Taormina/Giardini Naxos, Italy}
+}
+
+; Start of entry Fuessler2002a
+
+@TechReport{ Fuessler2002a,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and Martin Mauve and Hannes Hartenstein and Michael K{\"{a}}semann and Dieter Vollmer},
+	title                =	 {{A Comparison of Routing Strategies for Vehicular Ad Hoc Networks}},
+	year                 =	 {2002},
+	number               =	 {TR-02-003},
+	month                =	 {July},
+	institution          =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Fuessler2002b
+
+@InProceedings{ Fuessler2002b,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and Martin Mauve and Hannes Hartenstein and Michael K{\"{a}}semann and Dieter Vollmer},
+	title                =	 {{Poster: Location-Based Routing for Vehicular Ad-Hoc Networks}},
+	year                 =	 {2002},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the eigth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '02)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Fuessler2003a
+
+@TechReport{ Fuessler2003a,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Michael K{\"{a}}semann and Martin Mauve and Hannes Hartenstein},
+	title                =	 {{Beaconless Position-Based Routing for Mobile Ad-Hoc Networks}},
+	year                 =	 {2003},
+	number               =	 {TR-03-001},
+	institution          =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Fuessler2003b
+
+@Article{ Fuessler2003b,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Michael K{\"{a}}semann and Martin Mauve and Hannes Hartenstein},
+	title                =	 {{Contention-Based Forwarding for Mobile Ad-Hoc Networks}},
+	journal              =	 {Elsevier's Ad Hoc Networks},
+	year                 =	 {2003},
+	volume               =	 {1},
+	number               =	 {4},
+	pages                =	 {351--369}
+}
+
+; Start of entry Fuessler2003c
+
+@Article{ Fuessler2003c,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and Martin Mauve and Hannes Hartenstein and Michael K{\"{a}}semann and Dieter Vollmer},
+	title                =	 {{MobiCom Poster: Location-Based Routing for Vehicular Ad-hoc Networks}},
+	journal              =	 {ACM SIGMOBILE Mobile Computing and Communications Review (MC2R)},
+	year                 =	 {2003},
+	volume               =	 {7},
+	number               =	 {1},
+	pages                =	 {47--49},
+	month                =	 {January}
+}
+
+; Start of entry Fuessler2003d
+
+@InProceedings{ Fuessler2003d,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Martin Mauve and Hannes Hartenstein},
+	title                =	 {{A Novel Forwarding Paradigm for Position-Based Routing (with Implicit Addressing)}},
+	year                 =	 {2003},
+	pages                =	 {194--200},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the IEEE 18th Annual Workshop on Computer Communications (CCW 2003)},
+	address              =	 {Dana Point, CA}
+}
+
+; Start of entry Fuessler2004a
+
+@InProceedings{ Fuessler2004a,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and Hannes Hartenstein and J{\"{o}}rg Widmer and Martin Mauve and Wolfgang Effelsberg},
+	title                =	 {{Contention-Based Forwarding for Street Scenarios}},
+	year                 =	 {2004},
+	pages                =	 {155--159},
+	month                =	 {March},
+	booktitle            =	 {1st International Workshop on Intelligent Transportation},
+	address              =	 {Hamburg, Germany}
+}
+
+; Start of entry Fuessler2004b
+
+@InProceedings{ Fuessler2004b,
+	author               =	 {Holger F{\"{u}}{\ss{}}ler and Wolfgang Effelsberg},
+	title                =	 {{Routing in Mobilen Ad-Hoc Netzwerken}},
+	year                 =	 {2004},
+	month                =	 {June},
+	booktitle            =	 {Proc. of '18. DFN-Arbeitstagung {\"{u}}ber Kommunikationsnetze'},
+	address              =	 {D{\"{u}}sseldorf, Germany}
+}
+
+; Start of entry Fuhrmann2001a
+
+@Article{ Fuhrmann2001a,
+	author               =	 {Thomas T. Fuhrmann and J{\"{o}}rg Widmer},
+	title                =	 {{On the Scaling of Feedback Algorithms for Very Large Multicast Groups}},
+	journal              =	 {Special Issue of Computer Communications on Integrating Multicast into the Internet},
+	year                 =	 {2001},
+	volume               =	 {24},
+	number               =	 {5-6},
+	pages                =	 {539--547},
+	month                =	 {March}
+}
+
+; Start of entry Fullmer1995a
+
+@InProceedings{ Fullmer1995a,
+	author               =	 {Chane L. Fullmer and J. J. Garcia-Luna-Aceves},
+	title                =	 {{Floor Acquisition Multiple Access (FAMA) for Packet-Radio Networks}},
+	year                 =	 {1995},
+	pages                =	 {262--273},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the conference on Applications, technologies, architectures, and protocols for computer communication (SIGCOMM '95)},
+	address              =	 {Cambridge, MA}
+}
+
+; Start of entry Fullmer1997a
+
+@InProceedings{ Fullmer1997a,
+	author               =	 {Chane L. Fullmer and J. J. Garcia-Luna-Aceves},
+	title                =	 {{Solutions to Hidden Terminal Problems in Wireless Networks}},
+	year                 =	 {1997},
+	pages                =	 {39--49},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the ACM SIGCOMM '97 conference on Applications, Technologies, Architectures, and Protocols for Computer Communication},
+	address              =	 {Cannes, France}
+}
+
+; Start of entry Gabriel1969a
+
+@Article{ Gabriel1969a,
+	author               =	 {K. Gabriel and R. Sokal},
+	title                =	 {{A new statistical approach to geographic variation analysis}},
+	journal              =	 {Systematic Zoology},
+	year                 =	 {1969},
+	volume               =	 {18},
+	pages                =	 {259--278}
+}
+
+; Start of entry Garces1998a
+
+@InProceedings{ Garces1998a,
+	author               =	 {Rodrigo Garc{\`{e}}s and J. J. Garcia-Luna-Aceves},
+	title                =	 {{A Near-Optimum Channel Access Protocol Based on Incremental Collision Resolution and Distributed Transmission Queues}},
+	year                 =	 {1998},
+	pages                =	 {158--165},
+	month                =	 {April/May},
+	booktitle            =	 {Proceedings of the 17th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 1998)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Garcia1999a
+
+@InProceedings{ Garcia1999a,
+	author               =	 {J. J. Garcia-Luna-Aceves and Ewerton L. Madruga},
+	title                =	 {{A Multicast Routing Protocol for Ad-Hoc Networks}},
+	year                 =	 {1999},
+	pages                =	 {784--792},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 18th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 1999)},
+	address              =	 {New York City, New York}
+}
+
+; Start of entry Giordano1999a
+
+@TechReport{ Giordano1999a,
+	author               =	 {Silvia Giordano and Maher Hamdi},
+	title                =	 {{Mobility Management: The Virtual Home Region}},
+	year                 =	 {1999},
+	number               =	 {SSC/1999/037},
+	month                =	 {October},
+	institution          =	 {{EPFL-ICA}}
+}
+
+; Start of entry Giordano2003a
+
+@InCollection{ Giordano2003a,
+	author               =	 {Silvia Giordano and Ivan Stojmenovic and Ljubica Bla{\v{z}}evi{\'{c}}},
+	title                =	 {{Position-Based Routing Algorithms for AdHoc Networks: A Taxonomy}},
+	year                 =	 {2003},
+	month                =	 {November},
+	booktitle            =	 {Ad Hoc Wireless Networking},
+	editor               =	 {Ding-Zhu Du},
+	publisher            =	 {Kluwer Academic Publishers}
+}
+
+; Start of entry Gleissner2000a
+
+@Article{ Gleissner2000a,
+	author               =	 {Winfried Glei{\ss{}}ner and Herbert Zeitler},
+	title                =	 {{The Reuleaux Triangle and Its Center of Mass}},
+	journal              =	 {Results in Mathematics},
+	year                 =	 {2000},
+	volume               =	 {37},
+	pages                =	 {335--344}
+}
+
+; Start of entry Goldberg1991a
+
+@Article{ Goldberg1991a,
+	author               =	 {David Goldberg},
+	title                =	 {{What Every Computer Scientist Should Know About Floating-Point Arithmetic}},
+	journal              =	 {ACM Computing Surveys},
+	year                 =	 {1991},
+	volume               =	 {23},
+	number               =	 {1},
+	pages                =	 {5--48}
+}
+
+; Start of entry Graham1994a
+
+@Book{ Graham1994a,
+	author               =	 {Ronald L. Graham and Donald E. Knuth and Oren Patashnik},
+	title                =	 {{Concrete Mathematics}},
+	year                 =	 {1994},
+	publisher            =	 {Addison-Wesley Professional},
+	edition              =	 {2nd}
+}
+
+; Start of entry Grossglauser2002a
+
+@Article{ Grossglauser2002a,
+	author               =	 {Matthias Grossglauser and David N. C. Tse},
+	title                =	 {{Mobility increases the capacity of ad hoc wireless networks}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {2002},
+	volume               =	 {10},
+	number               =	 {4},
+	pages                =	 {477--486}
+}
+
+; Start of entry Grossglauser2003a
+
+@InProceedings{ Grossglauser2003a,
+	author               =	 {Matthias Grossglauser and Martin Vetterli},
+	title                =	 {{Locating Nodes with EASE: Last Encounter Routing in Ad Hoc Networks through Mobility Diffusion}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Gupta1999a
+
+@InProceedings{ Gupta1999a,
+	author               =	 {Sandeep K. S. Gupta and Pradip K. Srimani},
+	title                =	 {{An Adaptive Protocol for Reliable Multicast in Mobile Multi-hop Radio Networks}},
+	year                 =	 {1999},
+	pages                =	 {111--122},
+	month                =	 {February},
+	booktitle            =	 {Proceedings of the Second IEEE Workshop on Mobile Computer Systems and Applications},
+	address              =	 {New Orleans, Louisiana}
+}
+
+; Start of entry Gupta2000a
+
+@Article{ Gupta2000a,
+	author               =	 {Piyush Gupta and P.R. Kumar},
+	title                =	 {{The Capacity of Wireless Networks}},
+	journal              =	 {IEEE Transactions on Information Theory},
+	year                 =	 {2000},
+	volume               =	 {46},
+	number               =	 {2},
+	pages                =	 {388--404},
+	month                =	 {March}
+}
+
+; Start of entry Gupta2001a
+
+@TechReport{ Gupta2001a,
+	author               =	 {Piyush Gupta and Robert Gray and P.R. Kumar},
+	title                =	 {{An Experimental Scaling Law for Ad Hoc Networks}},
+	year                 =	 {2001},
+	institution          =	 {University of Illinois at Urbana-Champaign}
+}
+
+; Start of entry Haas1999a
+
+@Article{ Haas1999a,
+	author               =	 {Zygmunt J. Haas and Ben Liang},
+	title                =	 {{Ad Hoc mobility management with uniform quorum systems}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {1999},
+	volume               =	 {7},
+	number               =	 {2},
+	pages                =	 {228--240},
+	month                =	 {April}
+}
+
+; Start of entry Haas2001a
+
+@Article{ Haas2001a,
+	author               =	 {Zygmunt J. Haas and Marc R. Haas},
+	title                =	 {{The Performance of Query Control Schemes for the Zone Routing Protocol}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {2001},
+	volume               =	 {9},
+	number               =	 {4},
+	pages                =	 {427--438},
+	month                =	 {August}
+}
+
+; Start of entry Handley2003a
+
+@Article{ Handley2003a,
+	author               =	 {Mark Handley and Orion Hodson and Eddi Kohler},
+	title                =	 {{XORP: an open platform for network research}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {2003},
+	volume               =	 {33},
+	number               =	 {1},
+	pages                =	 {53--57},
+	month                =	 {January}
+}
+
+; Start of entry Harbison2002a
+
+@Book{ Harbison2002a,
+	author               =	 {Samuel P. III Harbison and Guy L. Jr. Steele},
+	title                =	 {{A C Reference Manual}},
+	year                 =	 {2002},
+	publisher            =	 {Prentice-Hall},
+	edition              =	 {5th}
+}
+
+; Start of entry Hartenstein2001a
+
+@InProceedings{ Hartenstein2001a,
+	author               =	 {Hannes Hartenstein and Bernd Bochow and Andr{\'{e}} Ebner and Matthias Lott and Markus Radimirsch and Dieter Vollmer},
+	title                =	 {{Position-aware ad hoc wireless networks for inter-vehicle communications: The FleetNet project}},
+	year                 =	 {2001},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Hartenstein2003a
+
+@InProceedings{ Hartenstein2003a,
+	author               =	 {Hannes Hartenstein and Holger F{\"{u}}{\ss{}}ler and Martin Mauve and Walter Franz},
+	title                =	 {{Simulation Results and Proof-of-Concept Implementation of the FleetNet Position-Based Router}},
+	year                 =	 {2003},
+	pages                =	 {192--197},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the IFIP-TC6 8th International Conference on Personal Wireless Communications (PWC '03)},
+	address              =	 {Venice, Italy}
+}
+
+; Start of entry Hassanein2001a
+
+@InProceedings{ Hassanein2001a,
+	author               =	 {Hossam Hassanein and Audrey Zhou},
+	title                =	 {{Routing with load balancing in wireless Ad hoc networks}},
+	year                 =	 {2002},
+	pages                =	 {89--96},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of the fourth ACM International Workshop on Modeling, Analysis and Simulation of Wireless and Mobile Systems (MSWiM '01)},
+	address              =	 {Rome, Italy}
+}
+
+; Start of entry Hechenleitner2002a
+
+@InProceedings{ Hechenleitner2002a,
+	author               =	 {Bernhard Hechenleitner and Karl Entacher},
+	title                =	 {{On Shortcomings of the ns-2 Random Number Generator}},
+	year                 =	 {2002},
+	pages                =	 {71--77},
+	month                =	 {January},
+	booktitle            =	 {Proceedings of Communication Networks and Distributed Systems Modeling and Simulation Conference},
+	address              =	 {San Antonio, TX}
+}
+
+; Start of entry Heidemann2001a
+
+@InProceedings{ Heidemann2001a,
+	author               =	 {John Heidemann and Nirupama Bulusu and Jeremy Elson and Chalermek Intanagonwiwat and Kun-Chan Lan and Ya Xu and Wei Ye and Deborah Estrin and Ramesh Govindan},
+	title                =	 {{Effects of Detail in Wireless Network Simulation}},
+	year                 =	 {2001},
+	pages                =	 {3--11},
+	month                =	 {January},
+	booktitle            =	 {Proceedings of SCS Multiconference on Distributed Systems},
+	address              =	 {Phoenix, Arizona}
+}
+
+; Start of entry Heidl2001a
+
+@MastersThesis{ Heidl2001a,
+	author               =	 {Marco Heidl},
+	title                =	 {{Session and Security Concept for DriveBy InfoFueling}},
+	year                 =	 {2000},
+	school               =	 {University of Mannheim}
+}
+
+; Start of entry Heissenbuettel2003a
+
+@Article{ Heissenbuettel2003a,
+	author               =	 {Marc Heissenb{\"{u}}ttel and Thorsten Braun},
+	title                =	 {{BLR: Beacon-Less Routing Algorithm for Mobile Ad-Hoc Networks}},
+	journal              =	 {to appear in Elsevier's Computer Communications Journal (Special Issue)},
+	year                 =	 {2003}
+}
+
+; Start of entry Helmy2002a
+
+@InProceedings{ Helmy2002a,
+	author               =	 {Ahmed Helmy},
+	title                =	 {{Architectural Framework for Large-Scale Multicast in Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	volume               =	 {4},
+	pages                =	 {2036--2042},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the IEEE International Conference on Communications (ICC)},
+	address              =	 {New York City, New York}
+}
+
+; Start of entry Holland1999a
+
+@InProceedings{ Holland1999a,
+	author               =	 {Gavin Holland and Nitin H. Vaidya},
+	title                =	 {{Analysis of TCP Performance over Mobile Ad Hoc Networks}},
+	year                 =	 {1999},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the fifth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '99)},
+	address              =	 {Seattle, Washington}
+}
+
+; Start of entry Hou1986a
+
+@Article{ Hou1986a,
+	author               =	 {Ting-Chao Hou and Victor O.K. Li},
+	title                =	 {{Transmission Range Control in Multihop Packet Radio Networks}},
+	journal              =	 {IEEE Transactions on Communications},
+	year                 =	 {1986},
+	volume               =	 {34},
+	number               =	 {1},
+	pages                =	 {38--44},
+	month                =	 {January}
+}
+
+; Start of entry Hsiao2001a
+
+@Article{ Hsiao2001a,
+	author               =	 {Pai-Hsiang Hsiao},
+	title                =	 {{Geographical Region Summary Service for Geographical Routing}},
+	journal              =	 {ACM Sigmobile Mobile Computing and Communications Review (MC2R)},
+	year                 =	 {2001},
+	volume               =	 {5},
+	number               =	 {4},
+	pages                =	 {25--39},
+	month                =	 {October}
+}
+
+; Start of entry Hu2000a
+
+@InProceedings{ Hu2000a,
+	author               =	 {Yih-Chun Hu and David B. Johnson},
+	title                =	 {{Caching Strategies in On-Demand Routing Protocols for Wireless Ad Hoc Networks}},
+	year                 =	 {2000},
+	pages                =	 {231--242},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the sixth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '00)},
+	address              =	 {Boston, Massachusetts}
+}
+
+; Start of entry Hu2001a
+
+@InProceedings{ Hu2001a,
+	author               =	 {Yih-Chun Hu and David B. Johnson},
+	title                =	 {{Implicit Source Routing for On-Demand Ad Hoc Network Routing}},
+	year                 =	 {2001},
+	pages                =	 {1--10},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Hu2002a
+
+@InProceedings{ Hu2002a,
+	author               =	 {Yih-Chun Hu and Adrian Perrig and David B. Johnson},
+	title                =	 {{Ariadne: A Secure On-Demand Routing Protocol for Ad Hoc Networks}},
+	year                 =	 {2002},
+	pages                =	 {12--23},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the eigth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '02)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Hubaux2001a
+
+@InProceedings{ Hubaux2001a,
+	author               =	 {Jean-Pierre Hubaux and Levente Buttyan and Srdjan Capkun},
+	title                =	 {{The Quest for Security in Mobile Ad Hoc Networks}},
+	year                 =	 {2001},
+	pages                =	 {146--155},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Jacobson1988a
+
+@Article{ Jacobson1988a,
+	author               =	 {Van Jacobson},
+	title                =	 {{Congestion Avoidance and Control}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {1988},
+	volume               =	 {18},
+	number               =	 {4},
+	pages                =	 {314--329}
+}
+
+; Start of entry Jacquet2001a
+
+@Misc{ Jacquet2001a,
+	author               =	 {Philippe Jacquet and Pascale Minet and Anis Laouiti and Laurent Viennot and Thomas Clausen and Cedric Adjih},
+	title                =	 {{Multicast Optimized Link State Routing}},
+	year                 =	 {2001},
+	howpublished         =	 {Internet Draft, draft-ietf-manet-olsr-molsr.txt, work in progress}
+}
+
+; Start of entry Jetcheva2001a
+
+@InProceedings{ Jetcheva2001a,
+	author               =	 {Jorjeta G. Jetcheva and David B. Johnson},
+	title                =	 {{Adaptive Demand-Driven Multicast Routing in Multi-Hop Wireless Ad Hoc Networks}},
+	year                 =	 {2001},
+	pages                =	 {33--44},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Jetcheva2001b
+
+@Misc{ Jetcheva2001b,
+	author               =	 {Jorjeta G. Jetcheva and Yih-Chun Hu and David A. Maltz and David B. Johnson},
+	title                =	 {{A Simple Protocol for Multicast and Broadcast in Mobile Ad Hoc Networks}},
+	year                 =	 {2001},
+	howpublished         =	 {Internet Draft, draft-ietf-manet-simple-mbcast-01.txt, work in progress}
+}
+
+; Start of entry Ji1998a
+
+@InProceedings{ Ji1998a,
+	author               =	 {Lusheng Ji and M. Scott Corson},
+	title                =	 {{A Lightweight Adaptive Multicast Algorithm}},
+	year                 =	 {1998},
+	pages                =	 {1036--1042},
+	month                =	 {November},
+	booktitle            =	 {Proceedings of IEEE Global Telecommunications Conference (Globecom1998)},
+	address              =	 {Sydney, Australia}
+}
+
+; Start of entry Ji2001a
+
+@InProceedings{ Ji2001a,
+	author               =	 {Lusheng Ji and M. Scott Corson},
+	title                =	 {{Differential Destination Multicast---A MANET Multicast Routing Protocol for Small Groups}},
+	year                 =	 {2001},
+	pages                =	 {1192--1202},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the 20th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2001)},
+	address              =	 {Anchorage, Alaska}
+}
+
+; Start of entry Ji2003a
+
+@InProceedings{ Ji2003a,
+	author               =	 {Ping Ji and Zihui Ge and Jim Kurose and Don Towsley},
+	title                =	 {{A Comparison of Hard-state and Soft-state Signaling Protocols}},
+	year                 =	 {2003},
+	pages                =	 {251--262},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of ACM SIGCOMM 2003 Conference on Computer Communications},
+	address              =	 {Karlsruhe, Germany}
+}
+
+; Start of entry Johansson1999a
+
+@InProceedings{ Johansson1999a,
+	author               =	 {Per Johansson and Tony Larsson and Nicklas Hedmann and Bartosz Mielczarek and Mikael Degermark},
+	title                =	 {{Scenario-Based Performance Analysis of Routing Protocols for Mobile Ad-Hoc Networks}},
+	year                 =	 {1999},
+	pages                =	 {195--206},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the fifth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '99)},
+	address              =	 {Seattle, Washington}
+}
+
+; Start of entry Johnson1996a
+
+@InCollection{ Johnson1996a,
+	author               =	 {David B. Johnson and David A. Maltz},
+	title                =	 {{Dynamic Source Routing in Ad Hoc Wireless Networks}},
+	year                 =	 {1996},
+	volume               =	 {353},
+	pages                =	 {153--181},
+	booktitle            =	 {Mobile Computing},
+	editor               =	 {Tomasz Imielinski and Hank Korth},
+	publisher            =	 {Kluwer Academic Publishers}
+}
+
+; Start of entry Kaesemann2002a
+
+@InProceedings{ Kaesemann2002a,
+	author               =	 {Michael K{\"{a}}semann and Hannes Hartenstein and Holger F{\"{u}}{\ss{}}ler and Martin Mauve},
+	title                =	 {{Analysis of a Location Service for Position-Based Routing in Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	pages                =	 {121--133},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 1st German Workshop on Mobile Ad-hoc Networking (WMAN 2002)},
+	series               =	 {GI -- Lecture Notes in Informatics}
+}
+
+; Start of entry Kaesemann2002b
+
+@TechReport{ Kaesemann2002b,
+	author               =	 {Michael K{\"{a}}semann and Hannes Hartenstein and Holger F{\"{u}}{\ss{}}ler and Martin Mauve},
+	title                =	 {{A Simulation Study of a Location Service for Position-Based Routing in Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	number               =	 {TR-07-002},
+	institution          =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Kaesemann2002c
+
+@TechReport{ Kaesemann2002c,
+	author               =	 {Michael K{\"{a}}semann and Holger F{\"{u}}{\ss{}}ler and Hannes Hartenstein and Martin Mauve},
+	title                =	 {{A Reactive Location Service for Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	number               =	 {TR-02-014},
+	month                =	 {November},
+	institution          =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Kaesemann2003a
+
+@MastersThesis{ Kaesemann2003a,
+	author               =	 {Michael K{\"{a}}semann},
+	title                =	 {{Beaconless Position-Based Routing for Mobile Ad-Hoc Networks}},
+	year                 =	 {2003},
+	month                =	 {February},
+	school               =	 {Department of Mathematics and Computer Science, University of Mannheim}
+}
+
+
+; Start of entry Karn1990a
+
+@InProceedings{ Karn1990a,
+	author               =	 {Phil Karn},
+	title                =	 {{{MACA} - A New Channel Access Method for Packet Radio}},
+	year                 =	 {1990},
+	pages                =	 {134--140},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the 9th ARRL/CRRL Amateur Radio Computer Networking Conference}
+}
+
+; Start of entry Karp2000a
+
+@InProceedings{ Karp2000a,
+	author               =	 {Brad N. Karp and H. T. Kung},
+	title                =	 {{{GPSR}: Greedy Perimeter Stateless Routing for Wireless Networks}},
+	year                 =	 {2000},
+	pages                =	 {243--254},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the sixth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '00)},
+	address              =	 {Boston, Massachusetts}
+}
+
+; Start of entry Karp2000b
+
+@PhdThesis{ Karp2000b,
+	author               =	 {Brad N. Karp},
+	title                =	 {{Geographic Routing for Wireless Networks}},
+	year                 =	 {2000},
+	month                =	 {October},
+	school               =	 {Harvard University}
+}
+
+; Start of entry Karp2001a
+
+@Misc{ Karp2001a,
+	author               =	 {Brad N. Karp},
+	title                =	 {{Challenges in Geographic Routing: Sparse Networks, Obstacles, and Traffic Provisioning}},
+	year                 =	 {2001},
+	month                =	 {May},
+	howpublished         =	 {Talk at DIMACS Workshop on Pervasive Networking}
+}
+
+; Start of entry Kiess2003a
+
+@MastersThesis{ Kiess2003a,
+	author               =	 {Wolfgang Kie{\ss{}}},
+	title                =	 {{Hierarchical Location Service for Mobile Ad-hoc Networks}},
+	year                 =	 {2003},
+	school               =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Kim2004a
+
+@Article{ Kim2004a,
+	author               =	 {Yongjin Kim and Jae-Joon Lee and Ahmed Helmy},
+	title                =	 {{Modeling and analyzing the impact of location inconsistencies on geographic routing in wireless networks}},
+	journal              =	 {ACM SIGMOBILE Mobile Computing and Communications Review (MC2R)},
+	year                 =	 {2004},
+	volume               =	 {8},
+	number               =	 {1},
+	pages                =	 {48--60},
+	month                =	 {January}
+}
+
+; Start of entry Kleinrock1975a
+
+@Article{ Kleinrock1975a,
+	author               =	 {Leonard Kleinrock and Fouad A. Tobagi},
+	title                =	 {{Packet Switching in Radio Channels: Part {I} -- Carrier Sense Multiple-Access Modes and Their Throughput-Delay Characteristics}},
+	journal              =	 {IEEE Transactions on Communications},
+	year                 =	 {1975},
+	volume               =	 {23},
+	number               =	 {12},
+	pages                =	 {1400--1416},
+	month                =	 {December}
+}
+
+; Start of entry Kleinrock1980a
+
+@Article{ Kleinrock1980a,
+	author               =	 {Leonard Kleinrock and Michel O. Scholl},
+	title                =	 {{Packet Switching in Radio Channels: New Conflict-Free Multiple Access Schemes}},
+	journal              =	 {IEEE Transactions on Communications},
+	year                 =	 {1980},
+	volume               =	 {28},
+	number               =	 {7},
+	pages                =	 {1015--1029},
+	month                =	 {July}
+}
+
+; Start of entry Knuth1997a
+
+@Book{ Knuth1997a,
+	author               =	 {Donald E. Knuth},
+	title                =	 {{The Art of Computer Programming - Fundamental Algorithms}},
+	year                 =	 {1997},
+	volume               =	 {1},
+	publisher            =	 {Addison-Wesley},
+	edition              =	 {3rd}
+}
+
+; Start of entry Knuth1997b
+
+@Book{ Knuth1997b,
+	author               =	 {Donald E. Knuth},
+	title                =	 {{The Art of Computer Programming - Seminumerical Algorithms}},
+	year                 =	 {1997},
+	volume               =	 {2},
+	publisher            =	 {Addison-Wesley},
+	edition              =	 {3rd}
+}
+
+; Start of entry Knuth1998a
+
+@Book{ Knuth1998a,
+	author               =	 {Donald E. Knuth},
+	title                =	 {{The Art of Computer Programming - Sorting and Searching}},
+	year                 =	 {1998},
+	volume               =	 {3},
+	publisher            =	 {Addison-Wesley},
+	edition              =	 {2nd}
+}
+
+; Start of entry Ko1998a
+
+@InProceedings{ Ko1998a,
+	author               =	 {Young-Bae Ko and Nitin H. Vaidya},
+	title                =	 {{Location-Aided Routing (LAR) in Mobile Ad Hoc Networks}},
+	year                 =	 {1998},
+	pages                =	 {66--75},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the fourth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '98)},
+	address              =	 {Dallas, Texas}
+}
+
+; Start of entry Ko1998b
+
+@TechReport{ Ko1998b,
+	author               =	 {Young-Bae Ko and Nitin H. Vaidya},
+	title                =	 {{Location-Based Multicast in Mobile Ad Hoc Networks}},
+	year                 =	 {1998},
+	number               =	 {98-018},
+	institution          =	 {Texas A\&M University}
+}
+
+; Start of entry Ko1999b
+
+@InProceedings{ Ko1999b,
+	author               =	 {Young-Bae Ko and Nitin H. Vaidya},
+	title                =	 {{Geocasting in Mobile Ad Hoc Networks: Location-Based Multicast Algorithms}},
+	year                 =	 {1999},
+	pages                =	 {101--110},
+	month                =	 {February},
+	booktitle            =	 {Proceedings of the 2nd IEEE Workshop on Mobile Computing Systems and Applications (WMCSA)},
+	address              =	 {New Orleans, LA}
+}
+
+; Start of entry Kohler2000a
+
+@Article{ Kohler2000a,
+	author               =	 {Eddie Kohler and Robert Morris and Benjie Chen and John Jannotti},
+	title                =	 {{The Click Modular Router}},
+	journal              =	 {{ACM} Transactions on Computer Systems},
+	year                 =	 {2000},
+	volume               =	 {18},
+	number               =	 {3},
+	pages                =	 {263--297},
+	month                =	 {August}
+}
+
+; Start of entry Kohler2001a
+
+@PhdThesis{ Kohler2001a,
+	author               =	 {Eddie Kohler},
+	title                =	 {{The Click Modular Router}},
+	year                 =	 {2001},
+	school               =	 {Massachusetts Institute of Technology}
+}
+
+; Start of entry Kuhn2002a
+
+@InProceedings{ Kuhn2002a,
+	author               =	 {Fabian Kuhn and Roger Wattenhofer and Aaron Zollinger},
+	title                =	 {{Asymptotically optimal geometric mobile ad-hoc routing}},
+	year                 =	 {2002},
+	pages                =	 {24--33},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the sixth international workshop on Discrete algorithms and methods for mobile computing and communications (DIAL-M '02)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Kuhn2003a
+
+@InProceedings{ Kuhn2003a,
+	author               =	 {Fabian Kuhn and Roger Wattenhofer and Aaron Zollinger},
+	title                =	 {{Worst-Case optimal and average-case efficient geometric ad-hoc routing}},
+	year                 =	 {2003},
+	pages                =	 {267--278},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the fourth ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '03)},
+	address              =	 {Annapolis, Maryland}
+}
+
+; Start of entry Kuhn2003b
+
+@InProceedings{ Kuhn2003b,
+	author               =	 {Fabian Kuhn and Roger Wattenhofer and Aaron Zollinger},
+	title                =	 {{Ad-Hoc Networks Beyond Unit Disk Graphs}},
+	year                 =	 {2003},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the 1st ACM DIALM-POMC Joint Workshop on Foundations of Mobile Computing (DIALM-POMC '03)},
+	address              =	 {San Diego, California}
+}
+
+; Start of entry Kuhn2003c
+
+@InProceedings{ Kuhn2003c,
+	author               =	 {Fabian Kuhn and Roger Wattenhofer and Yan Zhang and Aaron Zollinger},
+	title                =	 {{Geometric Ad-Hoc Routing: Of Theory and Practice}},
+	year                 =	 {2003},
+	pages                =	 {63--72},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of the 22nd ACM Annual Symposium on Principles of Distributed Computing (PODC '03)},
+	address              =	 {Boston, MA}
+}
+
+; Start of entry Kunz2001a
+
+@InProceedings{ Kunz2001a,
+	author               =	 {Thomas Kunz and Ed Cheng},
+	title                =	 {{Multicasting in Ad-Hoc Networks: Comparing MAODV and ODMRP}},
+	year                 =	 {2001},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the 7th European Conference on Computer Supported Cooperative Work (ECSCW 2001)},
+	address              =	 {Bonn, Germany}
+}
+
+; Start of entry Kwon2002a
+
+@Article{ Kwon2002a,
+	author               =	 {Taek Jin Kwon and Mario Gerla},
+	title                =	 {{Efficient Flooding with Passive Clustering (PC) in Ad Hoc Networks}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {2002},
+	volume               =	 {32},
+	number               =	 {1},
+	pages                =	 {44--56},
+	month                =	 {January}
+}
+
+; Start of entry Kwon2003a
+
+@InProceedings{ Kwon2003a,
+	author               =	 {Younggoo Kwon and Yuguang Fang and Haniph Latchman},
+	title                =	 {{A Novel MAC Protocol with Fast Collision Resolution for Wireless LANs}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Labiod2001a
+
+@Misc{ Labiod2001a,
+	author               =	 {Houda Labiod and Hasnaa Moustafa},
+	title                =	 {{The Source Routing-based Multicast Protocol for Mobile Ad Hoc Networks (SRMP)}},
+	year                 =	 {2001},
+	month                =	 {November},
+	howpublished         =	 {Internet Draft, draft-labiod-manet-srmp-00.txt, work in progress}
+}
+
+; Start of entry Lang2002a
+
+@MastersThesis{ Lang2002a,
+	author               =	 {Thomas Lang},
+	title                =	 {{Location Based Multicast for Wireless Networks}},
+	year                 =	 {2002},
+	school               =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Law2000a
+
+@Book{ Law2000a,
+	author               =	 {Averill M. Law and W. David Kelton},
+	title                =	 {{Simulation Modeling and Analysis}},
+	year                 =	 {2000},
+	publisher            =	 {McGraw-Hill},
+	edition              =	 {3rd}
+}
+
+; Start of entry Lee1999a
+
+@InProceedings{ Lee1999a,
+	author               =	 {Sung-Ju Lee and Mario Gerla and Ching-Chuan Chiang},
+	title                =	 {{On-Demand Multicast Routing Protocol}},
+	year                 =	 {1999},
+	pages                =	 {1298--1302},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of IEEE Wireless Communications and Networking Conference (WCNC '99)},
+	address              =	 {New Orleans, LA}
+}
+
+; Start of entry Lee2000a
+
+@InProceedings{ Lee2000a,
+	author               =	 {Sung-Ju Lee and William Su and Julian Hsu and Mario Gerla and Rajive Bagrodia},
+	title                =	 {{A Performance Comparison Study of Ad Hoc Wireless Multicast Protocols}},
+	year                 =	 {2000},
+	pages                =	 {565--574},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 19th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2000)},
+	address              =	 {Tel Aviv, Israel}
+}
+
+; Start of entry Lee2000b
+
+@InProceedings{ Lee2000b,
+	author               =	 {Seungjoon Lee and Chongkwon Kim},
+	title                =	 {{Neighbor Supporting Ad hoc Multicast Routing Protocol}},
+	year                 =	 {2000},
+	pages                =	 {37--44},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the first ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '00)},
+	address              =	 {Boston, Massachusetts}
+}
+
+; Start of entry Lee2000c
+
+@Misc{ Lee2000c,
+	author               =	 {Sung-Ju Lee and William Su and Mario Gerla},
+	title                =	 {{On-Demand Multicast routing Protocol (ODMRP) for Ad Hoc Networks}},
+	year                 =	 {2000},
+	howpublished         =	 {Internet Draft, draft-ietf-manet-odmrp-02.txt, work in progress}
+}
+
+; Start of entry Lee2001a
+
+@InProceedings{ Lee2001a,
+	author               =	 {Chae Young Lee and Hee Kwun Cho},
+	title                =	 {{Multicast Routing Considering Reliability And Network Load In Wireless Ad-Hoc Network}},
+	year                 =	 {2001},
+	volume               =	 {3},
+	pages                =	 {2203--2207},
+	month                =	 {May},
+	booktitle            =	 {Proceedings of the 53rd IEEE Vehicular Technology Conference},
+	address              =	 {Rhodes, Greece}
+}
+
+; Start of entry Lee2001b
+
+@InProceedings{ Lee2001b,
+	author               =	 {Meejeong Lee and Ye Kyung Kim},
+	title                =	 {{PatchODMRP: An Ad-hoc Multicast Routing Protocol}},
+	year                 =	 {2001},
+	pages                =	 {537--543},
+	month                =	 {February},
+	booktitle            =	 {Proceedings of the 15th IEEE International Conference on Information Networking},
+	address              =	 {Beppu City, Oita, Japan}
+}
+
+; Start of entry Leibscher2004a
+
+@MastersThesis{ Leibscher2004a,
+	author               =	 {Angelika Leibscher},
+	title                =	 {{Recovery-Strategies for Beaconless, Position-Based Routing in Mobile Ad-hoc Networks}},
+	year                 =	 {2004},
+	month                =	 {March},
+	school               =	 {Department of Mathematics and Computer Science, University of Mannheim}
+}
+
+; Start of entry Li2000a
+
+@InProceedings{ Li2000a,
+	author               =	 {Jinyang Li and John Jannotti and Douglas S. J. DeCouto and David R. Karger and Robert Morris},
+	title                =	 {{A Scalable Location Service for Geographic Ad Hoc Routing}},
+	year                 =	 {2000},
+	pages                =	 {120--130},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the sixth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '00)},
+	address              =	 {Boston, Massachusetts}
+}
+
+; Start of entry Li2001a
+
+@InProceedings{ Li2001a,
+	author               =	 {Jinyang Li and Charles Blake and Douglas S. J. DeCouto and Hu Imm Lee and Robert Morris},
+	title                =	 {{Capacity of Ad Hoc Wireless Networks}},
+	year                 =	 {2001},
+	pages                =	 {61--69},
+	month                =	 {July},
+	booktitle            =	 {Proceedings of the seventh annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '01)},
+	address              =	 {Rome, Italy}
+}
+
+; Start of entry Liang2003a
+
+@InProceedings{ Liang2003a,
+	author               =	 {Ben Liang and Zygmunt J. Haas},
+	title                =	 {{Optimizing Route-Cache Lifetime in Ad Hoc Networks}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Lin1999a
+
+@InProceedings{ Lin1999a,
+	author               =	 {Chunhung Richard Lin and Shiang-Wei Chao},
+	title                =	 {{A Multicast Routing Protocol for Multihop Wireless Networks}},
+	year                 =	 {1999},
+	pages                =	 {235--239},
+	month                =	 {December},
+	booktitle            =	 {Proceedings of IEEE Global Telecommunications Conference (Globecom1999)},
+	address              =	 {Rio de Janeiro, Brazil}
+}
+
+; Start of entry Lin2001a
+
+@InProceedings{ Lin2001a,
+	author               =	 {Xu Lin and Mouhsine Lakshdisi and Ivan Stojmenovic},
+	title                =	 {{Location Based Localized Alternate, Disjoint, Multi-path and Component Routing Schemes for Wireless Networks (Poster Abstract)}},
+	year                 =	 {2001},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Lin2003a
+
+@Article{ Lin2003a,
+	author               =	 {Xu Lin and Ivan Stojmenovic},
+	title                =	 {{Location based localized alternate, disjoint and multi-path routing algorithms for wireless networks}},
+	journal              =	 {Journal of Parallel and Distributed Computing},
+	year                 =	 {2003},
+	volume               =	 {63},
+	number               =	 {1},
+	pages                =	 {22--32}
+}
+
+; Start of entry Liu1999a
+
+@TechReport{ Liu1999a,
+	author               =	 {Mingyan Liu and Rajesh R. Talpade and Anthony McAuley and Ethendranath Bommaiah},
+	title                =	 {{AMRoute: Adhoc Multicast Routing Protocol}},
+	year                 =	 {1999},
+	key                  =	 {TR 99-1},
+	institution          =	 {CSHCN, University of Maryland}
+}
+
+; Start of entry Liu2003a
+
+@InProceedings{ Liu2003a,
+	author               =	 {Benyuan Liu and Zhen Liu and Don Towsley},
+	title                =	 {{On the Capacity of Hybrid Wireless Networks}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Lochert2003a
+
+@InProceedings{ Lochert2003a,
+	author               =	 {Christian Lochert and Hannes Hartenstein and Jing Tian and Holger F{\"{u}}{\ss{}}ler and Dagmar Herrmann and Martin Mauve},
+	title                =	 {{A Routing Strategy for Vehicular Ad Hoc Networks in City Environments}},
+	year                 =	 {2003},
+	pages                =	 {156--161},
+	month                =	 {June},
+	booktitle            =	 {Proc. of IEEE Intelligent Vehicles Symposium (IV2003)},
+	address              =	 {Columbus, OH}
+}
+
+; Start of entry Lochert2003b
+
+@MastersThesis{ Lochert2003b,
+	author               =	 {Christian Lochert},
+	title                =	 {{Ad Hoc Routing f{\"{u}}r die Kommunikation zwischen Fahrzeugen in Stadtszenarien}},
+	year                 =	 {2003},
+	school               =	 {Department of Mathematics and Computer Science, University of Mannheim}
+}
+
+; Start of entry Lundgren2002a
+
+@InProceedings{ Lundgren2002a,
+	author               =	 {Henrik Lundgren and Erik Nordstr{\"{o}}m and Christian Tschudin},
+	title                =	 {{Coping with communication gray zones in IEEE 802.11b based ad hoc networks}},
+	year                 =	 {2002},
+	pages                =	 {49--55},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the fifth ACM international workshop on Wireless mobile multimedia},
+	address              =	 {Atlanta, GA}
+}
+
+; Start of entry Lundgren2002b
+
+@InProceedings{ Lundgren2002b,
+	author               =	 {Henrik Lundgren and David Lundberg and Johan Nielsen and Erik Nordstr{\"{o}}m and Christian Tschudin},
+	title                =	 {{A large-scale testbed for reproducible Ad Hoc protocol evaluations}},
+	year                 =	 {2002},
+	pages                =	 {337--343},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of IEEE Wireless Communications and Networking Conference (WCNC '02)},
+	address              =	 {Orlando, FL}
+}
+
+; Start of entry Luo2003a
+
+@InProceedings{ Luo2003a,
+	author               =	 {Jun Luo and Jean-Pierre Hubaux and Patrick Th. Eugster},
+	title                =	 {{PAN: Providing Relieable Storage in Mobile Ad Hoc Networks with Probabilistic Quorum Systems}},
+	year                 =	 {2003},
+	pages                =	 {1--12},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the fourth ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '03)},
+	address              =	 {Annapolis, Maryland}
+}
+
+; Start of entry Maltz1999a
+
+@TechReport{ Maltz1999a,
+	author               =	 {David A. Maltz and Josh Broch and David B. Johnson},
+	title                =	 {{Experiences designing and building a multi-hop wireless ad hoc network testbed}},
+	year                 =	 {1999},
+	number               =	 {CMU-CS-99-116},
+	institution          =	 {School of Computer Science, Carnegie Mellon University}
+}
+
+; Start of entry Maltz1999b
+
+@Article{ Maltz1999b,
+	author               =	 {David A. Maltz and Josh Broch and Jorjeta G. Jetcheva and David B. Johnson},
+	title                =	 {{The Effects of On-Demand Behavior in Routing Protocols for Multi-Hop Wireless Ad Hoc Networks}},
+	journal              =	 {IEEE Journal on Selected Areas in Communications (special issue on mobile and wireless networks)},
+	year                 =	 {1999},
+	volume               =	 {17},
+	number               =	 {8},
+	pages                =	 {1439--1453},
+	month                =	 {August}
+}
+
+; Start of entry Marina2002a
+
+@InProceedings{ Marina2002a,
+	author               =	 {Mahesh K. Marina and Samir R. Das},
+	title                =	 {{Routing performance in the presence of unidirectional links in multihop wireless networks}},
+	year                 =	 {2002},
+	pages                =	 {12--23},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the third ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '02)},
+	address              =	 {Lausanne, Switzerland}
+}
+
+; Start of entry Matsumoto1998a
+
+@Article{ Matsumoto1998a,
+	author               =	 {Makoto Matsumoto and Takuji Nishimura},
+	title                =	 {{Mersenne Twister: A 623-Dimensionally Equidistributed Uniform Pseudo-Random Number Generator}},
+	journal              =	 {ACM Transactions on Modeling and Computer Simulation},
+	year                 =	 {1998},
+	volume               =	 {8},
+	number               =	 {1},
+	pages                =	 {3--30},
+	month                =	 {January}
+}
+
+; Start of entry Mauve2001a
+
+@Article{ Mauve2001a,
+	author               =	 {Martin Mauve and J{\"{o}}rg Widmer and Hannes Hartenstein},
+	title                =	 {{A Survey on Position-Based Routing in Mobile Ad-Hoc Networks}},
+	journal              =	 {IEEE Network},
+	year                 =	 {2001},
+	volume               =	 {15},
+	number               =	 {6},
+	pages                =	 {30--39},
+	month                =	 {November/December}
+}
+
+; Start of entry Mauve2002a
+
+@Article{ Mauve2002a,
+	author               =	 {Martin Mauve and Hannes Hartenstein and Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Wolfgang Effelsberg},
+	title                =	 {{Positionsbasiertes Routing f{\"{u}}r die Kommunikation zwischen Fahrzeugen}},
+	journal              =	 {it + ti},
+	year                 =	 {2002},
+	volume               =	 {44},
+	number               =	 {5},
+	pages                =	 {278--286},
+	month                =	 {October}
+}
+
+; Start of entry Mauve2003a
+
+@TechReport{ Mauve2003a,
+	author               =	 {Martin Mauve and Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Thomas Lang},
+	title                =	 {{Position-Based Multicast Routing for Mobile Ad-Hoc Networks}},
+	year                 =	 {2003},
+	number               =	 {TR-03-004},
+	institution          =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Mauve2003b
+
+@InProceedings{ Mauve2003b,
+	author               =	 {Martin Mauve and Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Thomas Lang},
+	title                =	 {{Poster: Position-Based Multicast Routing for Mobile Ad-Hoc Networks}},
+	year                 =	 {2003},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the fourth ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '03, electronic edition)},
+	address              =	 {Annapolis, Maryland}
+}
+
+; Start of entry Mauve2003c
+
+@Article{ Mauve2003c,
+	author               =	 {Martin Mauve and Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Thomas Lang},
+	title                =	 {{Position-based multicast routing for mobile Ad-hoc networks}},
+	journal              =	 {ACM SIGMOBILE Mobile Computing and Communications Review (MC2R)},
+	year                 =	 {2003},
+	volume               =	 {7},
+	number               =	 {3},
+	pages                =	 {53--55},
+	month                =	 {July}
+}
+
+; Start of entry McDonald2000a
+
+@InProceedings{ McDonald2000a,
+	author               =	 {A. Bruce McDonald and Taieb Znati},
+	title                =	 {{Predicting node proximity in ad-hoc networks: a least overhead adaptive model for selecting stable routes}},
+	year                 =	 {2000},
+	pages                =	 {29--33},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the first ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '00)},
+	address              =	 {Boston, Massachusetts}
+}
+
+; Start of entry Meggers1998a
+
+@InProceedings{ Meggers1998a,
+	author               =	 {Jens Meggers and Georg Filios},
+	title                =	 {{Multicast Communication in "ad hoc" Networks}},
+	year                 =	 {1998},
+	pages                =	 {372--376},
+	month                =	 {May},
+	booktitle            =	 {Proceedings of the IEEE 48th Vehicular Technology Conference (VTC'98)},
+	address              =	 {Ottawa, Canada}
+}
+
+; Start of entry Mitzenmacher2001a
+
+@InProceedings{ Mitzenmacher2001a,
+	author               =	 {Michael Mitzenmacher},
+	title                =	 {{Compressed Bloom Filters}},
+	year                 =	 {2001},
+	pages                =	 {144--150},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the 20th Annual ACM Symposium on Principles of Distributed Computing},
+	address              =	 {Newport, Rhode Island, USA}
+}
+
+; Start of entry Moeske2003a
+
+@MastersThesis{ Moeske2003a,
+	author               =	 {Michael M{\"{o}}ske},
+	title                =	 {{Real-World Evaluation of a Vehicular Ad Hoc Network using Position-Based Routing}},
+	year                 =	 {2003},
+	school               =	 {Department of Computer Science, University of Mannheim}
+}
+
+; Start of entry Moeske2004a
+
+@InProceedings{ Moeske2004a,
+	author               =	 {Michael M{\"{o}}ske and Holger F{\"{u}}{\ss{}}ler and Hannes Hartenstein and Walter Franz},
+	title                =	 {{Performance Measurements of a Vehicular Ad Hoc Network}},
+	year                 =	 {2004},
+	month                =	 {May},
+	booktitle            =	 {Accepted for Proceedings of the IEEE Vehicular Technology Conference (VTC'04 Spring)},
+	address              =	 {Milan, Italy}
+}
+
+; Start of entry Morris2000a
+
+@InProceedings{ Morris2000a,
+	author               =	 {Robert Morris and John Jannotti and Frans Kaashoek and Jinyang Li and Douglas S. J. DeCouto},
+	title                =	 {{CarNet: A Scalable Ad Hoc Wireless Network System}},
+	year                 =	 {2000},
+	pages                =	 {127ff},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the 9th ACM SIGOPS European workshop: Beyond the PC: New Challenges for the Operating System},
+	address              =	 {Kolding, Denmark}
+}
+
+; Start of entry Mosko2002a
+
+@InProceedings{ Mosko2002a,
+	author               =	 {Marc Mosko and J. J. Garcia-Luna-Aceves},
+	title                =	 {{A self-correcting neighbor protocol for mobile ad-hoc wireless networks}},
+	year                 =	 {2002},
+	pages                =	 {556--560},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the 11th IEEE International Conference on Computer Communications and Networks (ICCCN '02)},
+	address              =	 {Miame, Florida}
+}
+
+; Start of entry Moustafa2002a
+
+@InProceedings{ Moustafa2002a,
+	author               =	 {Hasnaa Moustafa and Houda Labiod},
+	title                =	 {{SRMP: A Mesh-based Protocol for Multicast Communication in ad hoc networks}},
+	year                 =	 {2002},
+	pages                =	 {43--48},
+	month                =	 {May},
+	booktitle            =	 {2002 International Conference on Third Generation Wireless and Beyond},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Nagaosa2000a
+
+@InProceedings{ Nagaosa2000a,
+	author               =	 {Tomotaka Nagaosa and Takaaki Hasegawa},
+	title                =	 {{A hierarchical vehicle position encoding scheme in inter-verhicle communication networks}},
+	year                 =	 {2000},
+	pages                =	 {168--171},
+	month                =	 {May},
+	booktitle            =	 {Proceedings of the IEEE 50th Vehicular Technology Conference (VTC'00)},
+	address              =	 {Birmingham, Al}
+}
+
+; Start of entry Naoumov2003a
+
+@InProceedings{ Naoumov2003a,
+	author               =	 {Valeri Naoumov and Thomas Gross},
+	title                =	 {{Simulation of Large Ad Hoc Networks}},
+	year                 =	 {2003},
+	pages                =	 {50--57},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the sixth ACM International Workshop on Modeling, Analysis and Simulation of Wireless and Mobile Systems (MSWiM '03)},
+	address              =	 {San Diego, California}
+}
+
+; Start of entry Nath2003a
+
+@Article{ Nath2003a,
+	author               =	 {Badri Nath and Drago{\c s} Niculescu},
+	title                =	 {{Routing on a Curve}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {2003},
+	volume               =	 {33},
+	number               =	 {1},
+	pages                =	 {155--160},
+	month                =	 {January}
+}
+
+; Start of entry Navas1997a
+
+@InProceedings{ Navas1997a,
+	author               =	 {Julio C. Navas and Tomasz Imielinski},
+	title                =	 {{GeoCast -- Geographic Addressing and Routing}},
+	year                 =	 {1997},
+	pages                =	 {66--76},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the third annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '97)},
+	address              =	 {Budapest, Hungary}
+}
+
+; Start of entry Neufeld2002a
+
+@InProceedings{ Neufeld2002a,
+	author               =	 {Michael Neufeld and Ashish Jain and Dirk Grunwald},
+	title                =	 {{Nsclick: Bridging Network Simulation and Deployment}},
+	year                 =	 {2002},
+	pages                =	 {74--81},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the fifth ACM International Workshop on Modeling, Analysis and Simulation of Wireless and Mobile Systems (MSWiM '02)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Ni1999a
+
+@InProceedings{ Ni1999a,
+	author               =	 {Sze-Yao Ni and Tseng Yu-Chee and Chen Yuh-Shyan and Sheu Jang-Ping},
+	title                =	 {{The Broadcast Storm Problem in a Mobile Ad Hoc Network}},
+	year                 =	 {1999},
+	pages                =	 {151--162},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the fifth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '99)},
+	address              =	 {Seattle, Washington}
+}
+
+; Start of entry Niculescu2003a
+
+@InProceedings{ Niculescu2003a,
+	author               =	 {Drago{\c s} Niculescu and Badri Nath},
+	title                =	 {{Ad Hoc Positioning System (APS) using AOA}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Nonnenmacher1999a
+
+@Article{ Nonnenmacher1999a,
+	author               =	 {J{\"{o}}rg Nonnenmacher and Ernst W. Biersack},
+	title                =	 {{Scalable Feedback for Large Groups}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {1999},
+	volume               =	 {7},
+	number               =	 {3},
+	pages                =	 {375--386}
+}
+
+; Start of entry Obraczka1998a
+
+@InProceedings{ Obraczka1998a,
+	author               =	 {Katia Obraczka and Gene Tsudik},
+	title                =	 {{Multicast Routing Issues in Ad Hoc Networks}},
+	year                 =	 {1998},
+	month                =	 {October},
+	booktitle            =	 {IEEE International Conference on Universal Personal Communications (ICUPC '98)},
+	address              =	 {Florence, Italy}
+}
+
+; Start of entry Ogier2001a
+
+@Misc{ Ogier2001a,
+	author               =	 {Richard G. Ogier and Fred L. Templin and Bhargav Bellur and Mark G. Lewis},
+	title                =	 {{Topology Broadcast Based on Reverse-Path Forwarding (TBRPF)}},
+	year                 =	 {2001},
+	month                =	 {November},
+	howpublished         =	 {Internet Draft, draft-ietf-manet-tbrpf-03.txt, work in progress}
+}
+
+; Start of entry Ozaki1999a
+
+@InProceedings{ Ozaki1999a,
+	author               =	 {Tomochika Ozaki and Jaime Bae Kim and Tatsuya Suda},
+	title                =	 {{Bandwidth-Efficient Multicast Routing Protocol for Ad-Hoc Networks}},
+	year                 =	 {1999},
+	pages                =	 {1182--1191},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the 8th IEEE International Conference on Computer Communications and Networks (ICCCN '99)},
+	address              =	 {Boston, MA}
+}
+
+; Start of entry Ozaki2001a
+
+@InProceedings{ Ozaki2001a,
+	author               =	 {Tomochika Ozaki and Jaime Bae Kim and Tatsuya Suda},
+	title                =	 {{Bandwidth-Efficient Multicast Routing for Multihop, Ad-Hoc Wireless Networks}},
+	year                 =	 {2001},
+	pages                =	 {1182--1191},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the 20th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2001)},
+	address              =	 {Anchorage, Alaska}
+}
+
+; Start of entry Pagani1999a
+
+@InProceedings{ Pagani1999a,
+	author               =	 {Elena Pagani and Gian Paolo Rossi},
+	title                =	 {{An On-Demand Shared Tree with Hybrid State for Multicast Routing in Ad Hoc Mobile Wireless Networks}},
+	year                 =	 {1999},
+	pages                =	 {4--9},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the IEEE International Workshops on Parallel Processing},
+	address              =	 {Wakamatsu, Japan}
+}
+
+; Start of entry Papoulis1991a
+
+@Book{ Papoulis1991a,
+	author               =	 {Athanasios Papoulis},
+	title                =	 {{Probability, Random Variables, and Stochastic Processes}},
+	year                 =	 {1991},
+	publisher            =	 {WCB/McGraw-Hill},
+	edition              =	 {3rd}
+}
+
+; Start of entry Park1988a
+
+@Article{ Park1988a,
+	author               =	 {Stephen K. Park and Keith W. Miller},
+	title                =	 {{Random Number Generators: Good Ones are Hard to Find}},
+	journal              =	 {Communications of the ACM},
+	year                 =	 {1988},
+	volume               =	 {31},
+	number               =	 {10},
+	pages                =	 {1192--1201},
+	month                =	 {October}
+}
+
+; Start of entry Park1997a
+
+@InProceedings{ Park1997a,
+	author               =	 {Vincent D. Park and M. Scott Corson},
+	title                =	 {{A Highly Adaptive Distributed Routing Algorithm for Mobile Wireless Networks}},
+	year                 =	 {1997},
+	pages                =	 {1405--1413},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the 16th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 1997)},
+	address              =	 {Kobe, Japan}
+}
+
+; Start of entry Partridge1998a
+
+@Article{ Partridge1998a,
+	author               =	 {Craig Partridge and Philip P. Carvey and Ed Burgess and Isidro Castineyra and Tom Clarke and Lise Graham and Michael Hathaway and Phil Herman and Allen King and Steve Kohalmi and Tracy Ma and John Mcallen and Trevor Mendez and Walter C. Milliken and Ronald Pettyjohn and John Rokosz and Joshua Seeger and Michael Sollins and Steve Storch and Benjamin Tober and Gregory D. Troxel and David Waitzman and Scott Winterble},
+	title                =	 {{A 50-Gb/s IP router}},
+	journal              =	 {IEEE/ACM Transactions on Networking (TON)},
+	year                 =	 {1998},
+	volume               =	 {6},
+	number               =	 {3},
+	pages                =	 {237--248},
+	month                =	 {June}
+}
+
+; Start of entry Pawlikowski2002a
+
+@Article{ Pawlikowski2002a,
+	author               =	 {Krzysztof Pawlikowski and Hae-Duck Joshua Jeong and Jong-Suk Ruth Lee},
+	title                =	 {{On Creditibility of Simulation Studies of Telecommunications Networks}},
+	journal              =	 {IEEE Communications Magazine},
+	year                 =	 {2002},
+	month                =	 {January}
+}
+
+; Start of entry Pei2001a
+
+@Article{ Pei2001a,
+	author               =	 {Guangyu Pei and Mario Gerla},
+	title                =	 {{Mobility management for hierarchical wireless networks}},
+	journal              =	 {Mobile Networks and Applications},
+	year                 =	 {2001},
+	volume               =	 {6},
+	number               =	 {4},
+	pages                =	 {331--337}
+}
+
+; Start of entry Perkins1994a
+
+@InProceedings{ Perkins1994a,
+	author               =	 {Charles E. Perkins and Pravin Bhagwat},
+	title                =	 {{Highly Dynamic Destination-Sequenced Distance-Vector Routing {(DSDV)}}},
+	year                 =	 {1994},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the conference on Communications architectures, protocols and applications (SIGCOMM '94)},
+	address              =	 {London, United Kingdom}
+}
+
+; Start of entry Perkins1999a
+
+@InProceedings{ Perkins1999a,
+	author               =	 {Charles E. Perkins and Elizabeth M. Royer},
+	title                =	 {{Ad-Hoc On-Demand Distance Vector Routing}},
+	year                 =	 {1999},
+	pages                =	 {90--100},
+	month                =	 {February},
+	booktitle            =	 {Proceedings of the 2nd IEEE Workshop on Mobile Computing Systems and Applications (WMCSA)},
+	address              =	 {New Orleans, LA}
+}
+
+; Start of entry Perkins2001a
+
+@Book{ Perkins2001a,
+	author               =	 {Charles E. Perkins},
+	title                =	 {{Ad Hoc Networking}},
+	year                 =	 {2001},
+	publisher            =	 {Addison-Wesley}
+}
+
+; Start of entry Raju2001a
+
+@Article{ Raju2001a,
+	author               =	 {Jyoti Raju and J. J. Garcia-Luna-Aceves},
+	title                =	 {{Scenario-based Comparison of Source-Tracing and Dynamic Source Routing Protocols for Ad Hoc Networks}},
+	journal              =	 {Computer Communication Review},
+	year                 =	 {2001},
+	volume               =	 {31},
+	number               =	 {5},
+	pages                =	 {70--81},
+	month                =	 {October}
+}
+
+; Start of entry Ramakrishna1989a
+
+@Article{ Ramakrishna1989a,
+	author               =	 {M. V. Ramakrishna},
+	title                =	 {{Practical Performance Of Bloom Filters and Parallel Free-Text Searching}},
+	journal              =	 {Communications of the ACM},
+	year                 =	 {1989},
+	volume               =	 {32},
+	number               =	 {10},
+	pages                =	 {1237--1239},
+	month                =	 {October}
+}
+
+; Start of entry Rao2003a
+
+@InProceedings{ Rao2003a,
+	author               =	 {Ananth Rao and Christos Papadimitriou and Scott Shenker and Ian Stoica},
+	title                =	 {{Geographic Routing without location information}},
+	year                 =	 {2003},
+	pages                =	 {96--108},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the ninth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '03)},
+	address              =	 {San Diego, California}
+}
+
+; Start of entry Ratnasamy2002a
+
+@InProceedings{ Ratnasamy2002a,
+	author               =	 {Sylvia Ratnasamy and Brad N. Karp and Li Yin and Fang Yu and Deborah Estrin and Ramesh Govindan and Scott Shenker},
+	title                =	 {{GHT: a geographic hash table for data-centric storage}},
+	year                 =	 {2002},
+	pages                =	 {78--87},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the first ACM international workshop on Wireless sensor networks and applications (WSNA 2002)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Roemer2001a
+
+@InProceedings{ Roemer2001a,
+	author               =	 {Kay R{\"{o}}mer},
+	title                =	 {{Time synchronization in ad hoc networks}},
+	year                 =	 {2001},
+	pages                =	 {173--182},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Ross1996a
+
+@Book{ Ross1996a,
+	author               =	 {Sheldon M. Ross},
+	title                =	 {{Simulation (Statistical Modeling \& Decision Science)}},
+	year                 =	 {1996},
+	publisher            =	 {Academic Press},
+	edition              =	 {2nd}
+}
+
+; Start of entry Royer1999a
+
+@Article{ Royer1999a,
+	author               =	 {Elizabeth M. Royer and Chai-Keong Toh},
+	title                =	 {{A Review of Current Routing Protocols for Ad-Hoc Mobile Wireless Networks}},
+	journal              =	 {IEEE Personal Communications},
+	year                 =	 {1999},
+	pages                =	 {46--55},
+	month                =	 {April}
+}
+
+; Start of entry Royer1999b
+
+@InProceedings{ Royer1999b,
+	author               =	 {Elizabeth M. Royer and Charles E. Perkins},
+	title                =	 {{Multicast Operation of the Ad-hoc On-Demand Distance Vector Routing Protocol}},
+	year                 =	 {1999},
+	pages                =	 {207--218},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the fifth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '99)},
+	address              =	 {Seattle, Washington}
+}
+
+; Start of entry Royer2000a
+
+@InProceedings{ Royer2000a,
+	author               =	 {Elizabeth M. Royer and Charles E. Perkins},
+	title                =	 {{An Implementation Study of the AODV Routing Protocol}},
+	year                 =	 {2000},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of IEEE Wireless Communications and Networking Conference (WCNC '00)},
+	address              =	 {Chicago, IL}
+}
+
+; Start of entry Rozovsky2001a
+
+@InProceedings{ Rozovsky2001a,
+	author               =	 {Robert Rozovsky and P.R. Kumar},
+	title                =	 {{SEEDEX: a MAC protocol for ad hoc networks}},
+	year                 =	 {2001},
+	pages                =	 {67--75},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Saltzer1984a
+
+@Article{ Saltzer1984a,
+	author               =	 {Jerome H. Saltzer and David P. Reed and David D. Clark},
+	title                =	 {{End-to-End Arguments in System Design}},
+	journal              =	 {ACM Transactions on Computer Systems (TOCS)},
+	year                 =	 {1984},
+	volume               =	 {2},
+	number               =	 {4},
+	pages                =	 {277--288},
+	month                =	 {November}
+}
+
+; Start of entry Schiller2000a
+
+@Book{ Schiller2000a,
+	author               =	 {Jochen Schiller},
+	title                =	 {{Mobilkommunikation}},
+	year                 =	 {2000},
+	publisher            =	 {Addison-Wesley}
+}
+
+; Start of entry Schiller2000b
+
+@Book{ Schiller2000b,
+	author               =	 {Jochen Schiller},
+	title                =	 {{Mobile Communications}},
+	year                 =	 {2000},
+	publisher            =	 {Addison-Wesley}
+}
+
+; Start of entry Schmidt1990a
+
+@InProceedings{ Schmidt1990a,
+	author               =	 {Douglas C. Schmidt},
+	title                =	 {{GPERF - A Perfect Hash Function Generator}},
+	year                 =	 {1990},
+	pages                =	 {87--102},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the second USENIX C++ Conference 1990},
+	address              =	 {San Francisco, California}
+}
+
+; Start of entry Schwingenschlogl2002a
+
+@Article{ Schwingenschlogl2002a,
+	author               =	 {Christian Schwingenschlogl and Timo Kosch},
+	title                =	 {{Geocast enhancements of AODV for vehicular networks}},
+	journal              =	 {ACM SIGMOBILE Mobile Computing and Communications Review (MC2R)},
+	year                 =	 {2002},
+	volume               =	 {6},
+	number               =	 {3},
+	pages                =	 {96--97},
+	month                =	 {July}
+}
+
+; Start of entry Sedgewick1992a
+
+@Book{ Sedgewick1992a,
+	author               =	 {Robert Sedgewick},
+	title                =	 {{Algorithmen in C}},
+	year                 =	 {1992},
+	publisher            =	 {Addison-Wesley}
+}
+
+; Start of entry Servetto2002a
+
+@InProceedings{ Servetto2002a,
+	author               =	 {Sergio D. Servetto and Guillermo Barrenechea},
+	title                =	 {{Constrained random walks on random graphs: routing algorithms for large scale wireless sensor networks}},
+	year                 =	 {2002},
+	pages                =	 {12--21},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the first ACM international workshop on Wireless sensor networks and applications (WSNA 2002)},
+	address              =	 {Atlanta, Georgia}
+}
+
+; Start of entry Shang2003a
+
+@InProceedings{ Shang2003a,
+	author               =	 {Yi Shang and Wheeler Ruml and Ying Zhang and Markus P. J. Fromherz},
+	title                =	 {{Localization from mere connectivity}},
+	year                 =	 {2003},
+	pages                =	 {201--212},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the fourth ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '03)},
+	address              =	 {Annapolis, Maryland}
+}
+
+; Start of entry Shenker2003a
+
+@Article{ Shenker2003a,
+	author               =	 {Scott Shenker and Sylvia Ratnasamy and Brad Karp and Ramesh Govindan and Deborah Estrin},
+	title                =	 {{Data-Centric Storage in Sensornets}},
+	journal              =	 {ACM SIGCOMM Computer Communication Review (CCR)},
+	year                 =	 {2003},
+	volume               =	 {33},
+	number               =	 {1},
+	pages                =	 {137--142},
+	month                =	 {January}
+}
+
+; Start of entry Shepard1996a
+
+@InProceedings{ Shepard1996a,
+	author               =	 {Timothy J. Shepard},
+	title                =	 {{A channel access scheme for large dense packet radio networks}},
+	year                 =	 {1996},
+	pages                =	 {219--230},
+	month                =	 {August},
+	booktitle            =	 {Conference proceedings on Applications, technologies, architectures, and protocols for computer communications (SIGCOMM '96)},
+	address              =	 {Palo Alto, California}
+}
+
+; Start of entry Singh2000a
+
+@Misc{ Singh2000a,
+	author               =	 {Harkirat Singh},
+	title                =	 {{Survey of Ad-hoc Multicast Protocols}},
+	year                 =	 {2000},
+	howpublished         =	 {available from http://www.cs.pdx.edu/~harkirat/projects.html}
+}
+
+; Start of entry Singh2002a
+
+@InProceedings{ Singh2002a,
+	author               =	 {Jatinder Pal Singh and Nicholas Bambos and Bhaskar Srinivasan and Detlef Clawin},
+	title                =	 {{Wireless LAN Performance under Varied Stress Conditions in Vehicular Traffic Scenarios}},
+	year                 =	 {2002},
+	volume               =	 {2},
+	pages                =	 {743--747},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the IEEE 56th Vehicular Technology Conference (VTC'00)},
+	address              =	 {Vancouver, Canada}
+}
+
+; Start of entry Sinha1999a
+
+@InProceedings{ Sinha1999a,
+	author               =	 {Prasun Sinha and Raghupathy Sivakumar and Vaduvur Bharghavan},
+	title                =	 {{MCEDAR: Multicast Core-Extraction Distributed Ad hoc Routing}},
+	year                 =	 {1999},
+	pages                =	 {1313--1317},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of IEEE Wireless Communications and Networking Conference (WCNC '99)},
+	address              =	 {New Orleans, LA}
+}
+
+; Start of entry Sinha1999b
+
+@InProceedings{ Sinha1999b,
+	author               =	 {Prasun Sinha and Narayanan Venkitaraman and Raghupathy Sivakumar and Vaduvur Bharghavan},
+	title                =	 {{WTCP: A Reliable Transport Protocol for Wireless Wide-Area Networks}},
+	year                 =	 {1999},
+	pages                =	 {231--241},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the fifth annual ACM/IEEE International Conference on Mobile computing and networking (MobiCom '99)},
+	address              =	 {Seattle, Washington}
+}
+
+; Start of entry Sinha2002a
+
+@InProceedings{ Sinha2002a,
+	author               =	 {Prasun Sinha and Narayanan Venkitaraman and Raghupathy Sivakumar and Vaduvur Bharghavan},
+	title                =	 {{WTCP: A Reliable Transport Protocol for Wireless Wide-Area Networks}},
+	volume               =	 {8},
+	number               =	 {2},
+	pages                =	 {301--316},
+	booktitle            =	 {Wireless Networks},
+	publisher            =	 {Kluwer Academic Publishers}
+}
+
+; Start of entry Sivakumar1998a
+
+@Article{ Sivakumar1998a,
+	author               =	 {Raghupathy Sivakumar and Bevan Das and Vaduvur Bharghavan},
+	title                =	 {{Spine Routing in Ad Hoc Networks}},
+	journal              =	 {ACM/Baltzer Cluster Computing Journal (special issue on Mobile Computing)},
+	year                 =	 {1998}
+}
+
+; Start of entry Sivakumar1999a
+
+@InProceedings{ Sivakumar1999a,
+	author               =	 {Raghupathy Sivakumar and Prasun Sinha and Vaduvur Bharghavan},
+	title                =	 {{CEDAR: a Core-Extraction Distributed Ad Hoc Routing Algorithm}},
+	year                 =	 {1999},
+	pages                =	 {202--209},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 18th Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 1999)},
+	address              =	 {New York City, New York}
+}
+
+; Start of entry Spohn2001a
+
+@InProceedings{ Spohn2001a,
+	author               =	 {Marcelo Spohn and J. J. Garcia-Luna-Aceves},
+	title                =	 {{Neighborhood Aware Source Routing}},
+	year                 =	 {2001},
+	pages                =	 {11--21},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Stanze2003a
+
+@Article{ Stanze2003a,
+	author               =	 {Oliver Stanze and Martina Zitterbart},
+	title                =	 {{Multicast-Routing in mobilen Ad-Hoc-Netzen}},
+	journal              =	 {Praxis der Informationsverarbeitung und Kommunikation},
+	year                 =	 {2003},
+	volume               =	 {4},
+	month                =	 {October}
+}
+
+; Start of entry Stevens1994a
+
+@Book{ Stevens1994a,
+	author               =	 {W. Richard Stevens},
+	title                =	 {{TCP/IP Illustrated}},
+	year                 =	 {1994},
+	volume               =	 {1},
+	publisher            =	 {Addison Wesley Longman}
+}
+
+; Start of entry Stevens1998a
+
+@Book{ Stevens1998a,
+	author               =	 {W. Richard Stevens},
+	title                =	 {{UNIX Network Programming}},
+	year                 =	 {1998},
+	volume               =	 {1},
+	publisher            =	 {Prentice Hall},
+	edition              =	 {2nd}
+}
+
+; Start of entry Stevens2004a
+
+@Book{ Stevens2004a,
+	author               =	 {W. Richard Stevens and Bill Fenner and Andrew M. Rudoff},
+	title                =	 {{UNIX Network Programming}},
+	year                 =	 {2004},
+	volume               =	 {1},
+	publisher            =	 {Addison-Wesley},
+	edition              =	 {3rd}
+}
+
+; Start of entry Stojmenovic1999a
+
+@TechReport{ Stojmenovic1999a,
+	author               =	 {Ivan Stojmenovic and Bosko Vukojevic},
+	title                =	 {{A routing strategy and quorum based location update scheme for ad hoc wireless networks}},
+	year                 =	 {1999},
+	number               =	 {TR-99-09},
+	month                =	 {September},
+	institution          =	 {Computer Science, SITE, University of Ottawa}
+}
+
+; Start of entry Stojmenovic1999b
+
+@TechReport{ Stojmenovic1999b,
+	author               =	 {Ivan Stojmenovic},
+	title                =	 {{Home agent based location update and destination search schemes in ad hoc wireless networks}},
+	year                 =	 {1999},
+	number               =	 {TR-99-10},
+	month                =	 {September},
+	institution          =	 {Computer Science, SITE, University of Ottawa}
+}
+
+; Start of entry Stojmenovic2000a
+
+@InProceedings{ Stojmenovic2000a,
+	author               =	 {Ivan Stojmenovic and Mark Russel},
+	title                =	 {{Depth first search and location based localized routing and QoS routing in wireless networks}},
+	year                 =	 {2000},
+	pages                =	 {173--180},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of IEEE International Conference on Parallel Processing}
+}
+
+; Start of entry Stojmenovic2002a
+
+@Article{ Stojmenovic2002a,
+	author               =	 {Ivan Stojmenovic},
+	title                =	 {{Position-Based Routing in Ad Hoc Networks}},
+	year                 =	 {2002},
+	volume               =	 {40},
+	number               =	 {7},
+	pages                =	 {128--134}
+}
+
+; Start of entry Su2001a
+
+@Article{ Su2001a,
+	author               =	 {William Su and Sung-Ju Lee and Mario Gerla},
+	title                =	 {{Mobility Prediction and Routing in Ad Hoc Wireless Networks}},
+	journal              =	 {International Journal of Network Management},
+	year                 =	 {2001},
+	volume               =	 {11},
+	number               =	 {1},
+	pages                =	 {3--30}
+}
+
+; Start of entry Sundaresan2003a
+
+@InProceedings{ Sundaresan2003a,
+	author               =	 {Karthikeyan Sundaresan and Vaidyanathan Anantharaman and Hung-Yun Hsieh and Raghupathy Sivakumar},
+	title                =	 {{ATP: A Reliable Transport Protocol for Ad-hoc Networks}},
+	year                 =	 {2003},
+	pages                =	 {64--75},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the fourth ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '03)},
+	address              =	 {Annapolis, Maryland}
+}
+
+; Start of entry Takai2001a
+
+@InProceedings{ Takai2001a,
+	author               =	 {Mineo Takai and Jay Martin and Rajive Bagrodia},
+	title                =	 {{Effects of wireless physical layer modeling in mobile ad hoc networks}},
+	year                 =	 {2001},
+	pages                =	 {87--94},
+	month                =	 {October},
+	booktitle            =	 {Proceedings of the second ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '01)},
+	address              =	 {Long Beach, California}
+}
+
+; Start of entry Takai2002a
+
+@TechReport{ Takai2002a,
+	author               =	 {Mineo Takai and Jay Martin and Rajive Bagrodia},
+	title                =	 {{Effects of Wireless Physical Layer Modeling in Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	institution          =	 {UCLA}
+}
+
+; Start of entry Tanenbaum1996a
+
+@Book{ Tanenbaum1996a,
+	author               =	 {Andrew S. Tanenbaum},
+	title                =	 {{Computer Networks}},
+	year                 =	 {1996},
+	publisher            =	 {Addison-Wesley},
+	edition              =	 {3rd}
+}
+
+; Start of entry Toh2000a
+
+@InProceedings{ Toh2000a,
+	author               =	 {Chai-Keong Toh and Guillermo Guichal and Santithorn Bunchua},
+	title                =	 {{ABAM: On-Demand Associativity-Based Multicast Routing for Ad Hoc Mobile Networks}},
+	year                 =	 {2000},
+	pages                =	 {987--993},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the IEEE 50th Vehicular Technology Conference (VTC'00)},
+	address              =	 {Boston, MA}
+}
+
+; Start of entry Toussaint1980a
+
+@Article{ Toussaint1980a,
+	author               =	 {Godfried Toussaint},
+	title                =	 {{The relative neighborhood graph of a finite planar set}},
+	journal              =	 {Pattern Recognition},
+	year                 =	 {1980},
+	volume               =	 {12},
+	number               =	 {4},
+	pages                =	 {261--268}
+}
+
+; Start of entry Transier2002a
+
+@MastersThesis{ Transier2002a,
+	author               =	 {Matthias Transier},
+	title                =	 {{Dynamic Load Balancing for Position-Based Routing Algorithms}},
+	year                 =	 {2002},
+	school               =	 {University of Mannheim}
+}
+
+; Start of entry Transier2004a
+
+@TechReport{ Transier2004a,
+	author               =	 {Matthias Transier and Holger F{\"{u}}{\ss{}}ler and J{\"{o}}rg Widmer and Martin Mauve and Wolfgang Effelsberg},
+	title                =	 {{A Hierarchical Approach to Position-Based Multicast for Mobile Ad-hoc Networks}},
+	year                 =	 {2004},
+	number               =	 {TR-04-002},
+	institution          =	 {Department for Mathematics and Computer Science, University of Mannheim}
+}
+
+; Start of entry Tschudin1991a
+
+@InProceedings{ Tschudin1991a,
+	author               =	 {Christian Tschudin},
+	title                =	 {{Flexible Protocol Stacks}},
+	year                 =	 {1991},
+	pages                =	 {197--205},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the conference on Communications architectures and protocols (SIGCOMM '91)},
+	address              =	 {Z{\"{u}}rich, Switzerland}
+}
+
+; Start of entry Tschudin2003a
+
+@InProceedings{ Tschudin2003a,
+	author               =	 {Christian Tschudin and Henrik Lundgren and Erik Nordstr{\"{o}}m},
+	title                =	 {{Embedding MANETs in the Real World}},
+	year                 =	 {2003},
+	pages                =	 {578--589},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the IFIP-TC6 8th International Conference on Personal Wireless Communications (PWC '03)},
+	address              =	 {Venice, Italy}
+}
+
+; Start of entry Valera2003a
+
+@InProceedings{ Valera2003a,
+	author               =	 {Alvin Valera and Winston K. G. Seah and SV Rao},
+	title                =	 {{Cooperative Packet Caching and Shortest Multipath Routing in Mobile Ad Hoc Networks}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Walsh2003a
+
+@InProceedings{ Walsh2003a,
+	author               =	 {Kevin Walsh and Emin G{\"{u}}n Sirer},
+	title                =	 {{Staged Simulation for Improving Scale and Performance of Wireless Network Simulations}},
+	year                 =	 {2003},
+	pages                =	 {667--675},
+	month                =	 {December},
+	booktitle            =	 {Proceedings of the 2003 Winter Simulation Conference},
+	address              =	 {New Orleans, LA}
+}
+
+; Start of entry Walsh2004a
+
+@Article{ Walsh2004a,
+	author               =	 {Kevin Walsh and Emin G{\"{u}}n Sirer},
+	title                =	 {{Staged Simulation: A General Technique for Improving Simulation Scale and Performance}},
+	journal              =	 {ACM Transactions on Modelling and Computer Simulation (TOMACS)},
+	year                 =	 {2004},
+	month                =	 {April (to appear)}
+}
+
+; Start of entry Wang2001a
+
+@InProceedings{ Wang2001a,
+	author               =	 {Kuochen Wang and Chaou-Tang Chang},
+	title                =	 {{An intelligent on-demand multicast routing protocol in ad hoc networks}},
+	year                 =	 {2001},
+	pages                =	 {909--914},
+	month                =	 {February},
+	booktitle            =	 {Proceedings of the 15th IEEE International Conference on Information Networking},
+	address              =	 {Beppu City, Oita, Japan}
+}
+
+; Start of entry Widmer2001a
+
+@InProceedings{ Widmer2001a,
+	author               =	 {J{\"{o}}rg Widmer and Thomas T. Fuhrmann},
+	title                =	 {{Extremum Feedback for Very Large Multicast Groups}},
+	year                 =	 {2001},
+	pages                =	 {56--75},
+	month                =	 {November},
+	booktitle            =	 {Proceedings of the Third International Workshop on Networked Group Communication (NGC)}
+}
+
+; Start of entry Widmer2001b
+
+@Article{ Widmer2001b,
+	author               =	 {J{\"{o}}rg Widmer and Robert Denda and Martin Mauve},
+	title                =	 {{A Survey on TCP-Friendly Congestion Control}},
+	journal              =	 {Special Issue of the IEEE Network Magazine "Control of Best Effort Traffic"},
+	year                 =	 {2001},
+	volume               =	 {15},
+	number               =	 {3},
+	pages                =	 {28--37},
+	month                =	 {May/June}
+}
+
+; Start of entry Widmer2002a
+
+@InCollection{ Widmer2002a,
+	author               =	 {J{\"{o}}rg Widmer and Martin Mauve and Hannes Hartenstein and Holger F{\"{u}}{\ss{}}ler},
+	title                =	 {{Position-Based Routing in Ad-Hoc Wireless Networks}},
+	year                 =	 {2002},
+	pages                =	 {12-1--12-14},
+	month                =	 {December},
+	booktitle            =	 {The Handbook of Ad Hoc Wireless Networks},
+	editor               =	 {Mohammad Ilyas},
+	address              =	 {Boca Raton, FL, U.S.A.},
+	publisher            =	 {CRC Press}
+}
+
+; Start of entry Williams2002a
+
+@InProceedings{ Williams2002a,
+	author               =	 {Brad Williams and Tracy Camp},
+	title                =	 {{Comparison of Broadcasting Techniques for Mobile Ad Hoc Networks}},
+	year                 =	 {2002},
+	pages                =	 {194--205},
+	month                =	 {June},
+	booktitle            =	 {Proceedings of the third ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '02)},
+	address              =	 {Lausanne, Switzerland}
+}
+
+; Start of entry Wischhof2003a
+
+@InProceedings{ Wischhof2003a,
+	author               =	 {Lars Wischhof and Andr{\'{e}} Ebner and Hermann Rohling and Matthias Lott and R{\"{u}}diger Halfmann},
+	title                =	 {{SOTIS - A Self-Organizing Traffic Information System}},
+	year                 =	 {2003},
+	month                =	 {April},
+	booktitle            =	 {Proceedings of the IEEE 57th Vehicular Technology Conference (VTC'03 Spring)},
+	address              =	 {Jeju, Korea}
+}
+
+; Start of entry Wu1999a
+
+@InProceedings{ Wu1999a,
+	author               =	 {Chun Wei Wu and Yong Chiang Tay},
+	title                =	 {{AMRIS: A Multicast Protocol for Ad Hoc Wireless Networks}},
+	year                 =	 {1999},
+	pages                =	 {25--29},
+	month                =	 {November},
+	booktitle            =	 {Proc. of IEEE Military Communications Conference (MILCOM)},
+	address              =	 {Atlantic City, NJ}
+}
+
+; Start of entry Wu2003a
+
+@InProceedings{ Wu2003a,
+	author               =	 {Jie Wu and Fei Dai},
+	title                =	 {{Broadcasting in Ad Hoc Networks Based on Self-Pruning}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Xue2001a
+
+@InProceedings{ Xue2001a,
+	author               =	 {Yuan Xue and Baochun Li and Klara Nahrstedt},
+	title                =	 {{A Scalable Location Management Scheme in Mobile Ad-Hoc Networks}},
+	year                 =	 {2001},
+	pages                =	 {102--111},
+	month                =	 {November},
+	booktitle            =	 {Proceedings of the 26th Annual IEEE Conference on Local Computer Networks (LCN'01)},
+	address              =	 {Tampa, Florida}
+}
+
+; Start of entry Yoon2003a
+
+@InProceedings{ Yoon2003a,
+	author               =	 {Jungkeun Yoon and Mingyan Liu and Brian Noble},
+	title                =	 {{Random Waypoint Considered Harmful}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Zaumen1991a
+
+@InProceedings{ Zaumen1991a,
+	author               =	 {William T. Zaumen and J. J. Garcia-Luna-Aceves},
+	title                =	 {{Dynamics of Distributed Shortest-Path Routing Algorithms}},
+	year                 =	 {1991},
+	pages                =	 {31--42},
+	month                =	 {September},
+	booktitle            =	 {Proceedings of the conference on Communications architectures and protocols (SIGCOMM '91)},
+	address              =	 {Z{\"{u}}rich, Switzerland}
+}
+
+; Start of entry Zhou2000a
+
+@InProceedings{ Zhou2000a,
+	author               =	 {Hu Zhou and Suresh Singh},
+	title                =	 {{Content based multicast (CBM) in ad hoc networks}},
+	year                 =	 {2000},
+	pages                =	 {51--60},
+	month                =	 {August},
+	booktitle            =	 {Proceedings of the first ACM international symposium on Mobile and ad hoc networking \& computing (MobiHoc '00)},
+	address              =	 {Boston, Massachusetts}
+}
+
+; Start of entry Zhou2003a
+
+@InProceedings{ Zhou2003a,
+	author               =	 {Hongbo Zhou and Lionel M. Ni and Matt W. Mutka},
+	title                =	 {{Prophet Address Allocation for Large Scale MANETs}},
+	year                 =	 {2003},
+	month                =	 {March},
+	booktitle            =	 {Proceedings of the 22nd Annual Joint Conference of the IEEE Computer and Communications Societies (INFOCOM 2003)},
+	address              =	 {San Francisco, CA}
+}
+
+; Start of entry Zorzi2003a
+
+@Article{ Zorzi2003a,
+	author               =	 {Michele Zorzi and Ramesh R. Rao},
+	title                =	 {{Geographic Random Forwarding (GeRaF) for ad hoc and sensor networks: multihop performance}},
+	journal              =	 {IEEE Transactions on Mobile Computing},
+	year                 =	 {2003},
+	volume               =	 {2},
+	number               =	 {4},
+	pages                =	 {337--348},
+	month                =	 {October}
+}
+
+; Start of entry Zorzi2003b
+
+@Article{ Zorzi2003b,
+	author               =	 {Michele Zorzi and Ramesh R. Rao},
+	title                =	 {{Geographic Random Forwarding (GeRaF) for Ad Hoc and Sensor Networks: Energy and Latency Performance}},
+	journal              =	 {IEEE Transactions on Mobile Computing},
+	year                 =	 {2003},
+	volume               =	 {2},
+	number               =	 {4},
+	pages                =	 {349--365},
+	month                =	 {October}
+}
+
+
