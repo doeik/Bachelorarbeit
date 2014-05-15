@@ -1,0 +1,50 @@
+﻿Cgroups:
+
+Tool, um Systemressourcen für bestimmte Prozesse festzulegen. Die generelle Gruppenstruktur ist hierarchisch angelegt. Die Eigenschaften einer Gruppe werden beim Erstellen einer Untergruppe übernommen und können dann nachträglich angepasst werden.
+
+Ursprüngliche Aufteilung:
+
+blkio:
+
+Legt beim Zugriff auf block devices die Priorität eines Prozesses gegenüber anderen Prozessen, sowie die maximal möglichen Operationen pro Zeiteinheit, fest.
+
+cpuacct:
+
+Liefert Informationen über die Zeit, die die Prozesse für die Nutzung der CPU zugeteilt bekommen haben.
+
+cpuset:
+
+Weißt den Prozessen CPUs und memory nodes zu.
+
+devices:
+
+Erlaubt oder verweigert den Zugriff auf character bzw block devices.
+
+freezer:
+
+Prozesse in dieser Gruppe können beliebig angehalten und wieder aufgenommen werden.
+
+memory:
+
+Liefert detaillierte Information über Speichernutzung und ist in der Lage, diese auch zu limitieren.
+
+net-cls:
+
+Markiert die Netzwerkpakete eines Prozesses, damit sie einfacher verfolgt werden können
+
+net-prio:
+
+Passt die Priorität der Netzwerkpakete über ein spezifisches Interface an.
+
+
+
+Linux Containers:
+
+Durch namespaces können Teile des Kernels instanziert werden, was dazu führt, dass sich ein Linux Container anderer Prozesse, User, gemounteten filesystems und der eigentlichen Netzwerkinterfaces samt ip table nicht bewusst ist.
+Es wird jedoch nicht wie bei einer VM eine komplett andere Hardware Konfiguration emuliert –-> LXC ist schneller als VMs.
+
+Hat keinen separaten Kernel, sondern greift auf den eigentlichen Kernel des Systems zu.
+
+Besitzt sein eigenes virtuelles filesystem.
+
+Verwendet cgroups, um seinen containern die Ressourcennutzung zu begrenzen. 
