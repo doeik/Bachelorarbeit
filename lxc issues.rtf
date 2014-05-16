@@ -1,0 +1,28 @@
+﻿lxc-execute -n <container-name> <executable>
+
+als root führt zur fehlerausgabe:
+init.lxc: failed to exec: '<executable>' : Permission denied
+
+falls die Datei sich im Benutzerverzeichnis befindet.
+
+Getestet ohne Fehler mit anderen Pfaden:
+
+/
+/home
+/bin
+/tmp
+
+
+lxc-execute -n <container-name> -- sh -c <executable>
+
+Mit dieser Eingabe funktioniert das Ausführen von executables auch im Nutzerverzeichnis.
+
+
+
+lxc-attach -n <container-name> <executable>
+lxc-attach -n <container-name> -- sh -c <executable>
+
+liefern beide „lxc_container: No such file or directory - failed to exec '<executable>'“
+
+Bisher keine laufende Konfiguration für lxc-attach gefunden.
+
