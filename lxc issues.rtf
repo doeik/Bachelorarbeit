@@ -19,10 +19,13 @@ Mit dieser Eingabe funktioniert das Ausführen von executables auch im Nutzerver
 
 
 
-lxc-attach -n <container-name> <executable>
-lxc-attach -n <container-name> -- sh -c <executable>
 
-liefern beide „lxc_container: No such file or directory - failed to exec '<executable>'“
+Um lxc mit pacman unter archlinux zu installieren:
 
-Bisher keine laufende Konfiguration für lxc-attach gefunden.
+mount -o bind /proc /var/lib/lxc/<container>/rootfs/proc
+oder
+mount -t proc /proc /var/lib/lxc/<container>/rootfs/proc
 
+dazu noch etc/resolv.conf modifizieren zB: hhu name server 134.99.128.5
+oder
+mount -o bind /etc/resolv.conf /var/lib/lxc/<container>/rootfs/etc/resolv.conf
