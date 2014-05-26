@@ -2,6 +2,25 @@
 - debootstrap
 - rsync
 
-Bestehendes Problem:
-Wie installiert man lxc in einem debian container?
-Es besteht keine internet verbindung, und debian benutzt apt-get, während mein arch pacman nutzt.
+Folgende commands waren nötig, um bash commands und apt-get install nutzen zu können:
+PATH=/bin:$PATH
+export PATH
+PATH=/sbin:$PATH
+export PATH
+PATH=/usr/bin:$PATH
+export PATH
+PATH=/usr/sbin:$PATH
+export PATH
+
+Obwohl lxc im Debian container scheinbar korrekt installiert ist, wird lxc-init nicht gefunden.
+
+chroot /path/to/rootfs
+(Path Vars setzen s.o.)
+apt-get install lxc
+(bei prompt standart verzeichnis bestätigen)
+exit
+lxc-execute -n <container> <program>
+  Failed to find an lxc-init(...)
+
+
+Vermutung: Wenn die die obigen Path-Variablen nicht gesetzt sind, schlägt lxc-stop fehl (der Prozess returnt nicht).
