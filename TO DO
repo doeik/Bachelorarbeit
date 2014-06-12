@@ -1,0 +1,17 @@
+/proc/fs
+
+non root user
+
+nicht gast
+
+Dos
+
+cpu, ram, zeit
+
+netzwerk + devices; kein usb, fancontrol
+
+berechtigungen testen (kill etc)
+
+Python script:
+    entsprechendes feedback, falls timeout aufgetreten ist
+    beliebig viele parameter entegegen nehmen
