@@ -2,4 +2,4 @@ timedos successfully averted
 cpudos consumes 100% of the possible cpu load, but would only get 1/4 of the cpu time compared to other tasks without limitation. unfortunately this is hard to test
 memorydos successfully averted but not yet tested with swap as i do not have a swap partition mounted on my system. but lxc.cgroup.memory.memsw.limit_in_bytes should do the trick
 forkbomb successfully averted
-tested the kill command inside a container to try and see if it would be possible to kill a process: process not found (which was expected and desired because processes in the container should be seperated through the kernel by the proc namspaces)
+tested the kill command inside a container to try and see if it would be possible to kill a process on the hostsystem: process not found (which was expected and desired because processes in the container should be seperated through the kernel by the proc namspaces)

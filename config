@@ -39,9 +39,9 @@ lxc.mount.entry = proc {container}rootfs/proc proc nosuid,nodev,noexec 0 0
 # 100MB
 lxc.cgroup.memory.limit_in_bytes = 104857600
 # unable to test memsw.limit_in_bytes because no swap present on current system
-# 112MB (memory + swap)
-#lxc.cgroup.memory.memsw.limit_in_bytes = 117440512
+# 100MB (memory + swap)
+#lxc.cgroup.memory.memsw.limit_in_bytes = 104857600
 # 12MB
 lxc.cgroup.memory.kmem.limit_in_bytes = 12582912
 # 1024 equals 100%
-lxc.cgroup.cpu.shares = 512
+lxc.cgroup.cpu.shares = 256

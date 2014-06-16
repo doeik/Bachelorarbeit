@@ -1,4 +1,4 @@
-/proc/fs
+/procfs
 
 non root user
 
@@ -15,3 +15,4 @@ berechtigungen testen (kill etc)
 Python script:
     entsprechendes feedback, falls timeout aufgetreten ist
     beliebig viele parameter entegegen nehmen
+    detach stderr
