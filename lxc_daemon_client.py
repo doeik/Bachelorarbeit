@@ -1,3 +1,4 @@
+import os
 import socket
 import sys
 
@@ -5,7 +6,7 @@ SERVER_ADDRESS = "./uds_lxcdaemon"
 
 
 def main():
-    msg = "#" + sys.argv[1]
+    msg = "#" + os.path.abspath(sys.argv[1])
     if sys.argv[1] == "stop":
         msg = "!"
     toServer_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
@@ -18,8 +19,10 @@ def main():
     		toServer_socket.sendall(msg.encode())
     	except Exception as e:
     		print(e)
-    	finally:
-    		toServer_socket.close()
+    	else:
+            reply = toServer_socket.recv(16).decode()
+            print("lxc_daemon_client: " + reply)
+
 
 
 if __name__ == "__main__":
