@@ -13,6 +13,8 @@ netzwerk + devices; kein usb, fancontrol
 berechtigungen testen (kill etc)
 
 Python script:
-    entsprechendes feedback, falls timeout aufgetreten ist
-    beliebig viele parameter entegegen nehmen
     detach stderr
+    
+    paramter mit json dictionaries übergeben
+    socket.makefile()
+    tempfile (es gibt auch eine funktion, die directories erstellt)
