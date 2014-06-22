@@ -1,3 +1,4 @@
+import json
 import os
 import socket
 import sys
@@ -6,7 +7,8 @@ SERVER_ADDRESS = "./uds_lxcdaemon"
 
 
 def main():
-    msg = os.path.abspath(sys.argv[1])
+    arglist = [os.path.abspath(sys.argv[1])]
+    arglist.extend(sys.argv[2:])
     client_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     try:
     	client_socket.connect(SERVER_ADDRESS)
@@ -14,11 +16,14 @@ def main():
     	print(e)
     else:
     	try:
-    		client_socket.sendall(msg.encode())
+            fd = client_socket.makefile("w")
+            fd.write(json.dumps(arglist))
+            fd.write("\n")
+            fd.close()
     	except Exception as e:
     		print(e)
     	else:
-            reply = client_socket.recv(16).decode()
+            reply = client_socket.recv(128).decode()
             print("lxc_daemon_client: " + reply)
 
 

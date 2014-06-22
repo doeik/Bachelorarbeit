@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import io
+import json
 import optparse
 import os
 import random
@@ -66,14 +67,22 @@ def processLxc(params):
     return (returncode, timeout_event.is_set())
 
 
-def composeReplyToClient(client_socket, text):
-    params = text.split()
-    (returncode, timeout_occured) = processLxc(params)
-    msg = str(returncode)
-    if timeout_occured:
-        msg = "t/o"
-    if returncode == 2:
-        msg = "2 - an unexpected exception occured while trying to run the container"
+def composeReplyToClient(client_socket):
+    fd = client_socket.makefile("r")
+    jsonlist = fd.readline()
+    fd.close()
+    try:
+        params = json.loads(jsonlist)
+    except ValueError as e:
+        msg = "invalid json object"
+        print(e)
+    else:
+        (returncode, timeout_occured) = processLxc(params)
+        msg = str(returncode)
+        if timeout_occured:
+            msg = "t/o"
+        if returncode == 2:
+            msg = "2 - an unexpected exception occured while trying to run the container"
     try:
         client_socket.sendall(msg.encode())
     except Exception as e:
@@ -90,14 +99,10 @@ def runServer():
     server_socket.bind(SERVER_ADDRESS)
     server_socket.listen(1)
     while True:
-        client_socket, toClient_address = server_socket.accept()
-        try:
-            tmpstr = client_socket.recv(2048)
-            client_thread = threading.Thread(
-                target=composeReplyToClient, args=(client_socket, tmpstr.decode()))
-            client_thread.start()
-        except:
-            client_socket.close()
+        client_socket, client_address = server_socket.accept()
+        client_thread = threading.Thread(
+            target=composeReplyToClient, args=(client_socket, ))
+        client_thread.start()
 
 
 def sendToBackground():
