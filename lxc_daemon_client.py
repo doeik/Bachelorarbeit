@@ -8,7 +8,7 @@ UDS_SOCKET = "./uds_lxcdaemon"
 
 
 def main():
-    dict_request = {"keep-alive": False, "action": "run_prog", "timeout": 30}
+    dict_request = {"keep-alive": False, "action": "run_prog", "timeout": 2}
     fd_program = io.open(sys.argv[1], "rb")
     program = base64.b64encode(fd_program.read())
     fd_program.close()

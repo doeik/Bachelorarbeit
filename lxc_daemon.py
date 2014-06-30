@@ -6,6 +6,7 @@ import lxc
 import optparse
 import os
 import random
+import setproctitle
 import socket
 import stat
 import string
@@ -13,7 +14,7 @@ import subprocess
 import threading
 
 LXC_PATH = "/var/lib/lxc/"
-TIMEOUT = 10
+TIMEOUT = 30
 CONFIG_TEMPLATE = "./config"
 UDS_SOCKET = "./uds_lxcdaemon"
 
@@ -33,40 +34,28 @@ def makeConfigFromTemplate(tmpName):
     newconf.close()
 
 
-def timerEvent2(timeout_event, tmpName):
-    timeout_event.set()
-    bla = io.open("timertest", "w")
-    bla.write("test")
-    bla.close
-    subprocess.call(["lxc-stop", "-n", tmpName, "-k"])
-
-
 def timerEvent(timeout_event, container):
     timeout_event.set()
-    print("Container state: " + container.state)
     container.stop()
-    print("Container state: " + container.state)
 
 
 def processLxc(dict_request, program):
     params = dict_request["params"]
-    if "timeout" in dict_request:
-        timeout = dict_request["timeout"]
-    else:
-        timeout = TIMEOUT
+    timeout = dict_request.get("timeout", TIMEOUT)
     tmpName = "".join([random.choice(string.ascii_letters + string.digits)
                        for n in range(12)])
     container = lxc.Container(tmpName)
     container.create("debian", lxc.LXC_CREATE_QUIET)
     try:
-        #makeConfigFromTemplate(tmpName)
+        # makeConfigFromTemplate(tmpName)
         container.start()
         timeout_event = threading.Event()
-        t = threading.Timer(timeout, timerEvent2, (timeout_event, tmpName))
+        t = threading.Timer(timeout, timerEvent, (timeout_event, tmpName))
         t.start()
         prog_path = os.path.join(
             LXC_PATH, tmpName, "rootfs/", os.path.basename(params[0]))
         fd_prog = io.open(prog_path, "wb")
+        print("test")
         fd_prog.write(program)
         fd_prog.close()
         os.chmod(prog_path, stat.S_IEXEC)
@@ -86,13 +75,13 @@ def processLxc(dict_request, program):
                 container.stop()
         else:
             container.wait("STOPPED", 10)
-        container.destroy()
+        boolean = container.destroy()
+        print(boolean)
     return (returncode, timeout_event.is_set())
 
 
 def handleRunProgAction(dict_request):
-    program = base64.b64decode(
-        dict_request["b64_data"].encode(encoding="utf8"))
+    program = base64.b64decode(dict_request["b64_data"].encode("utf8"))
     (returncode, timeout_occured) = processLxc(dict_request, program)
     msg = str(returncode % 255)
     if timeout_occured:
@@ -113,10 +102,7 @@ def handleClient(client_socket):
             fd.write("invalid json object")
             break
         else:
-            if "keep-alive" in dict_request:
-                keep_alive = dict_request["keep-alive"]
-            else:
-                keep_alive = False
+            keep_alive = dict_request.get("keep-alive", False)
             if dict_request["action"] == "run_prog":
                 response = handleRunProgAction(dict_request)
             fd.write(response + "\n")
@@ -146,6 +132,7 @@ def sendToBackground():
         os.setsid()
         pid = os.fork()
         if pid == 0:
+            setproctitle.setproctitle("lxc_daemon_background")
             # os.chdir("/")
             os.umask(0)
             runServer()
