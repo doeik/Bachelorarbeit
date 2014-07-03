@@ -15,6 +15,4 @@ berechtigungen testen (kill etc)
 Python script:
     detach stderr
     
-    paramter mit json dictionaries übergeben
-    socket.makefile()
-    tempfile (es gibt auch eine funktion, die directories erstellt)
+    

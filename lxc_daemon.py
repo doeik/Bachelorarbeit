@@ -12,6 +12,7 @@ import stat
 import string
 import subprocess
 import threading
+import traceback
 
 LXC_PATH = "/var/lib/lxc/"
 TIMEOUT = 30
@@ -41,6 +42,7 @@ def timerEvent(timeout_event, container):
 
 def processLxc(dict_request, program):
     params = dict_request["params"]
+    info = None
     timeout = dict_request.get("timeout", TIMEOUT)
     tmpName = "".join([random.choice(string.ascii_letters + string.digits)
                        for n in range(12)])
@@ -50,21 +52,20 @@ def processLxc(dict_request, program):
         # makeConfigFromTemplate(tmpName)
         container.start()
         timeout_event = threading.Event()
-        t = threading.Timer(timeout, timerEvent, (timeout_event, tmpName))
+        t = threading.Timer(timeout, timerEvent, (timeout_event, container))
         t.start()
         prog_path = os.path.join(
             LXC_PATH, tmpName, "rootfs/", os.path.basename(params[0]))
         fd_prog = io.open(prog_path, "wb")
-        print("test")
         fd_prog.write(program)
         fd_prog.close()
         os.chmod(prog_path, stat.S_IEXEC)
         params[0] = os.path.join("/", os.path.basename(params[0]))
         returncode = container.attach_wait(
             lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DROP_CAPABILITIES, extra_env_vars="PATH=/bin:/sbin:/usr/bin:/usr/sbin")
-    except Exception as e:
+    except Exception:
         returncode = 2
-        print(e)
+        info = traceback.format_exc()
     finally:
         try:
             t.cancel()
@@ -75,20 +76,46 @@ def processLxc(dict_request, program):
                 container.stop()
         else:
             container.wait("STOPPED", 10)
-        boolean = container.destroy()
-        print(boolean)
-    return (returncode, timeout_event.is_set())
+        container.destroy()
+    return (returncode, timeout_event.is_set(), info)
 
 
 def handleRunProgAction(dict_request):
     program = base64.b64decode(dict_request["b64_data"].encode("utf8"))
-    (returncode, timeout_occured) = processLxc(dict_request, program)
-    msg = str(returncode % 255)
+    (returncode, timeout_occured, info) = processLxc(dict_request, program)
+    dict_response = {"success": True,
+                     "returncode": returncode % 255}
     if timeout_occured:
-        msg = "t/o"
-    if returncode == 2:
-        msg = "2 - an unexpected exception occured while trying to run the container"
-    return msg
+        dict_response["timeout"] = True
+    else:
+        dict_response["timeout"] = False
+    if info != None:
+        dict_response["success"] = False
+        dict_response[
+            "info"] = "an unexpected exception occured while trying to run the container:\n" + info
+    return dict_response
+
+
+def actionNotFoundResponse(dict_request):
+    dict_response = {"success": False,
+                     "info": "No such action: " + dict_request.get("action", "None")}
+    return dict_response
+
+
+"""
+    Insert new actions here.
+    Please stick to the following syntax for these methods:
+    - takes dict_request
+    - returns new dictionary containing response
+
+    Method must be referenced in determineMethodFromAction.
+"""
+
+
+def determineMethodFromAction(actionValue):
+    if actionValue == "run_prog":
+        return handleRunProgAction
+    return actionNotFoundResponse
 
 
 def handleClient(client_socket):
@@ -99,19 +126,25 @@ def handleClient(client_socket):
         try:
             dict_request = json.loads(jsondict)
         except ValueError:
-            fd.write("invalid json object")
+            dict_response = {"success": False,
+                             "info": "invalid json object"}
+            fd.write(json.dumps(dict_response) + "\n")
+            fd.flush()
             break
         else:
             keep_alive = dict_request.get("keep-alive", False)
-            if dict_request["action"] == "run_prog":
-                response = handleRunProgAction(dict_request)
-            fd.write(response + "\n")
+            method = determineMethodFromAction(
+                dict_request.get("action", "None"))
+            dict_response = method(dict_request)
+            fd.write(json.dumps(dict_response) + "\n")
             fd.flush()
     fd.close()
     client_socket.close()
 
 
 def runServer():
+    setproctitle.setproctitle("lxc_daemon")
+    os.umask(0)
     try:
         os.unlink(UDS_SOCKET)
     except OSError:
@@ -132,9 +165,6 @@ def sendToBackground():
         os.setsid()
         pid = os.fork()
         if pid == 0:
-            setproctitle.setproctitle("lxc_daemon_background")
-            # os.chdir("/")
-            os.umask(0)
             runServer()
         else:
             os._exit(0)
@@ -146,7 +176,17 @@ def main():
     parser = optparse.OptionParser()
     parser.add_option("-b", "--background", action="store_true",
                       dest="background", help="start this process in the background")
+    parser.add_option("-s", "--stop", action="store_true",
+                      dest="stop", help="terminate all running lxc_daemon processes")
+    parser.add_option("-k", "--kill", action="store_true",
+                      dest="kill", help="forcibly kill all running lxc_daemon processes")
     (options, args) = parser.parse_args()
+    if options.stop:
+        subprocess.call(["killall", "lxc_daemon"])
+        return
+    if options.kill:
+        subprocess.call(["killall", "-9", "lxc_daemon"])
+        return
     if options.background:
         sendToBackground()
     else:
