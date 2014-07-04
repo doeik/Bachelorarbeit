@@ -22,17 +22,15 @@ UDS_SOCKET = "./uds_lxcdaemon"
 
 def makeConfigFromTemplate(tmpName):
     container_path = os.path.join(LXC_PATH, tmpName) + "/"
-    config = io.open(CONFIG_TEMPLATE, "r")
-    content = config.readlines()
-    config.close()
+    with io.open(CONFIG_TEMPLATE, "r") as config:
+        content = config.readlines()
     for i, line in enumerate(content):
         line = line.replace("{container}", container_path)
         line = line.replace("{name}", tmpName)
         content[i] = line
-    newconf = io.open(container_path + "config", "w")
-    for line in content:
-        newconf.write(line)
-    newconf.close()
+    with io.open(container_path + "config", "w") as newconf:
+        for line in content:
+            newconf.write(line)
 
 
 def timerEvent(timeout_event, container):
@@ -40,10 +38,10 @@ def timerEvent(timeout_event, container):
     container.stop()
 
 
-def processLxc(dict_request, program):
-    params = dict_request["params"]
+def processLxc(request, program):
+    params = request["params"]
     info = None
-    timeout = dict_request.get("timeout", TIMEOUT)
+    timeout = request.get("timeout", TIMEOUT)
     tmpName = "".join([random.choice(string.ascii_letters + string.digits)
                        for n in range(12)])
     container = lxc.Container(tmpName)
@@ -56,13 +54,12 @@ def processLxc(dict_request, program):
         t.start()
         prog_path = os.path.join(
             LXC_PATH, tmpName, "rootfs/", os.path.basename(params[0]))
-        fd_prog = io.open(prog_path, "wb")
-        fd_prog.write(program)
-        fd_prog.close()
+        with io.open(prog_path, "wb") as fi_prog:
+            fi_prog.write(program)
         os.chmod(prog_path, stat.S_IEXEC)
         params[0] = os.path.join("/", os.path.basename(params[0]))
         returncode = container.attach_wait(
-            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DROP_CAPABILITIES, extra_env_vars="PATH=/bin:/sbin:/usr/bin:/usr/sbin")
+            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DROP_CAPABILITIES, extra_env_vars=("PATH=/bin:/sbin:/usr/bin:/usr/sbin", ))
     except Exception:
         returncode = 2
         info = traceback.format_exc()
@@ -80,42 +77,38 @@ def processLxc(dict_request, program):
     return (returncode, timeout_event.is_set(), info)
 
 
-def handleRunProgAction(dict_request):
-    program = base64.b64decode(dict_request["b64_data"].encode("utf8"))
-    (returncode, timeout_occured, info) = processLxc(dict_request, program)
-    dict_response = {"success": True,
-                     "returncode": returncode % 255}
-    if timeout_occured:
-        dict_response["timeout"] = True
-    else:
-        dict_response["timeout"] = False
+def handleRunProgAction(request):
+    program = base64.b64decode(request["b64_data"].encode("utf8"))
+    (returncode, timeout_occured, info) = processLxc(request, program)
+    response = {
+        "success": True,
+        "timeout": timeout_occured,
+        "returncode": returncode % 255,
+    }
     if info != None:
-        dict_response["success"] = False
-        dict_response[
+        response["success"] = False
+        response[
             "info"] = "an unexpected exception occured while trying to run the container:\n" + info
-    return dict_response
-
-
-def actionNotFoundResponse(dict_request):
-    dict_response = {"success": False,
-                     "info": "No such action: " + dict_request.get("action", "None")}
-    return dict_response
+    return response
 
 
 """
     Insert new actions here.
-    Please stick to the following syntax for these methods:
-    - takes dict_request
-    - returns new dictionary containing response
+    Please stick to the following sheme for these methods:
+    - takes request dictionary
+    - returns new response dictionary
 
     Method must be referenced in determineMethodFromAction.
 """
 
 
 def determineMethodFromAction(actionValue):
-    if actionValue == "run_prog":
-        return handleRunProgAction
-    return actionNotFoundResponse
+    return {
+        "run_prog": handleRunProgAction,
+    }.get(actionValue,
+          lambda request: {"success": False,
+                           "info": "No such action: " + request.get("action", "None"),
+                           })
 
 
 def handleClient(client_socket):
@@ -124,19 +117,20 @@ def handleClient(client_socket):
     while keep_alive:
         jsondict = fd.readline()
         try:
-            dict_request = json.loads(jsondict)
+            request = json.loads(jsondict)
         except ValueError:
-            dict_response = {"success": False,
-                             "info": "invalid json object"}
-            fd.write(json.dumps(dict_response) + "\n")
+            response = {"success": False,
+                        "info": "invalid json object",
+                        }
+            fd.write(json.dumps(response) + "\n")
             fd.flush()
             break
         else:
-            keep_alive = dict_request.get("keep-alive", False)
+            keep_alive = request.get("keep-alive", False)
             method = determineMethodFromAction(
-                dict_request.get("action", "None"))
-            dict_response = method(dict_request)
-            fd.write(json.dumps(dict_response) + "\n")
+                request.get("action", "None"))
+            response = method(request)
+            fd.write(json.dumps(response) + "\n")
             fd.flush()
     fd.close()
     client_socket.close()
@@ -151,6 +145,7 @@ def runServer():
         pass
     server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     server_socket.bind(UDS_SOCKET)
+    #os.chmod(UDS_SOCKET, 0o777)
     server_socket.listen(1)
     while True:
         client_socket, client_address = server_socket.accept()

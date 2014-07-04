@@ -10,9 +10,8 @@ UDS_SOCKET = "./uds_lxcdaemon"
 
 def main():
     dict_request = {"keep-alive": False, "action": "run_prog", "timeout": 10}
-    fd_program = io.open(sys.argv[1], "rb")
-    program = base64.b64encode(fd_program.read())
-    fd_program.close()
+    with io.open(sys.argv[1], "rb") as fi_program:
+        program = base64.b64encode(fi_program.read())
     dict_request["b64_data"] = str(program, encoding="utf8")
     arglist = sys.argv[1:]
     dict_request["params"] = arglist
@@ -22,11 +21,10 @@ def main():
     except Exception:
         traceback.print_exc()
     else:
-        fd = client_socket.makefile("rw")
-        fd.write(json.dumps(dict_request) + "\n")
-        fd.flush()
-        recv_data = fd.readline()
-        fd.close()
+        with client_socket.makefile("rw") as fd:
+            fd.write(json.dumps(dict_request) + "\n")
+            fd.flush()
+            recv_data = fd.readline()
         dict_response = json.loads(recv_data)
         print("lxc_daemon_client:")
         if dict_response["success"] == True:

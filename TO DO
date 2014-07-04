@@ -14,5 +14,7 @@ berechtigungen testen (kill etc)
 
 Python script:
     detach stderr
+    keine umask änderung: setze berechtigungen für socket
+    in den code für lxc.LXC_ATTACH_DROP_CAPABILITIES schauen
     
     
