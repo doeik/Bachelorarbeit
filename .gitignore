@@ -1,3 +1,5 @@
 *.pdf
 *.kilepr
 .directory
+old/*
+lxc on github/*

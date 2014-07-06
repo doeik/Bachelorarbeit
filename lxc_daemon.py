@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import base64
+import grp
 import io
 import json
 import lxc
@@ -138,14 +139,14 @@ def handleClient(client_socket):
 
 def runServer():
     setproctitle.setproctitle("lxc_daemon")
-    os.umask(0)
+    #os.setgid(grp.getgrnam("info2_containers").gr_gid)
     try:
         os.unlink(UDS_SOCKET)
     except OSError:
         pass
     server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     server_socket.bind(UDS_SOCKET)
-    #os.chmod(UDS_SOCKET, 0o777)
+    os.chmod(UDS_SOCKET, stat.S_IRWXU | stat.S_IRGRP | stat.S_IWGRP)
     server_socket.listen(1)
     while True:
         client_socket, client_address = server_socket.accept()
