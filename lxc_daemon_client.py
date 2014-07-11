@@ -5,7 +5,7 @@ import socket
 import sys
 import traceback
 
-UDS_SOCKET = "./uds_lxcdaemon"
+UDS_FILE = "/run/uds_lxcdaemon"
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
     dict_request["params"] = arglist
     client_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
     try:
-        client_socket.connect(UDS_SOCKET)
+        client_socket.connect(UDS_FILE)
     except Exception:
         traceback.print_exc()
     else:

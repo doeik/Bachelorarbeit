@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 from __future__ import unicode_literals
 import base64
 import grp
@@ -18,18 +19,18 @@ import traceback
 LXC_PATH = "/var/lib/lxc/"
 TIMEOUT = 30
 CONFIG_TEMPLATE = "./config"
-UDS_SOCKET = "./uds_lxcdaemon"
+UDS_FILE = "/run/uds_lxcdaemon"
 
 
 def makeConfigFromTemplate(tmpName):
-    container_path = os.path.join(LXC_PATH, tmpName) + "/"
+    container_path = os.path.join(LXC_PATH, tmpName)
     with io.open(CONFIG_TEMPLATE, "r") as config:
         content = config.readlines()
     for i, line in enumerate(content):
-        line = line.replace("{container}", container_path)
+        line = line.replace("{container}", container_path + "/")
         line = line.replace("{name}", tmpName)
         content[i] = line
-    with io.open(container_path + "config", "w") as newconf:
+    with io.open(os.path.join(container_path, "config"), "w") as newconf:
         for line in content:
             newconf.write(line)
 
@@ -60,7 +61,7 @@ def processLxc(request, program):
         os.chmod(prog_path, stat.S_IEXEC)
         params[0] = os.path.join("/", os.path.basename(params[0]))
         returncode = container.attach_wait(
-            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DROP_CAPABILITIES, extra_env_vars=("PATH=/bin:/sbin:/usr/bin:/usr/sbin", ))
+            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DROP_CAPABILITIES, extra_env_vars=("PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin", ))
     except Exception:
         returncode = 2
         info = traceback.format_exc()
@@ -139,14 +140,13 @@ def handleClient(client_socket):
 
 def runServer():
     setproctitle.setproctitle("lxc_daemon")
-    #os.setgid(grp.getgrnam("info2_containers").gr_gid)
     try:
-        os.unlink(UDS_SOCKET)
+        os.unlink(UDS_FILE)
     except OSError:
         pass
     server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
-    server_socket.bind(UDS_SOCKET)
-    os.chmod(UDS_SOCKET, stat.S_IRWXU | stat.S_IRGRP | stat.S_IWGRP)
+    server_socket.bind(UDS_FILE)
+    os.chmod(UDS_FILE, stat.S_IRWXU | stat.S_IRGRP | stat.S_IWGRP)
     server_socket.listen(1)
     while True:
         client_socket, client_address = server_socket.accept()
@@ -176,6 +176,8 @@ def main():
                       dest="stop", help="terminate all running lxc_daemon processes")
     parser.add_option("-k", "--kill", action="store_true",
                       dest="kill", help="forcibly kill all running lxc_daemon processes")
+    parser.add_option("-g", "--group", action="store_true",
+                      dest="group", help="add lxc_daemon to usergroup. required when not running as system daemon")
     (options, args) = parser.parse_args()
     if options.stop:
         subprocess.call(["killall", "lxc_daemon"])
@@ -183,6 +185,8 @@ def main():
     if options.kill:
         subprocess.call(["killall", "-9", "lxc_daemon"])
         return
+    if options.group:
+        os.setgid(grp.getgrnam("info2_containers").gr_gid)
     if options.background:
         sendToBackground()
     else:

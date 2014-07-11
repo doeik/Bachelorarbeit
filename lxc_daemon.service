@@ -3,7 +3,7 @@ Description=daemon for running linux containers
 After=syslog.target
 [Service]
 Group=info2_containers
-ExecStart=/var/lib/info2_containers/lxc_daemon.py
+ExecStart=/usr/local/bin/lxc_daemon.py
 Restart=on-abort
 [Install]
 WantedBy=multi-user.target
