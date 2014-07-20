@@ -18,7 +18,7 @@ import traceback
 
 LXC_PATH = "/var/lib/lxc/"
 TIMEOUT = 30
-CONFIG_TEMPLATE = "./config"
+CONFIG_TEMPLATE = "/usr/local/lib/lxc_daemon/config_template"
 UDS_FILE = "/run/uds_lxcdaemon"
 
 
@@ -61,7 +61,7 @@ def processLxc(request, program):
         os.chmod(prog_path, stat.S_IEXEC)
         params[0] = os.path.join("/", os.path.basename(params[0]))
         returncode = container.attach_wait(
-            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DROP_CAPABILITIES, extra_env_vars=("PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin", ))
+            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DEFAULT, extra_env_vars=("PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin", ))
     except Exception:
         returncode = 2
         info = traceback.format_exc()
