@@ -9,7 +9,7 @@ UDS_FILE = "/run/uds_lxcdaemon"
 
 
 def main():
-    dict_request = {"keep-alive": False, "action": "run_prog", "timeout": 10}
+    dict_request = {"keep-alive": False, "action": "run_prog", "timeout": 30}
     with io.open(sys.argv[1], "rb") as fi_program:
         program = base64.b64encode(fi_program.read())
     dict_request["b64_data"] = str(program, encoding="utf8")

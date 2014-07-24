@@ -11,5 +11,6 @@ int main(int argc, char *argv[]) {
       if (p != NULL) {
 	 *p = 10000;
       }
+      else return 1;
     }
 }

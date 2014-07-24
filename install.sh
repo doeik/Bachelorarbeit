@@ -76,6 +76,12 @@ function uninstall() {
   sudo rm /run/uds_lxcdaemon
 }
 
+function upgrade() {
+  sudo cp ./lxc_daemon.py /usr/local/bin/lxc_daemon.py
+  sudo cp ./config_template /usr/local/lib/lxc_daemon/config_template
+  sudo systemctl restart lxc_daemon.service
+}
+
 
 # run install or uninstall function for current distribution
 
@@ -87,4 +93,7 @@ then
 elif [ "$1" = "uninstall" ]
 then
   uninstall
+elif [ "$1" = "upgrade" ]
+then
+  upgrade
 fi

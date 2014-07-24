@@ -49,7 +49,7 @@ def processLxc(request, program):
     container = lxc.Container(tmpName)
     container.create("debian", lxc.LXC_CREATE_QUIET)
     try:
-        # makeConfigFromTemplate(tmpName)
+        makeConfigFromTemplate(tmpName)
         container.start()
         timeout_event = threading.Event()
         t = threading.Timer(timeout, timerEvent, (timeout_event, container))

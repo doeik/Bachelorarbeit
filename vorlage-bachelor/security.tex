@@ -1,0 +1,41 @@
+\chapter{Lxc security}
+
+Linux containers achieve their execution environment security through the following concepts:\\
+chroot, namespaces, cgroups, privilege dropping (seccomp policies, app armor)\\
+
+\section{Cgroups}
+
+Cgroups is the feature of choice when it comes to limiting machine resources and as such preventing dos attacks.
+Also it is not pre-configured in any way, so this needs some accounting:\\
+First thing to do is to to limit the memory to prevent processes in the container from eating up the whole machine memory.
+When the memory consumtion reaches the specified threshold the cgroups memory resource controller tries to reclaim memory first,
+but if that fails it will kill the most memory consuming process in the container which should result in a return code of 9.
+I have tested this with a minimal c program which consumes as much memory as possible.\\
+If the system has got swap memory this must also be limited. Otherwise it would just begin to swap out after the memory
+threshold has been reached. Since the kernel does not distinguish between swapped or unswapped memory the limit computes as follows:
+memory limit + swap limit.\\
+Currently my daemon does not determine whether the swap is activated or not, this needs to be adjusted manually in the cgroups
+section of the config template by uncommenting the line stating lxc.memory.msw.limit\_in\_bytes.\\
+For IO operations cgroups do mostly read/write rate throttling, so there is no limit restricting the amount of disk space programs
+can use up. However this is not a huge problem since the lxc\_daemon always sets a timeout on container executions after which the
+rootfs is destroyed and therefore all disk space freed. It is unlikely that this will have an impact on the system's health although
+running several containers at once will have a significant impact on how fast the execution will terminate especially if all these
+need to do IO operations.\\
+One of the severest dos attacks is the fork bomb because it causes the system to freeze completely. Fortunately cgroups provides
+the kmem extension with which it is possible to limit the kernel memory to a small amount. If set properly this will cause the fork()
+system call to fail way before freezing the system.
+
+Currently the memory.kmem feature is disabled in the default archlinux kernel due to the current development state.\cite{kmembug}
+
+\section{Capability dropping}
+
+Since the goal is to allow c-programs by students that are only granted some standart ansi c libraries, capability dropping can be
+done somewhat relentlessly. Nevertheless some capabilities are more significant than others and need to emphasized:\\
+Setpcap is an important capability to drop. Owning this capability would allow a possibly harmful program to re-grant itself any
+capability.\cite{kernelcaps}\\
+The mount capability would allow to forego apparmor restrictions since these are bound to specific paths.
+
+\section{Seccomp policies}
+
+Seccomp policies are a rather low level feature, hence it is not safe tampering with them. They depend on system specific information such
+as the architecture (x64 or x86). Essentially they are currently used by lxc to blacklist some unsafe system calls.
