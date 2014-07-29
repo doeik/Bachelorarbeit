@@ -1,0 +1,18 @@
+\chapter{Daemon structure}
+
+\section{Purpose}
+
+Since lxc requires the processing user to have root privileges, precautions need to be taken to ensure
+the safety of the system. Mainly we do not want to have root privileges for more actions other than those who really
+need these. As a consequence programs are passed to the lxc_daemon who then performs the container creation
+and execution and in the end returns the results back to an unprivileged program (e.g. the mail server).
+
+\section{Communication}
+
+\section{The protocol}
+
+\section{Actions implementation}
+
+The code is designed to be easily extendable.
+
+\section{Container handling}

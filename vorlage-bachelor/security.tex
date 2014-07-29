@@ -3,11 +3,20 @@
 Linux containers achieve their execution environment security through the following concepts:\\
 chroot, namespaces, cgroups, privilege dropping (seccomp policies, app armor)\\
 
+\section{Chroot}
+
+Using chroot allows the caller to set a different directory as the new root directory. All directories which are not subdirectories
+of the new root directory have become inaccessible which is why they are often referred to as jails. Chroot is not designed as a security
+feature and thus it is possible to break out of the current environment.\\
+Lxc uses the system call pivot_root() to change the root directory which also stores the old root directory.(?)
+
+\section{Namespaces}
+
 \section{Cgroups}
 
-Cgroups (control groups) are a feature for limiting resources and access or simply supervise processes. The different cgroups exist as
+Cgroups (control groups) are a feature for limiting resources and access or simply supervising processes. The different cgroups exist as
 pseudo filesystems in /sys/fs/cgroup. They are in general hierarchially organized: In each group subdirectories can be created
-which inherit the settings of the parent control group. If done manually settings are read by using the cat command on the relevant
+which inherit the settings of the parent control group. If done manually, settings are read by using the cat command on the relevant
 pseudofile and respectively set by using the echo command and diverting the output into the file. Processes are assigned to these groups
 by simply echoing the pid into the tasks file.\\
 The currently prevalent cgroups are:\\
@@ -44,14 +53,14 @@ I have tested this with a minimal c program which consumes as much memory as pos
 If the system has got swap memory this must also be limited. Otherwise it would just begin to swap out after the memory
 threshold has been reached. Since the kernel does not distinguish between swapped or unswapped memory the limit computes as follows:
 memory limit + swap limit.\\
-Currently my daemon does not determine whether the swap is activated or not, this needs to be adjusted manually in the cgroups
+Currently the lxc_daemon does not determine whether the swap is activated or not, this needs to be adjusted manually in the cgroups
 section of the config template by uncommenting the line stating lxc.memory.msw.limit\_in\_bytes.\\
 For IO operations cgroups do mostly read/write rate throttling, so there is no limit restricting the amount of disk space programs
 can use up. However this is not a huge problem since the lxc\_daemon always sets a timeout on container executions after which the
 rootfs is destroyed and therefore all disk space freed. It is unlikely that this will have an impact on the system's health although
 running several containers at once will have a significant impact on how fast the execution will terminate, especially if all these
 need to do IO operations.\\
-One of the severest dos attacks is the fork bomb because it causes the system to freeze completely. Fortunately cgroups provides
+One of the severest dos attacks is the fork bomb because it causes the system to freeze completely\cite{forkbomb}. Fortunately cgroups provides
 the kmem extension which is capable of limiting the kernel memory to a small amount. If set properly this will cause the fork()
 system call to fail way before freezing the system. In conclusion after some trial-and-error-testing 12 megabytes seems to be a
 stable amount of allowed kernel memory.\\
