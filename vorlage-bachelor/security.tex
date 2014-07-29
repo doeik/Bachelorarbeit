@@ -3,11 +3,40 @@
 Linux containers achieve their execution environment security through the following concepts:\\
 chroot, namespaces, cgroups, privilege dropping (seccomp policies, app armor)\\
 
+\section{Cgroups}
+
+Cgroups (control groups) are a feature for limiting resources and access or simply supervise processes. The different cgroups exist as
+pseudo filesystems in /sys/fs/cgroup. They are in general hierarchially organized: In each group subdirectories can be created
+which inherit the settings of the parent control group. If done manually settings are read by using the cat command on the relevant
+pseudofile and respectively set by using the echo command and diverting the output into the file. Processes are assigned to these groups
+by simply echoing the pid into the tasks file.\\
+The currently prevalent cgroups are:\\
+blkio - this subsystem sets limits on input/output access to and from block devices such as physical drives (disk, solid state, USB, etc.). 
+
+cpu - this subsystem uses the scheduler to provide cgroup tasks access to the CPU. 
+
+cpuacct - this subsystem generates automatic reports on CPU resources used by tasks in a cgroup. 
+
+cpuset - this subsystem assigns individual CPUs (on a multicore system) and memory nodes to tasks in a cgroup. 
+
+devices - this subsystem allows or denies access to devices by tasks in a cgroup. 
+
+freezer - this subsystem suspends or resumes tasks in a cgroup. 
+
+memory - this subsystem sets limits on memory use by tasks in a cgroup, and generates automatic reports on memory resources used by those tasks. 
+
+net\_cls - this subsystem tags network packets with a class identifier (classid) that allows the Linux traffic controller (tc) to identify
+packets originating from a particular cgroup task. 
+
+net\_prio - this subsystem provides a way to dynamically set the priority of network traffic per network interface. 
+
+ns - the namespace subsystem.\\
+\cite{cgroups}
+
 \section{Cgroup limits}
 
-% general description of cgroups (control groups, hierachies, nested relationships)
 Cgroups is the feature of choice when it comes to limiting machine resources and as such preventing dos attacks.
-Also it is not - except for the devices section - pre-configured in any way, so this needs some accounting:\\
+Also it is not - except for the devices section - preconfigured by lxc in any way, so this needs some accounting:\\
 First thing to do is to to limit the memory to prevent processes in the container from eating up the whole machine memory.
 When the memory consumtion reaches the specified threshold the cgroups memory resource controller tries to reclaim memory first,
 but if that fails it will kill the most memory consuming process in the container which should result in a return code of 9\cite{cgrpmem}.
@@ -26,14 +55,31 @@ One of the severest dos attacks is the fork bomb because it causes the system to
 the kmem extension which is capable of limiting the kernel memory to a small amount. If set properly this will cause the fork()
 system call to fail way before freezing the system. In conclusion after some trial-and-error-testing 12 megabytes seems to be a
 stable amount of allowed kernel memory.\\
-Currently the memory.kmem feature is disabled in the default archlinux kernel due to memory reclaim not being implemented yet\cite{kmembug}.
+Currently the memory.kmem feature is disabled in the default archlinux kernel due to memory reclaim not being implemented yet\cite{kmembug}.\\
 % cpu shares
 
 \section{Cgroup devices}
 
-Another important cgroups feature
+Another important cgroups feature is the device section
+First all devices are denied and then permitted exclusivly.
 
 \section{Capability dropping}
+
+How caps are dropped:
+python-lxc/lxc.c in Container\_start at l. 1380 self->container->start(...)
+lxc/lxccontainer.c: at l. 3551 c->start = lxcapi\_start(...)
+		    in lxcapi\_start at l. 675 ret = lxc\_start(...)
+lxc/lxc.h: at l. 52 extern int lxc\_start(...) (function in liblxc)
+lxc/start.c: in lxc\_start(...) at l. 1174
+	     in \_\_lxc\_start(...) at l. 1031
+lxc/conf.c: in lxc\_setup(...) at l. 4117 ff
+
+container is spawned
+  (unshare namespaces etc?)
+container is set up:
+  mounting rootfs
+  mounting /dev
+  processing mount entries or automounting /proc and /sys
 
 Since the goal is to allow c-programs by students that are only granted some standart ansi c libraries, capability dropping can be
 done somewhat relentlessly. Nevertheless some capabilities are more significant than others and need to be emphasized:\\

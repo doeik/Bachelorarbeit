@@ -1,20 +1,4 @@
-/procfs
-
-non root user
-
-nicht gast
-
-Dos
-
-cpu, ram, zeit
-
-netzwerk + devices; kein usb, fancontrol
-
-berechtigungen testen (kill etc)
-
-Python script:
-    detach stderr
-    keine umask änderung: setze berechtigungen für socket
-    in den code für lxc.LXC_ATTACH_DROP_CAPABILITIES schauen
-    
-    
+genau beschreiben, wie und wann der container capabilities dropt
+user namespace
+  testen: datei im container und im host anschauen
+brauch man cap_sys_boot?

@@ -1,12 +1,19 @@
 lxc.network.type = empty
 lxc.rootfs = {container}rootfs
 
+# Set the pivot directory
+lxc.pivotdir = lxc_putold
+
+# Blacklist some syscalls which are not safe in privileged
+# containers
+lxc.seccomp = /usr/share/lxc/config/common.seccomp
 
 # Container specific configuration
 lxc.mount = {container}fstab
 lxc.utsname = {name}
 lxc.arch = amd64
-lxc.cap.keep = sys_boot
+
+lxc.cap.keep = none
 
 #no implicit access to devices
 lxc.cgroup.devices.deny = a
