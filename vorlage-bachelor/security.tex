@@ -8,7 +8,7 @@ chroot, namespaces, cgroups, privilege dropping (seccomp policies, app armor)\\
 Using chroot allows the caller to set a different directory as the new root directory. All directories which are not subdirectories
 of the new root directory have become inaccessible which is why they are often referred to as jails. Chroot is not designed as a security
 feature and thus it is possible to break out of the current environment.\\
-Lxc uses the system call pivot_root() to change the root directory which also stores the old root directory.(?)
+Lxc uses the system call pivot\_root() to change the root directory which also stores the old root directory.(?)
 
 \section{Namespaces}
 
@@ -53,7 +53,7 @@ I have tested this with a minimal c program which consumes as much memory as pos
 If the system has got swap memory this must also be limited. Otherwise it would just begin to swap out after the memory
 threshold has been reached. Since the kernel does not distinguish between swapped or unswapped memory the limit computes as follows:
 memory limit + swap limit.\\
-Currently the lxc_daemon does not determine whether the swap is activated or not, this needs to be adjusted manually in the cgroups
+Currently the lxc\_daemon does not determine whether the swap is activated or not, this needs to be adjusted manually in the cgroups
 section of the config template by uncommenting the line stating lxc.memory.msw.limit\_in\_bytes.\\
 For IO operations cgroups do mostly read/write rate throttling, so there is no limit restricting the amount of disk space programs
 can use up. However this is not a huge problem since the lxc\_daemon always sets a timeout on container executions after which the

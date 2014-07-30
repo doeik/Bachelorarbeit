@@ -5,11 +5,20 @@
 \BOOKMARK [0][-]{chapter*.2}{Abbildungsverzeichnis}{}% 5
 \BOOKMARK [0][-]{chapter*.3}{Tabellenverzeichnis}{}% 6
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 7
-\BOOKMARK [0][-]{chapter.2}{2 Lxc security}{}% 8
-\BOOKMARK [1][-]{section.2.1}{2.1 Cgroups}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.2}{2.2 Cgroup limits}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.3}{2.3 Cgroup devices}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.4}{2.4 Capability dropping}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.5}{2.5 Seccomp policies}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{3 Lxc issues}{}% 14
-\BOOKMARK [0][-]{chapter*.4}{Literaturverzeichnis}{}% 15
+\BOOKMARK [0][-]{chapter.2}{2 Daemon structure}{}% 8
+\BOOKMARK [1][-]{section.2.1}{2.1 Purpose}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.2}{2.2 Communication}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{2.3 The protocol}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{2.4 Actions implementation}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.5}{2.5 Container handling}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{3 Lxc security}{}% 14
+\BOOKMARK [1][-]{section.3.1}{3.1 Chroot}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{3.2 Namespaces}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{3.3 Cgroups}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.4}{3.4 Cgroup limits}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.5}{3.5 Cgroup devices}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.6}{3.6 Capability dropping}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.7}{3.7 Seccomp policies}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{4 Lxc issues}{}% 22
+\BOOKMARK [1][-]{section.4.1}{4.1 Lxc-python api and threads}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter*.4}{Literaturverzeichnis}{}% 24

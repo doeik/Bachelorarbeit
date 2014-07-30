@@ -34,7 +34,7 @@ function debinstall() {
   sudo apt-get install -y gcc
   sudo apt-get install -y debootstrap
   sudo apt-get install -y python
-  sudo apt-get install -y python-setproctitle
+  sudo apt-get install -y python3-setproctitle
   sudo apt-get install -y git
   sudo apt-get install -y make
   sudo apt-get install -y automake

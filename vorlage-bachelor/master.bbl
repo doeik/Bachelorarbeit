@@ -7,6 +7,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[bug]{bugreport}
+\emph{{attach_wait bug report}}.
+\newblock
+  \url{https://lists.linuxcontainers.org/pipermail/lxc-devel/2014-July/009757.html},
+  Abruf: 25.07.2014.
+
 \bibitem[cgra]{cgroups}
 \emph{{Cgroups}}.
 \newblock
@@ -17,6 +23,15 @@
 \emph{{Cgroups memory controller}}.
 \newblock \url{https://www.kernel.org/doc/Documentation/cgroups/memory.txt},
   Abruf: 25.07.2014.
+
+\bibitem[for]{forkbomb}
+\emph{{fork bomb}}.
+\newblock \url{http://de.wikipedia.org/wiki/Forkbomb}, Abruf: 29.07.2014.
+
+\bibitem[gil]{gil}
+\emph{{CPython Global Interpreter Lock}}.
+\newblock \url{https://wiki.python.org/moin/GlobalInterpreterLock}, Abruf:
+  30.07.2014.
 
 \bibitem[ker]{kernelcaps}
 \emph{{Kernel Capabilities}}.

@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 from __future__ import unicode_literals
 import base64
 import grp
@@ -71,8 +71,8 @@ def processLxc(request, program):
         except:
             pass
         if not timeout_event.is_set():
-            if not container.shutdown(5):
-                container.stop()
+            container.stop()
+                
         else:
             container.wait("STOPPED", 10)
         container.destroy()

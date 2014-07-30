@@ -4,10 +4,19 @@
 
 Since lxc requires the processing user to have root privileges, precautions need to be taken to ensure
 the safety of the system. Mainly we do not want to have root privileges for more actions other than those who really
-need these. As a consequence programs are passed to the lxc_daemon who then performs the container creation
+need these. As a consequence programs are passed to the lxc\_daemon who then performs the container creation
 and execution and in the end returns the results back to an unprivileged program (e.g. the mail server).
 
 \section{Communication}
+
+Any program who wants to communicate with the lxc\_daemon is able to do this through a unix domain socket located
+in /run. Unix domain sockets are mostly handled like IP-sockets but instead of using an IP address UDS take file paths.
+Also - which is a convenient feature - access to this socket can be limited easily through altering the file modes.
+Practically speaking this allows us to only permit programs with a certain user id to access the socket which then again
+implies that an admin has explicitly allowed this user to be able to communicate with the daemon.\\
+Currently the name of the usergroup is ''info2\_containers''.\\
+When not running the lxc\_daemon as a system service the option ''-g'' needs to be specified. This sets the group id
+accordingly and thus preventing the file modes from being set incorrectly.
 
 \section{The protocol}
 
