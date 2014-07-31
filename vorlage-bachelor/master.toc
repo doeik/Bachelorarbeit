@@ -12,10 +12,10 @@
 \contentsline {section}{\numberline {3.1}Chroot}{5}{section.3.1}
 \contentsline {section}{\numberline {3.2}Namespaces}{6}{section.3.2}
 \contentsline {section}{\numberline {3.3}Cgroups}{6}{section.3.3}
-\contentsline {section}{\numberline {3.4}Cgroup limits}{7}{section.3.4}
-\contentsline {section}{\numberline {3.5}Cgroup devices}{8}{section.3.5}
-\contentsline {section}{\numberline {3.6}Capability dropping}{8}{section.3.6}
-\contentsline {section}{\numberline {3.7}Seccomp policies}{9}{section.3.7}
+\contentsline {section}{\numberline {3.4}Cgroup limits}{8}{section.3.4}
+\contentsline {section}{\numberline {3.5}Cgroup devices}{9}{section.3.5}
+\contentsline {section}{\numberline {3.6}Capability dropping}{9}{section.3.6}
+\contentsline {section}{\numberline {3.7}Seccomp policies}{10}{section.3.7}
 \contentsline {chapter}{\numberline {4}Lxc issues}{11}{chapter.4}
 \contentsline {section}{\numberline {4.1}Lxc-python api and threads}{11}{section.4.1}
 \contentsline {chapter}{\nonumberline Literaturverzeichnis}{13}{chapter*.4}

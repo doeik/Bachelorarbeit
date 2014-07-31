@@ -8,7 +8,7 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[bug]{bugreport}
-\emph{{attach_wait bug report}}.
+\emph{{attach\_wait bug report}}.
 \newblock
   \url{https://lists.linuxcontainers.org/pipermail/lxc-devel/2014-July/009757.html},
   Abruf: 25.07.2014.
