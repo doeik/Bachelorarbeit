@@ -40,16 +40,12 @@ def timerEvent(timeout_event, container):
     container.stop()
 
 
-def processLxc(request, program):
+def processLxc(request, container, program):
     params = request["params"]
     info = None
+    tmpName = container.name
     timeout = request.get("timeout", TIMEOUT)
-    tmpName = "".join([random.choice(string.ascii_letters + string.digits)
-                       for n in range(12)])
-    container = lxc.Container(tmpName)
-    container.create("debian", lxc.LXC_CREATE_QUIET)
     try:
-        makeConfigFromTemplate(tmpName)
         container.start()
         timeout_event = threading.Event()
         t = threading.Timer(timeout, timerEvent, (timeout_event, container))
@@ -72,20 +68,22 @@ def processLxc(request, program):
             pass
         if not timeout_event.is_set():
             container.stop()
-                
+
         else:
             container.wait("STOPPED", 10)
-        container.destroy()
     return (returncode, timeout_event.is_set(), info)
 
 
-def handleRunProgAction(request):
+def handleRunProgAction(request, container):
     program = base64.b64decode(request["b64_data"].encode("utf8"))
-    (returncode, timeout_occured, info) = processLxc(request, program)
+    (returncode, timeout_occured, info) = processLxc(
+        request, container, program)
+    if returncode != 255:
+        returncode = returncode % 255
     response = {
         "success": True,
         "timeout": timeout_occured,
-        "returncode": returncode % 255,
+        "returncode": returncode,
     }
     if info != None:
         response["success"] = False
@@ -98,6 +96,7 @@ def handleRunProgAction(request):
     Insert new actions here.
     Please stick to the following sheme for these methods:
     - takes request dictionary
+    - takes container object
     - returns new response dictionary
 
     Method must be referenced in determineMethodFromAction.
@@ -113,7 +112,29 @@ def determineMethodFromAction(actionValue):
                            })
 
 
+def actionSupervisor(request, container, method):
+    if not container.defined:
+        if request.get("use_template_container", False):
+            template_container = lxc.Container(
+                request.get("template_container_name"))
+            if not template_container.defined:
+                return {"success": False,
+                        "info": "template container does not exist",
+                        }
+            container = template_container.clone(container.name)
+        else:
+            container.create("debian", lxc.LXC_CREATE_QUIET)
+            makeConfigFromTemplate(container.name)
+    response = method(request, container)
+    if not request.get("keep-alive", False):
+        container.destroy()
+    return response
+
+
 def handleClient(client_socket):
+    tmpName = "".join([random.choice(string.ascii_letters + string.digits)
+                       for n in range(12)])
+    container = lxc.Container(tmpName)
     fd = client_socket.makefile("rw")
     keep_alive = True
     while keep_alive:
@@ -131,7 +152,7 @@ def handleClient(client_socket):
             keep_alive = request.get("keep-alive", False)
             method = determineMethodFromAction(
                 request.get("action", "None"))
-            response = method(request)
+            response = actionSupervisor(request, container, method)
             fd.write(json.dumps(response) + "\n")
             fd.flush()
     fd.close()

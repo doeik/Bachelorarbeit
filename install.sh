@@ -39,6 +39,8 @@ function debinstall() {
   sudo apt-get install -y make
   sudo apt-get install -y automake
   sudo apt-get install -y pkg-config
+  sudo apt-get install -y linux-headers-amd64
+  sudo apt-get install -y libcap2
   currentdir=$(pwd)
   mkdir /tmp/lxc_on_github
   cd /tmp/lxc_on_github
