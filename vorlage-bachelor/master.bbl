@@ -42,4 +42,10 @@
 \emph{{cgroups kmem bug report}}.
 \newblock \url{https://bugs.archlinux.org/task/40818}, Abruf: 22.07.2014.
 
+\bibitem[per]{personality}
+\emph{{Lxc personalities}}.
+\newblock
+  \url{http://www.redhat.com/archives/libvir-list/2011-February/msg01040.html},
+  Abruf: 05.08.2014.
+
 \end{thebibliography}

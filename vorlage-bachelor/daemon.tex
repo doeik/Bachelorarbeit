@@ -10,18 +10,95 @@ and execution and in the end returns the results back to an unprivileged program
 \section{Communication}
 
 Any program who wants to communicate with the lxc\_daemon is able to do this through a unix domain socket located
-in /run. Unix domain sockets are mostly handled like IP-sockets but instead of using an IP address UDS take file paths.
+in `/run'. Unix domain sockets are mostly handled like IP-sockets but instead of using an IP address UDS take file paths.
 Also - which is a convenient feature - access to this socket can be limited easily through altering the file modes.
 Practically speaking this allows us to only permit programs with a certain user id to access the socket which then again
 implies that an admin has explicitly allowed this user to be able to communicate with the daemon.\\
-Currently the name of the usergroup is ''info2\_containers''.\\
-When not running the lxc\_daemon as a system service the option ''-g'' needs to be specified. This sets the group id
+Currently the name of the usergroup is ``info2\_containers''.\\
+When not running the lxc\_daemon as a system service the option ``-g'' needs to be specified. This sets the group id
 accordingly and thus preventing the file modes from being set incorrectly.
 
 \section{The protocol}
 
-\section{Actions implementation}
-
-The code is designed to be easily extendable.
+The daemon takes a json object containg a python dictionary which needs to specify at least a valid action to
+be performed as well as some arguments which are needed for that particular action.\\
+Currently the daemon only performs the ``run\_prog'' action which requires a base64 encoded program to be run
+inside the container under the keyword ``b64\_data''. Note that the base64 byte string needs to be converted to
+UTF8 first as json complains when a byte string is passed.\\
+In addition to that this action requires a list of parameters under the keyword ``params'' which is obligatory
+because the first argument is the name of the program.\\
+There are a few other non-essential options:\\
+The ``keep-alive'' keyword (default: False) contains a boolean indicating whether the connection is to be closed
+directly after this action or to be held open awaiting further instructions.\\
+The ``timeout'' keyword (default: TIMEOUT) specifies after how many seconds the container execution shall be
+terminated. The default value is specified by the constant ``TIMEOUT'' as a fallback since we do not want any
+container action to last forever.\\
+Also not essential but highly recommended is the option ``use\_template\_container'' (default: False). This
+requires an already existing template container from which the daemon clones a new temporary one. Not only
+this is much faster than creating a container from scratch every time, but it is also an easy way to tweak
+the containers for ones purposes, for example through installing additional software packages.\\
+The returned json dictionary always contains a boolean variable ``success'' which if set to ``True'' should
+furthermore contain any results, or if set to ``False'' some error information under the keyword ``info''.\\
+The ``run\_prog'' action returns the exit value of the program and a boolean variable ``timeout'' to indicate
+whether the container terminated normally or had to be shut down by the daemon.
 
 \section{Container handling}
+
+In the following a top--down examination regarding the container handling is described:\\
+When the server socket detects an incoming connection and creates a thread in which ``handleClient'' is responsible
+for the communication to the corresponding program, a container object is already created. This is not accompanied by
+any other action, the container does not exist yet. It is simply done to make the function and any nested functions
+if desired aware of the container. Mainly this function would need to know the container if it detected a connection
+timeout and wanted to stop the whole execution process prematurely (not implemented yet).\\
+The function ``actionSupervisor'' takes the container object from ``handleClient'' and returns a response dictionary.
+The purpose of this function is to make sure the container exists and if not is created accordingly and destroyed
+properly when the connection shall no longer be kept alive. It also calls the function which determines the action
+to be performed and thus which function is to be called respectively.\\
+Since the only defined action is ``run\_prog'' at the moment it is sufficient to describe only this way although it is
+non-deterministic in principle.\\
+The ``handleRunProgAction'' function decodes the base64 string into ordinary byte code and passes it along with the
+request dictionary and the container object to the function ``processLXC'' which then returns a tuple containing the return
+value of the executed program, a boolean which indicates whether a timeout occured during the process and a string
+with error information which is not assigned if no error occured. The further handling of the return code needs some
+explanation:\\
+% source dammit -.-
+The exit code of a program is an unsigned 8 bit integer. The attach\_wait method returns a 16 bit integer though. The 8
+most significant bits are the exit code of the executed program while the 8 least significant bits indicate the exit
+value of the attach\_wait process. If the latter fails it returns -1 which will result in the actual return value of
+255 due to its unsigned nature. As a consequence any value returned by the program which is something other than 0 will be
+above 255 which is why the daemon does not return the exit value directly but rather computes it as exit code modulo
+255.\\
+Afterwards a dictionary is created and the information is put into it. If ``info'' is not none ``success'' ist set to false
+and the info string is appended to the dictionary.\\
+The ``processLXC'' function starts the container, starts a timer, writes the binary code into the root filesystem, runs
+``attach\_wait'', then tries to stop the timer, stops the container and in the end returns the tuple of arguemnts
+described above.\\
+Everything from the container start to the attach\_wait method is in a try-block to be be able to provide information on
+any unexpected error and most importantly make sure that the container is stopped. Not having the container in a stopped
+state will break the whole process in such a way that it will leave us with an orphaned container since running containers
+cannot be destroyed.\\
+Directly after the start a timer thread is started which will notify the current thread through a timer event if the
+timeout is triggered and the container is stopped externally by the timer thread. This makes sure that the container
+execution thread will eventually terminate.\\
+After that the binary file is written to the rootfs and made executable (file modes and other metadata are not preserved).\\
+The attach\_wait method executes the program inside the container and waits for the exit status. The first argument is
+one of two function handles (the other one being ``lxc.attach\_run\_shell''). Either one of those needs to be specified. Then
+follow the parameters to pass to this function in a list object and finally a keyword argument is given. The
+``attach\_flags'' are a combination of bitwise or'ed flags which determine the behaviour of the attach process. Among
+the default options are capability dropping and moving the process to cgroups, furthermore setting the personality
+(main purpose in lxc: running 32 bit containers on 64 bit hosts)\cite{personality} and enabling linux security modules
+which has no effect with the current configuration neither using App Armor nor any other lsm.\\
+In the ``finally'' block the container is stopped except if the timeout event is set. In that case the code makes use of
+the container object's own function to wait for a certain state. This is done to avoid possible race conditions since
+the container is stopped by another thread and we definitely do not want to try to destroy the container before it
+reaches the stopped state. The returning of the processLXC function guarantees to have a stopped container.
+
+\section{Actions implementation}
+
+The code is designed to be easily extendable.\\
+The ``actionSupervisor'' function takes a generic function which it recieves through executing the ``determineMethodFromAction''
+function which again provides a mapping from keywords in ``action'' to function handles. One can safely add a new action
+in said function without having to modify any existing functions (except for this one of course). These new methods
+just need to conform to the following sheme:\\
+They take two arguments: A request dictionary and as the second one the container object.\\
+They have to return a newly created response dictionary.

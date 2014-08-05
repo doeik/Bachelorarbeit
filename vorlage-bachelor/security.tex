@@ -9,7 +9,7 @@ Using chroot allows the caller to set a different directory as the new root dire
 of the new root directory have become inaccessible which is why they are often referred to as jails. Chroot is not designed as a security
 feature and thus it is possible to break out of the current environment.\\
 Lxc uses the system call pivot\_root() to change the root directory which also stores the old root directory.
-Currently the default mount point is '/usr/lib/lxc/rootfs/lxc\_putold'. After changing successfully to the new root directory
+Currently the default mount point is `/usr/lib/lxc/rootfs/lxc\_putold'. After changing successfully to the new root directory
 the old root directory in the path specified above is unmounted (conf.c in setup\_rootfs\_pivot\_root).
 
 \section{Namespaces}
@@ -20,7 +20,7 @@ There are 6 namespaces existent at the moment:\\
 mnt - The mount namespace separates mountpoints and filesystems.\\
 pid - The pid namespace creates separate environments each containing its own process hierachy. Killing the process with PID 1
 in a container for example will not affect the hosts init process in any way but rather end the process inside the container with PID 1
-which is the containers own init process in most cases.\\
+which is the container's own init process in most cases.\\
 net - The net namespace grants a separate network stack. The only device prevalent by default is the loopback device. To access any network
 one must create a virtual ethernet device (veth) consisting of two network devices one in the original and one in the new namespace.\\
 ipc - The ipc (inter process communication) namespace prevents any interaction between processes in separate namespaces.\\
