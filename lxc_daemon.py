@@ -57,7 +57,7 @@ def processLxc(request, container, program):
         os.chmod(prog_path, stat.S_IEXEC)
         params[0] = os.path.join("/", os.path.basename(params[0]))
         returncode = container.attach_wait(
-            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DEFAULT, extra_env_vars=("PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin", ))
+            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DEFAULT)
     except Exception:
         returncode = 2
         info = traceback.format_exc()
@@ -68,7 +68,6 @@ def processLxc(request, container, program):
             pass
         if not timeout_event.is_set():
             container.stop()
-
         else:
             container.wait("STOPPED", 10)
     return (returncode, timeout_event.is_set(), info)
@@ -112,7 +111,7 @@ def determineMethodFromAction(actionValue):
                            })
 
 
-def actionSupervisor(request, container, method):
+def actionSupervisor(request, container):
     if not container.defined:
         if request.get("use_template_container", False):
             template_container = lxc.Container(
@@ -125,6 +124,8 @@ def actionSupervisor(request, container, method):
         else:
             container.create("debian", lxc.LXC_CREATE_QUIET)
             makeConfigFromTemplate(container.name)
+    method = determineMethodFromAction(
+        request.get("action", "None"))
     response = method(request, container)
     if not request.get("keep-alive", False):
         container.destroy()
@@ -150,9 +151,7 @@ def handleClient(client_socket):
             break
         else:
             keep_alive = request.get("keep-alive", False)
-            method = determineMethodFromAction(
-                request.get("action", "None"))
-            response = actionSupervisor(request, container, method)
+            response = actionSupervisor(request, container)
             fd.write(json.dumps(response) + "\n")
             fd.flush()
     fd.close()
