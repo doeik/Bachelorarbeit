@@ -85,12 +85,29 @@ the kmem extension which is capable of limiting the kernel memory to a small amo
 system call to fail way before freezing the system. In conclusion after some trial-and-error-testing 12 megabytes seems to be a
 stable amount of allowed kernel memory.\\
 Currently the memory.kmem feature is disabled in the default archlinux kernel due to memory reclaim not being implemented yet\cite{kmembug}.\\
-% cpu shares
+Cgroups also provides a feature for limiting the cpu usage. It is possible to adjust the amount of cpu shares the process gets compared to
+other processes in which 1024 is 100\% and 256 25\% respectively. 256 is the current priority assigned to all containers run by the lxc\_daemon.
+I have also provided a minimal cpu dos c-program which simply increments an integer in an infinite loop. Unfortunately this hard to test
+since the program still uses up the whole cpu capacity, it just gets a smaller portion compared to processes on normal priority.
 
 \section{Cgroup devices}
 
-Another important cgroups feature is the device section
-First all devices are denied and then permitted exclusivly.
+Another important cgroups feature is the device section.\\
+First all devices are denied and then permitted exclusively. For this purpose the wildcard rule ``a'' exists which includes
+all devices. Any other rule needs to specify a block (``b'') or a character (``c'') device followed by the major and
+- separated by a colon - the minor device number.\\
+The main difference between block and character devices is that block devices have a cache of their own and therefore are not
+written or read directly upon like character devices.\\
+The major device number specifies the device driver (e.g. SCSI for SATA hard drives) and the minor number refers to different
+devices controlled by the same driver (e.g. partitions or terminals)\cite{devicenumbers}.\\
+The allowed devices are currently /dev/null, /dev/zero, /dev/random, /dev/urandom and the real time clock.
+The most notable points where this configuration differs from common configurations provided with the stock containers are
+the exclusion of ttys (?) and pts (?) and furthermore fuse.
+We do not need to interact with the container during the execution so ttys and pts are not needed.
+Fuse (filesystem in userspace) allows unprivileged mounting of devices...
+
+wir wollen weder mit dem container zur laufzeit interagieren (tty und pts), noch usb sticks oder andere temporäre devices mounten (fuse)
+
 
 \section{Capability dropping}
 
