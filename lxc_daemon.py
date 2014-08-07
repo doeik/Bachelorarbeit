@@ -16,21 +16,21 @@ import subprocess
 import threading
 import traceback
 
-LXC_PATH = "/var/lib/lxc/"
 TIMEOUT = 30
 CONFIG_TEMPLATE = "/usr/local/lib/lxc_daemon/config_template"
 UDS_FILE = "/run/uds_lxcdaemon"
 
 
-def makeConfigFromTemplate(tmpName):
-    container_path = os.path.join(LXC_PATH, tmpName)
+def makeConfigFromTemplate(container):
+    container_path = container.config_file_name[
+        :len(container.config_file_name) - 6]
     with io.open(CONFIG_TEMPLATE, "r") as config:
         content = config.readlines()
     for i, line in enumerate(content):
-        line = line.replace("{container}", container_path + "/")
-        line = line.replace("{name}", tmpName)
+        line = line.replace("{container}", container_path)
+        line = line.replace("{name}", container.name)
         content[i] = line
-    with io.open(os.path.join(container_path, "config"), "w") as newconf:
+    with io.open(container.config_file_name, "w") as newconf:
         for line in content:
             newconf.write(line)
 
@@ -43,7 +43,6 @@ def timerEvent(timeout_event, container):
 def processLxc(request, container, program):
     params = request["params"]
     info = None
-    tmpName = container.name
     timeout = request.get("timeout", TIMEOUT)
     try:
         container.start()
@@ -51,7 +50,7 @@ def processLxc(request, container, program):
         t = threading.Timer(timeout, timerEvent, (timeout_event, container))
         t.start()
         prog_path = os.path.join(
-            LXC_PATH, tmpName, "rootfs/", os.path.basename(params[0]))
+            container.get_config_item("lxc.rootfs"), os.path.basename(params[0]))
         with io.open(prog_path, "wb") as fi_prog:
             fi_prog.write(program)
         os.chmod(prog_path, stat.S_IEXEC)
@@ -123,7 +122,7 @@ def actionSupervisor(request, container):
             container = template_container.clone(container.name)
         else:
             container.create("debian", lxc.LXC_CREATE_QUIET)
-            makeConfigFromTemplate(container.name)
+            makeConfigFromTemplate(container)
     method = determineMethodFromAction(
         request.get("action", "None"))
     response = method(request, container)
