@@ -39,7 +39,7 @@ def containerSetup(name, args):
         return 1
     makeConfigFromTemplate(cont)
     if len(args) < 1:
-        print("no packages to be installed specified")
+        print("tc_setup: no packages to be installed specified")
     else:
         packageInstall(cont, args)
     return 0

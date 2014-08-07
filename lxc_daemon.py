@@ -111,9 +111,9 @@ def determineMethodFromAction(actionValue):
 
 def actionSupervisor(request, container):
     if not container.defined:
-        if request.get("use_template_container", False):
+        if "use_template_container" in request:
             template_container = lxc.Container(
-                request.get("template_container_name"))
+                request.get("use_template_container"))
             if not template_container.defined:
                 return {"success": False,
                         "info": "template container does not exist",
