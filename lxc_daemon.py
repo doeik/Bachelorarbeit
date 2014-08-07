@@ -22,8 +22,7 @@ UDS_FILE = "/run/uds_lxcdaemon"
 
 
 def makeConfigFromTemplate(container):
-    container_path = container.config_file_name[
-        :len(container.config_file_name) - 6]
+    container_path = os.path.dirname(container.config_file_name)
     with io.open(CONFIG_TEMPLATE, "r") as config:
         content = config.readlines()
     for i, line in enumerate(content):

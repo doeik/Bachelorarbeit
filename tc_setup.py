@@ -1,16 +1,15 @@
-import os
 import io
-import sys
 import lxc
-import subprocess
 import optparse
+import os
+import subprocess
 
 CONFIG_TEMPLATE = "/usr/local/lib/lxc_daemon/config_template"
 NAMESERVER = "8.8.4.4"
 
 
 def makeConfigFromTemplate(cont):
-    container_path = cont.config_file_name[:len(cont.config_file_name) - 6]
+    container_path = os.path.dirname(cont.config_file_name)
     with io.open(CONFIG_TEMPLATE, "r") as config:
         content = config.readlines()
     for i, line in enumerate(content):
@@ -39,7 +38,7 @@ def containerSetup(name, args):
     if not cont.defined:
         return 1
     makeConfigFromTemplate(cont)
-    if len(sys.argv) < 2:
+    if len(args) < 1:
         print("no packages to be installed specified")
     else:
         packageInstall(cont, args)
