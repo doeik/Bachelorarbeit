@@ -1,0 +1,25 @@
+How caps are dropped:
+python-lxc/lxc.c in Container\_start at l. 1380 self->container->start(...)
+lxc/lxccontainer.c: at l. 3551 c->start = lxcapi\_start(...)
+		    in lxcapi\_start at l. 675 ret = lxc\_start(...)
+lxc/lxc.h: at l. 52 extern int lxc\_start(...) (function in liblxc)
+lxc/start.c: in lxc\_start(...) at l. 1174
+	     in \_\_lxc\_start(...) at l. 1031
+lxc/conf.c: in lxc\_setup(...) at l. 4117 ff
+
+lxc\_init is executed
+  secomp policies are loaded
+  state ``STARTING'' is set
+  envvars for (mount?)hooks are set
+container is spawned
+  setup cgroups
+  pin rootfs
+  create a process in a new set of namespaces -> do\_start
+  setup cgroup limits
+do_start:
+  executing init process
+  
+container is set up:
+  mounting rootfs
+  mounting /dev
+  processing mount entries or automounting /proc and /sys 

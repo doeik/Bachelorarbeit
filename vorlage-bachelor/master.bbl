@@ -7,6 +7,12 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[att]{attachwait}
+\emph{{The attach\_wait method}}.
+\newblock
+  \url{https://lists.linuxcontainers.org/pipermail/lxc-devel/2013-August/004898.html},
+  Abruf: 10.08.2014.
+
 \bibitem[bug]{bugreport}
 \emph{{attach\_wait bug report}}.
 \newblock
@@ -23,6 +29,12 @@
 \emph{{Cgroups memory controller}}.
 \newblock \url{https://www.kernel.org/doc/Documentation/cgroups/memory.txt},
   Abruf: 25.07.2014.
+
+\bibitem[dev]{devicenumbers}
+\emph{{Device numbers}}.
+\newblock
+  \url{http://www.linux-tutorial.info/modules.php?name=MContent&pageid=94},
+  Abruf: 06.08.2014.
 
 \bibitem[for]{forkbomb}
 \emph{{fork bomb}}.

@@ -17,7 +17,7 @@ import threading
 import traceback
 
 TIMEOUT = 30
-CONFIG_TEMPLATE = "/usr/local/lib/lxc_daemon/config_template"
+CONFIG_TEMPLATE = "/usr/local/share/lxc_daemon/config_template"
 UDS_FILE = "/run/uds_lxcdaemon"
 
 

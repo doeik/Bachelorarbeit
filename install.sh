@@ -59,8 +59,8 @@ function coreinstall() {
   sudo groupadd info2_containers
   sudo cp ./lxc_daemon.py /usr/local/bin/
   sudo chmod 700 /usr/local/bin/lxc_daemon.py
-  sudo mkdir /usr/local/lib/lxc_daemon
-  sudo cp ./config_template /usr/local/lib/lxc_daemon/config_template
+  sudo mkdir /usr/local/share/lxc_daemon
+  sudo cp ./config_template /usr/local/share/lxc_daemon/config_template
   sudo cp ./lxc_daemon.service /etc/systemd/system/
   sudo systemctl daemon-reload
   sudo systemctl enable lxc_daemon.service
@@ -74,13 +74,13 @@ function uninstall() {
   sudo systemctl disable lxc_daemon.service
   sudo rm /usr/local/bin/lxc_daemon.py
   sudo rm /etc/systemd/system/lxc_daemon.service
-  sudo rm -rf /usr/local/lib/lxc_daemon
+  sudo rm -rf /usr/local/share/lxc_daemon
   sudo rm /run/uds_lxcdaemon
 }
 
 function upgrade() {
   sudo cp ./lxc_daemon.py /usr/local/bin/lxc_daemon.py
-  sudo cp ./config_template /usr/local/lib/lxc_daemon/config_template
+  sudo cp ./config_template /usr/local/share/lxc_daemon/config_template
   sudo systemctl restart lxc_daemon.service
 }
 

@@ -1,0 +1,20 @@
+\chapter{Future work}
+
+\section{Unprivileged containers}
+
+Lxc can also be run by a non root user which would make the ``lxc\_daemon'' obsolete.
+However the process is both internally and externally quite different from privileged execution.
+Container creation cannot be done with the standart templates because these use tools like
+debootstrap which need to do some privileged operations. A solution to that is the download template
+which pulls any supported rootfs that is updated daily. Furthermore the config would need to
+be adjusted to go with unprivileged containers, plus the user namespace would become essential
+although it is still not enabled in some distributions (archlinux being one of them).
+Last but not least the owner of the rootfs needs to be changed to match the user who is executing
+the container which is still a privileged operation.
+
+\section{Daemon actions}
+
+At the moment the daemon features only one single action. It would be convenient for practical use
+to be able to have files that are created during the process exported to the unprivileged peer.
+Also an action which does not run a program directly but rather passes it as a parameter to a different
+command (e.g. gcc) would come in handy.

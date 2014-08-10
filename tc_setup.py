@@ -4,7 +4,7 @@ import optparse
 import os
 import subprocess
 
-CONFIG_TEMPLATE = "/usr/local/lib/lxc_daemon/config_template"
+CONFIG_TEMPLATE = "/usr/local/share/lxc_daemon/config_template"
 NAMESERVER = "8.8.4.4"
 
 

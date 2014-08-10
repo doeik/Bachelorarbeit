@@ -1,0 +1,8 @@
+bei einem user der in einen userns hineingemapped ist wird bei jedem systemcall geprüft, ob er in beiden namespaces zu dieser operation berechtigt ist.
+https://www.kernel.org/doc/ols/2006/ols2006v1-pages-101-112.pdf
+d.h. man möchte den container nicht als root starten, da dies ja überhaupt keinen unterschied machen würde (root-->root).
+Vielmehr möchte man einen normalen user in einem container wie einen root nutzer aussehen lassen.
+Blöderweise funktionieren unprivilegierte container (vor allem intern) ganz anders.
+https://www.stgraber.org/2014/01/17/lxc-1-0-unprivileged-containers/
+hier ein tutorial, dass diesen gedanken zum einen widerspricht und zum anderen nicht funktioniert:
+http://crashcourse.housegordon.org/LXC-semi-unprivileged-containers.html
