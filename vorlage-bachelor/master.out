@@ -1,9 +1,9 @@
 \BOOKMARK [0][-]{tit.0}{Titelseite}{}% 1
 \BOOKMARK [0][-]{abstract.0}{Zusammenfassung}{}% 2
 \BOOKMARK [0][-]{ack.0}{Danksagung}{}% 3
-\BOOKMARK [0][-]{content.0}{Inhaltsverzeichnis}{}% 4
-\BOOKMARK [0][-]{chapter*.2}{Abbildungsverzeichnis}{}% 5
-\BOOKMARK [0][-]{chapter*.3}{Tabellenverzeichnis}{}% 6
+\BOOKMARK [0][-]{content.0}{Contents}{}% 4
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 5
+\BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 6
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 7
 \BOOKMARK [0][-]{chapter.2}{2 Daemon structure}{}% 8
 \BOOKMARK [1][-]{section.2.1}{2.1 Purpose}{chapter.2}% 9
@@ -26,4 +26,4 @@
 \BOOKMARK [0][-]{chapter.5}{5 Future work}{}% 26
 \BOOKMARK [1][-]{section.5.1}{5.1 Unprivileged containers}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.2}{5.2 Daemon actions}{chapter.5}% 28
-\BOOKMARK [0][-]{chapter*.4}{Literaturverzeichnis}{}% 29
+\BOOKMARK [0][-]{chapter*.4}{Bibliography}{}% 29
