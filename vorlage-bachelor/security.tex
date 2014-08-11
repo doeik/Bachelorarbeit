@@ -111,7 +111,7 @@ Fuse (filesystem in userspace) allows unprivileged mounting of devices...
 \section{Capability dropping}
 
 There are two types of users on a linux system: the root user who is basically allowed to do everything and the normal user 
-who is not capable of performing any priviliged operation. Kernel capabilities are a feature which allow a more distinct way of handling
+who is not capable of performing any privileged operation. Kernel capabilities are a feature which allow a more distinct way of handling
 permissions. In general the procedure is to start a program with root permissions and then dropping capabilities from the prevailing full set.
 Any child process spawned will inherit this capability subset.
 In some situations it might be more suitable to grant just a few capabilities while dropping the others, or maybe a program wants to do
@@ -123,7 +123,7 @@ hotkey ctrl+alt+del the machine could easily be rebooted circumventing the conta
 Then ``lxc\_init'' is executed which mainly loads the seccomp policies, sets the state to ``STARTING'' and environment variables for
 a pre-setup hook script. Slightly afterwards ``lxc\_spawn'' is executed which then sets up cgroups according to the config specifications,
 clones or inherits namespaces and creates a new process through ``lxc\_clone''. This child process in turn executes ``do\_start'' which
-mounts the filesystems accordingly and ultimately drops the priviliges. After that it replaces itself with the init process of
+mounts the filesystems accordingly and ultimately drops the privileges. After that it replaces itself with the init process of
 the container through the exec() system call.
 
 \section{Mountpoints}
