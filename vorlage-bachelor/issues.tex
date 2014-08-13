@@ -2,10 +2,12 @@
 
 \section{Lxc-python api and threads}
 
-In general c-code is not thread safe, so when executing a c-function through python the default
-behaviour of the python interpreter is to block all other running threads until said function returns\cite{gil}.\\
-When executing the attach\_wait function all threads would be blocked until it returned. Unfortunately
+In general c-code is not thread safe, so when executing a c-function through \textit{python} the default
+behaviour of the \textit{python interpreter} is to block all other running threads until said function returns\cite{gil}.\\
+When executing the \texttt{attach\_wait} function provided by the \textit{python-lxc} API which runs a command
+inside a container and returns its exit value
+all threads would be blocked until it returned. Unfortunately
 this made it impossible to stop the container through a timer thread atfer a certain amount of time had
 passed (not to speak of running more than one container simultaneously).\\
-However there are macros defined in python.h which are able to tell python to temporarily allow threads.
+However there are macros defined in \texttt{python.h} which are able to tell \textit{python} to temporarily allow threads.
 Turning in this patch\cite{bugreport} resolved the issue.

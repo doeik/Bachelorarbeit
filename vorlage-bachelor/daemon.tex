@@ -20,7 +20,7 @@ accordingly and thus preventing the file modes from being set incorrectly.
 
 \section{The protocol}
 
-The daemon takes a json object containg a python dictionary which needs to specify at least a valid action to
+The daemon takes a json object containing a python dictionary which needs to specify at least a valid action to
 be performed as well as some arguments which are needed for that particular action.\\
 Currently the daemon only performs the ``run\_prog'' action which requires a base64 encoded program to be run
 inside the container under the keyword ``b64\_data''. Note that the base64 byte string needs to be converted to
@@ -44,7 +44,7 @@ whether the container terminated normally or had to be shut down by the daemon.
 
 \section{The config template}
 
-The install shell script stores the ``config\_template'' in `/usr/local/share/lxc\_daemon/'. During container
+During container
 creation a generic config file is created which afterwards will be overwritten by the lxc\_daemon using
 the template.\\
 The daemon is aware of two keywords within the config template:\\
@@ -104,13 +104,3 @@ In the ``finally'' block the container is stopped except if the timeout event is
 the container object's own function to wait for a certain state. This is done to avoid possible race conditions since
 the container is stopped by another thread and we definitely do not want to try to destroy the container before it
 reaches the stopped state. The returning of the processLXC function guarantees to have a stopped container.
-
-\section{Actions implementation}
-
-The code is designed to be easily extendable.\\
-The ``actionSupervisor'' function takes a generic function which it recieves through executing the ``determineMethodFromAction''
-function which again provides a mapping from keywords in ``action'' to function handles. One can safely add a new action
-in said function without having to modify any existing functions (except for this one of course). These new methods
-just need to conform to the following sheme:\\
-They take two arguments: A request dictionary and as the second one the container object.\\
-They have to return a newly created response dictionary.

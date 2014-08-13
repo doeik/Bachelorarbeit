@@ -1,71 +1,75 @@
-\chapter{Lxc security}
+\chapter{Lxc security}\label{features}
 
-Linux containers achieve their execution environment security through the following concepts:\\
-chroot, namespaces, cgroups, privilege dropping (seccomp policies, app armor)\\
+\textit{Linux Containers} achieve their execution environment security through the following concepts:\\
+Chroot, namespaces, cgroups, privilege dropping, seccomp policies and linux security modules (e.g. \textit{app armor}).\\
+I have not included \textit{app armor} nor any other linux security module in my configuration so this will not be discussed.
+Nevertheless this had to be mentioned at least for the sake of completeness.\\
+Furthermore most of the research has been done using \textit{archlinux} as the host OS which is why issues with its particular
+kernel configuration are stressed explicitly.
 
-\section{Chroot}
+\section{Chroot}\label{rootfs}
 
-Using chroot allows the caller to set a different directory as the new root directory. All directories which are not subdirectories
-of the new root directory have become inaccessible which is why they are often referred to as jails. Chroot is not designed as a security
-feature and thus it is possible to break out of the current environment.\\
-Lxc uses the system call pivot\_root() to change the root directory which also stores the old root directory.
-Currently the default mount point is `/usr/lib/lxc/rootfs/lxc\_putold'. After changing successfully to the new root directory
-the old root directory in the path specified above is unmounted (conf.c in setup\_rootfs\_pivot\_root).
+Using \textit{chroot} allows the caller to set a different directory as the new root directory.\\
+The root of a filesystem is the point where all directory paths originate from. It is impossible to go up another stage in the path hierarchy.
+Nothing exists in the virtual filesystem beyond this point. Typically a so called \textit{rootfs} contains all files needed for
+the execution of a whole operating system.
+The container rootfs is an exeption though because the kernel is already loaded by
+the host system and is therefore not needed. Note that other \textit{chroot} environments do not need a kernel either but often have got one
+since in many cases \textit{chroot} is used to install a new operating system on a machine.\\
+All directories which are not subdirectories
+of the new root have become inaccessible, so if the \textit{chroot} system call is unable to find another shell in the new
+rootfs it will fail. Also it is not possible to execute any non-built-in command if a copy of the correspondent binary file is
+not present in the new root directory.\\
+\textit{Chroot} is not designed as a security feature and thus it is possible to break out of the current environment.\\
+\textit{Lxc} uses the system call \texttt{pivot\_root()} to change the root directory which also stores the old root directory.
+Currently the default mount point is \texttt{/usr/lib/lxc/rootfs/lxc\_putold}. After changing successfully to the new root directory
+the old root directory in the path specified above is unmounted (conf.c in \texttt{setup\_rootfs\_pivot\_root}).
 
 \section{Namespaces}
 
-Namespaces separate parts of the kernel from each other which are traditionally global. When spawning the container lxc unshares
+Namespaces\cite{namespaces} separate parts of the kernel from each other which are traditionally global. When spawning the container \textit{lxc} unshares
 the available namespaces from the host.\\
-There are 6 namespaces in use by lxc at the moment:\\
-mnt - The mount namespace separates mountpoints and filesystems.\\
-pid - The pid namespace creates separate environments each containing its own process hierachy. Killing the process with PID 1
+There are 6 namespaces in use by \textit{lxc} at the moment:\\
+\textit{mnt} - The mount namespace separates mountpoints and filesystems.\\
+\textit{pid} - The pid namespace creates separate environments each containing its own process hierarchy. Killing the process with PID 1
 in a container for example will not affect the host's init process in any way but rather end the process inside the container with PID 1
 which is the container's own init process in most cases.\\
-net - The net namespace grants a separate network stack. The only device prevalent by default is the loopback device. To access any network
+\textit{net} - The net namespace grants a separate network stack. The only device prevalent by default is the loopback device. To access any network
 one must create a virtual ethernet device (veth) consisting of a pair of network devices one in the original and one in the new namespace.\\
-ipc - The ipc (inter process communication) namespace prevents any interaction between processes in separate namespaces.\\
-uts - The uts namespace makes it possible to provide different information on the system such as the hostname, the OS name and version
-when calling uname().\\
-user - The user namespace provides a mapping of user ids and group ids from the host system to the namespace. A user may have the uid 0
+\textit{ipc} - The ipc (inter process communication) namespace prevents any interaction between processes in separate namespaces.\\
+\textit{uts} - The uts namespace makes it possible to provide different information on the system such as the hostname, the OS name and version
+when calling \texttt{uname()}.\\
+\textit{user} - The user namespace provides a mapping of user ids and group ids from the host's to the new namespace. A user may have the uid 0
 (root) in the newly created namespace but uid 10000 in the host's namespace. So if this user ever manages to break the isolation of the
 container, he will never be root on the host because his id is mapped to uid 10000.\\
-% sources
-% when does the container do unshare()?
+In \textit{archlinux} and a few other distributions the user namespace is deactivated due to major concerns that this could open a broad
+attack surface to unprivileged users \cite{archuserns}.
 
 \section{Cgroups}
 
-Cgroups (control groups) are a feature for limiting resources and access or simply supervising processes. The different cgroups exist as
-pseudo filesystems in /sys/fs/cgroup. They are in general hierarchially organized: In each group subdirectories can be created
+\textit{Cgroups} (control groups) is a feature for limiting resources and access or simply supervising processes. The different cgroups exist as
+pseudo filesystems in \texttt{/sys/fs/cgroup}. They are in general hierarchially organized: In each group subdirectories can be created
 which inherit the settings of the parent control group. If done manually, settings are read by using the cat command on the relevant
 pseudofile and respectively set by using the echo command and diverting the output into the file. Processes are assigned to these groups
-by simply echoing the pid into the tasks file.\\
+by simply echoing the pid into the \texttt{tasks} file.\\
 The currently prevalent cgroups are:\\
-blkio - this subsystem sets limits on input/output access to and from block devices such as physical drives (disk, solid state, USB, etc.). 
-
-cpu - this subsystem uses the scheduler to provide cgroup tasks access to the CPU. 
-
-cpuacct - this subsystem generates automatic reports on CPU resources used by tasks in a cgroup. 
-
-cpuset - this subsystem assigns individual CPUs (on a multicore system) and memory nodes to tasks in a cgroup. 
-
-devices - this subsystem allows or denies access to devices by tasks in a cgroup. 
-
-freezer - this subsystem suspends or resumes tasks in a cgroup. 
-
-memory - this subsystem sets limits on memory use by tasks in a cgroup, and generates automatic reports on memory resources used by those tasks. 
-
-net\_cls - this subsystem tags network packets with a class identifier (classid) that allows the Linux traffic controller (tc) to identify
-packets originating from a particular cgroup task. 
-
-net\_prio - this subsystem provides a way to dynamically set the priority of network traffic per network interface. 
-
-ns - the namespace subsystem.\\
+\textit{blkio} - this subsystem sets limits on input/output access to and from block devices such as physical drives (disk, solid state, USB, etc.).\\
+\textit{cpu} - this subsystem uses the scheduler to provide cgroup tasks access to the CPU.\\
+\textit{cpuacct} - this subsystem generates automatic reports on CPU resources used by tasks in a cgroup.\\
+\textit{cpuset} - this subsystem assigns individual CPUs (on a multicore system) and memory nodes to tasks in a cgroup.\\
+\textit{devices} - this subsystem allows or denies access to devices by tasks in a cgroup. \\
+\textit{freezer} - this subsystem suspends or resumes tasks in a cgroup.\\
+\textit{memory} - this subsystem sets limits on memory use by tasks in a cgroup, and generates automatic reports on memory resources used by those tasks.\\
+\textit{net\_cls} - this subsystem tags network packets with a class identifier (classid) that allows the Linux traffic controller (tc) to identify
+packets originating from a particular cgroup task. \\
+\textit{net\_prio} - this subsystem provides a way to dynamically set the priority of network traffic per network interface.\\
+\textit{ns} - the namespace subsystem.\\
 \cite{cgroups}
 
 \section{Cgroup limits}
 
 Cgroups is the feature of choice when it comes to limiting machine resources and as such preventing dos attacks.
-Also it is not - except for the devices section - preconfigured by lxc in any way, so this needs some accounting:\\
+Also it is not - except for the devices section - preconfigured by \textit{lxc} in any way, so this needs some accounting:\\
 First thing to do is to to limit the memory to prevent processes in the container from eating up the whole machine memory.
 When the memory consumtion reaches the specified threshold the cgroups memory resource controller tries to reclaim memory first,
 but if that fails it will kill the most memory consuming process in the container which should result in a return code of 9\cite{cgrpmem}.
@@ -73,68 +77,91 @@ I have tested this with a minimal c program which consumes as much memory as pos
 If the system has got swap memory this must also be limited. Otherwise it would just begin to swap out after the memory
 threshold has been reached. Since the kernel does not distinguish between swapped or unswapped memory the limit computes as follows:
 memory limit + swap limit.\\
-Currently the lxc\_daemon does not determine whether the swap is activated or not, this needs to be adjusted manually in the cgroups
-section of the config template by uncommenting the line stating lxc.memory.msw.limit\_in\_bytes.\\
+Currently the \texttt{lxc\_daemon} does not determine whether the swap is activated or not, this needs to be adjusted manually in the cgroups
+section of the config template by uncommenting the line stating \texttt{lxc.memory.msw.limit\_in\_bytes}.\\
 For IO operations cgroups do mostly read/write rate throttling, so there is no limit restricting the amount of disk space programs
-can use up. However this is not a huge problem since the lxc\_daemon always sets a timeout on container executions after which the
+can use up. However this is not a huge problem since the \texttt{lxc\_daemon} always sets a timeout on container executions after which the
 rootfs is destroyed and therefore all disk space freed. It is unlikely that this will have an impact on the system's health although
 running several containers at once will have a significant impact on how fast the execution will terminate, especially if all these
 need to do IO operations.\\
-One of the severest dos attacks is the fork bomb because it causes the system to freeze completely\cite{forkbomb}. Fortunately cgroups provides
-the kmem extension which is capable of limiting the kernel memory to a small amount. If set properly this will cause the fork()
+One of the severest dos attacks is the fork bomb \cite{forkbomb}. Its only purpose is to replicate itself as much as possible until
+the system freezes completely. Fortunately cgroups provides
+the \texttt{kmem} extension which is capable of limiting the kernel memory to a small amount. If set properly this will cause the \texttt{fork()}
 system call to fail way before freezing the system. In conclusion after some trial-and-error-testing 12 megabytes seems to be a
 stable amount of allowed kernel memory.\\
-Currently the memory.kmem feature is disabled in the default archlinux kernel due to memory reclaim not being implemented yet\cite{kmembug}.\\
+Currently the \texttt{memory.kmem} feature is disabled in the default archlinux kernel due to memory reclaim not being implemented yet\cite{kmembug}.\\
 Cgroups also provides a feature for limiting the cpu usage. It is possible to adjust the amount of cpu shares the process gets compared to
-other processes in which 1024 is 100\% and 256 25\% respectively. 256 is the current priority assigned to all containers run by the lxc\_daemon.
+other processes in which 1024 is 100\% and 256 25\% respectively. 256 is the current priority assigned to all containers run by the \texttt{lxc\_daemon}.
 I have also provided a minimal cpu dos c-program which simply increments an integer in an infinite loop. Unfortunately this is hard to test
 since the program still uses up the whole cpu capacity, it just gets a smaller portion compared to processes on default priority.
 
 \section{Cgroup devices}
 
 Another important cgroups feature is the device section.\\
-First all devices are denied and then permitted exclusively. For this purpose the wildcard rule ``a'' exists which includes
-all devices. Any other rule needs to specify a block (``b'') or a character (``c'') device followed by the major and
+First all devices are denied and then permitted exclusively. For this purpose the wildcard rule \texttt{a} exists which includes
+all devices. Any other rule needs to specify a block (\texttt{b}) or a character (\texttt{c}) device followed by the major and
 - separated by a colon - the minor device number.\\
 The main difference between block and character devices is that block devices have a cache of their own and therefore are not
 written or read directly upon like character devices. Since different system calls are used for each, the kernel
 needs to be aware of the device type.\\% source
 The major device number specifies the device driver (e.g. SCSI for SATA hard drives) and the minor number refers to different
 devices controlled by the same driver (e.g. partitions or terminals)\cite{devicenumbers}.\\
-The devices currently allowed by the config template are `/dev/null', `/dev/zero', `/dev/random', `/dev/urandom' and the real time clock.
+The devices currently allowed by the config template are \texttt{/dev/null}, \texttt{/dev/zero}, \texttt{/dev/random}, \texttt{/dev/urandom}
+and the real time clock.\\
+The pseudofile \texttt{/dev/null} discards any data it is given as input, \texttt{/dev/zero} does the same but additionally
+outputs zeros when read upon. \texttt{/dev/random} and \texttt{/dev/urandom} provide randomized bit sequences which are
+commonly used for key generation (e.g. SSH, PGP). As CAP\_SYS\_TIME has been dropped (see chapter \ref{caps} for information on capabilities)
+the real time clock cannot be altered, but reading from it is still possible.\\
 The most notable points where this configuration differs from common configurations provided with the stock containers are
-the exclusion of ttys (?) and pts (?) and furthermore fuse.
-We do not need to interact with the container during the execution so ttys and pts are not needed.
-Fuse (filesystem in userspace) allows unprivileged mounting of devices...
+the exclusion of \textit{ttys} and \textit{pts} and furthermore \textit{fuse}.
+\textit{Ttys} (teletypes) or more ordinarily referred to as consoles are input/ouput devices for user interaction while \textit{pts}
+(pseudottys) act like \textit{ttys} but feed their IO-data to another program. Both are obsolete in automated container usage.\\
+\textit{Fuse} (filesystem in userspace)\cite{fuse} allows unprivileged mounting of devices (e.g. usb storage devices). As it is not intended for
+one of the containers to be able to mount anything by itself this has been deactivated.
 
+\begin{figure}[htb]
+\begin{center}
+  \includegraphics[width=300pt]{fig/figure_1.png}
+  \caption{start flowchart}
+  \label{figure_1}
+\end{center}
+\end{figure}
 
-\section{Capability dropping}
+\section{Capability dropping}\label{caps}
 
 There are two types of users on a linux system: the root user who is basically allowed to do everything and the normal user 
 who is not capable of performing any privileged operation. Kernel capabilities are a feature which allow a more distinct way of handling
 permissions. In general the procedure is to start a program with root permissions and then dropping capabilities from the prevailing full set.
 Any child process spawned will inherit this capability subset.
 In some situations it might be more suitable to grant just a few capabilities while dropping the others, or maybe a program wants to do
-privileged operations before handing the control over to some unstrustworthy program (which is the case with lxc). Note
+privileged operations before handing the control over to some unstrustworthy program (which is the case with \textit{lxc}). Note
 that unless CAP\_SETPCAP is dropped the program can regrant itself any capability\cite{kernelcaps}.
-As mentioned before lxc does not drop its capabilities immediately. The start processes as follows in a stripped down version:\\
-In ``\_\_lxc\_start'' (start.c) the container first checks if he has to drop CAP\_SYS\_BOOT. If the kernel is set to allow a hard interrupt through the
-hotkey ctrl+alt+del the machine could easily be rebooted circumventing the container isolation (see must\_drop\_cap\_sys\_boot).
-Then ``lxc\_init'' is executed which mainly loads the seccomp policies, sets the state to ``STARTING'' and environment variables for
-a pre-setup hook script. Slightly afterwards ``lxc\_spawn'' is executed which then sets up cgroups according to the config specifications,
-clones or inherits namespaces and creates a new process through ``lxc\_clone''. This child process in turn executes ``do\_start'' which
+As mentioned before lxc does not drop its capabilities immediately. The start processes as follows in a stripped down version (see figure \ref{figure_1}):\\
+Note that the nodes represent a ``step into'' exept for \textit{lxc\_clone --> child exits} which is a ``step over'' and -- as the parent is
+irrelevant at this point for showing how capabilities are dropped -- does not point to another function but rather to a certain state.\\
+In \texttt{\_\_lxc\_start} (start.c) the container first executes \texttt{lxc\_init} which mainly loads the seccomp policies (see chapter \ref{seccomp}),
+sets the state to ``STARTING'' and environment variables for a pre-setup hook script. On return a \textit{handler} struct is handed to
+\texttt{\_\_lxc\_start} which then adds the struct ops containing function references for later use and some commands given be the
+initial caller (the first argument must be something like \texttt{/sbin/init}) to execute after lxc is done setting everything up for
+the actual init process of the container.
+Slightly afterwards \texttt{lxc\_spawn} is executed which then sets up cgroups according to the config specifications,
+clones or inherits namespaces and creates a new process through \texttt{lxc\_clone}. This child process in turn executes \texttt{do\_start} which
 mounts the filesystems accordingly and ultimately drops the privileges. After that it replaces itself with the init process of
-the container through the exec() system call.
+the container through the \texttt{exec()} system call. The parent process waits for the child to complete its startup process and determines
+if it simply exited or was signaled because it tried to do a reboot.\\
+I have written a minimal c-program to test for capabilities inside the container which prints out every single one with
+its label followed by the effective value, \texttt{1} for set \texttt{0} for unset. The code makes use of the shared library
+\texttt{libcap.so.2}, so when running inside a container this must be present or else the test will fail.
 
 \section{Mountpoints}
 
-The only mounted filesystem besides the root filesystem is `/proc'. `/proc' is crucial for the execution environment because many
+The only mounted filesystem besides the root filesystem is \texttt{/proc}. \texttt{/proc} is crucial for the execution environment because many
 different programs rely on it to store and access process information. However while running the test-c-programs no error due
-to `/proc' not being mounted could be detected.\\
-The `/sys' filesystem contains amongst other things pseudofiles for accessing the machine hardware. As untrustworthy programs
-having access to hardware settings is highly undesired, the safest yet most radical solution is not to mount `/sys'.
+to \texttt{/proc} not being mounted could be detected.\\
+The \texttt{/sys} filesystem contains amongst other things pseudofiles for accessing the machine hardware. As untrustworthy programs
+having access to hardware settings is highly undesired, the safest yet most radical solution is not to mount \texttt{/sys}.
 
-\section{Seccomp policies}
+\section{Seccomp policies}\label{seccomp}
 
 Seccomp policies are a rather low level feature, hence it is not safe tampering with them. They depend on system specific information such
 as the architecture (x64 or x86). Essentially they are currently used by lxc to blacklist some unsafe system calls.

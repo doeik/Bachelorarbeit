@@ -7,6 +7,11 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[arc]{archuserns}
+\emph{{User namespace concerns}}.
+\newblock \url{http://www.spinics.net/lists/linux-containers/msg28929.html},
+  Abruf: 13.08.2014.
+
 \bibitem[att]{attachwait}
 \emph{{The attach\_wait method}}.
 \newblock
@@ -36,9 +41,17 @@
   \url{http://www.linux-tutorial.info/modules.php?name=MContent&pageid=94},
   Abruf: 06.08.2014.
 
+\bibitem[doc]{docker}
+\emph{{Docker}}.
+\newblock \url{https://www.docker.com/}, Abruf: 12.08.2014.
+
 \bibitem[for]{forkbomb}
 \emph{{fork bomb}}.
 \newblock \url{http://de.wikipedia.org/wiki/Forkbomb}, Abruf: 29.07.2014.
+
+\bibitem[fus]{fuse}
+\emph{{Fuse}}.
+\newblock \url{http://fuse.sourceforge.net/}, Abruf: 13.08.2014.
 
 \bibitem[gil]{gil}
 \emph{{CPython Global Interpreter Lock}}.
@@ -54,10 +67,29 @@
 \emph{{cgroups kmem bug report}}.
 \newblock \url{https://bugs.archlinux.org/task/40818}, Abruf: 22.07.2014.
 
+\bibitem[lxc]{lxc}
+\emph{{Linux Containers}}.
+\newblock \url{https://linuxcontainers.org/}, Abruf: 10.08.2014.
+
+\bibitem[nam]{namespaces}
+\emph{{Kernel namespaces}}.
+\newblock
+  \url{https://www.kernel.org/doc/ols/2006/ols2006v1-pages-101-112.pdf}, Abruf:
+  13.08.2014.
+
 \bibitem[per]{personality}
 \emph{{Lxc personalities}}.
 \newblock
   \url{http://www.redhat.com/archives/libvir-list/2011-February/msg01040.html},
   Abruf: 05.08.2014.
+
+\bibitem[ptr]{ptrace}
+\emph{{Ptrace}}.
+\newblock \url{http://man7.org/linux/man-pages/man2/ptrace.2.html}, Abruf:
+  12.08.2014.
+
+\bibitem[qem]{qemu}
+\emph{{Qemu}}.
+\newblock \url{http://wiki.qemu.org/Main_Page}, Abruf: 12.08.2014.
 
 \end{thebibliography}
