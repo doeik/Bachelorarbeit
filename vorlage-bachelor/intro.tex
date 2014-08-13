@@ -2,21 +2,21 @@
 
 There are several solutions trying to increase the security of the operating system when executing untrusted software,
 three of them being mentioned here:\\
-Container virtualization with linux containers\cite{lxc}, a virtual machine like qemu\cite{qemu} and ptrace\cite{ptrace}.\\
+Container virtualization with \textit{linux containers}\cite{lxc}, a virtual machine like \textit{qemu}\cite{qemu} and \textit{ptrace}\cite{ptrace}.\\
 The first two both try to achieve security through isolating the potentially malicious program from the host system.
-Ptrace instead is capable of inspecting and intercepting system calls, it is able to modify memory and registers of a process it is attached to.\\
+\textit{Ptrace} instead is capable of inspecting and intercepting system calls, it is able to modify memory and registers of a process it is attached to.\\
 My choice was to analyze container virtualization because it idealy provides an execution environment for
 potentially malicious code which is entirely isolated from the rest of the system while being comparatively
 lightweight. Unlike virtual machines which come with emulated hardware and a completely separate operating
 system, container virtualization works with the host's kernel and a set of security features provided by the
-linux kernel (see chapter \ref{features} for a full list of these).
+\textit{linux} kernel (see chapter \ref{features} for a full list of these).
 This same concept which provides a huge advantage over fully virtualized machines has also a major downside
 because it restricts -- unlike  \textit{VMs} -- an implementation to a single kernel (who has to provide sufficient
 security features of course). Nevertheless it takes just very few seconds to build and start a container.
 The \textit{Linux Container} project (\textit{lxc}) is one of the existing implementations for container virtualization,
 however it is intended for people who are familiar
-with linux on an advanced level and willing to spend quite a notable amount of time understanding and
+with \textit{linux} on an advanced level and willing to spend quite a notable amount of time understanding and
 configuring it (mainly \textit{lxc}, but also the system). With this in mind the intention was to create a program
 which manages creation, execution and destruction automatically, is safely configured and easy to set up.\\
-Another project with almost similar goals is docker\cite{docker}, but the focus is not on automatized execution but rather on
+Another project with almost similar goals is \textit{docker}\cite{docker}, but the focus is not on automated execution but rather on
 interactively operable containers. 

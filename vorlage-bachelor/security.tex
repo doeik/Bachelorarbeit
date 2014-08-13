@@ -163,5 +163,6 @@ having access to hardware settings is highly undesired, the safest yet most radi
 
 \section{Seccomp policies}\label{seccomp}
 
-Seccomp policies are a rather low level feature, hence it is not safe tampering with them. They depend on system specific information such
-as the architecture (x64 or x86). Essentially they are currently used by lxc to blacklist some unsafe system calls.
+\textit{Seccomp policies} are a rather low level feature. They depend on system specific information such
+as the architecture (x64 or x86). Essentially they are currently used by \textit{lxc} to blacklist some unsafe system calls that aim on
+modifying the currently running kernel.
