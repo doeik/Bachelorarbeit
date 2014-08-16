@@ -2,34 +2,33 @@
 
 \textit{Linux Containers} achieve their execution environment security through the following concepts:\\
 Chroot, namespaces, cgroups, privilege dropping, seccomp policies and linux security modules (e.g. \textit{app armor}).\\
-I have not included \textit{app armor} nor any other linux security module in my configuration so this will not be discussed.
-Nevertheless this had to be mentioned at least for the sake of completeness.\\
-Furthermore most of the research has been done using \textit{archlinux} as the host OS which is why issues with its particular
+Neither \textit{app armor} nor any other linux security module is included in the current container configuration for this project
+so this will not be discussed. Nevertheless it had to be mentioned at least for the sake of completeness.\\
+Furthermore most of the research has been done using \textit{Arch Linux} as the host OS which is why issues with its particular
 kernel configuration are stressed explicitly.
 
 \section{Chroot}\label{rootfs}
 
 Using \textit{chroot} allows the caller to set a different directory as the new root directory.\\
-The root of a filesystem is the point where all directory paths originate from. It is impossible to go up another stage in the path hierarchy.
+The root of a filesystem is the point where all directory paths originate from.
 Nothing exists in the virtual filesystem beyond this point. Typically a so called \textit{rootfs} contains all files needed for
 the execution of a whole operating system.
 The container rootfs is an exeption though because the kernel is already loaded by
 the host system and is therefore not needed. Note that other \textit{chroot} environments do not need a kernel either but often have got one
 since in many cases \textit{chroot} is used to install a new operating system on a machine.\\
-All directories which are not subdirectories
-of the new root have become inaccessible, so if the \textit{chroot} system call is unable to find another shell in the new
-rootfs it will fail. Also it is not possible to execute any non-built-in command if a copy of the correspondent binary file is
-not present in the new root directory.\\
-\textit{Chroot} is not designed as a security feature and thus it is possible to break out of the current environment.\\
-\textit{Lxc} uses the system call \texttt{pivot\_root()} to change the root directory which also stores the old root directory.
-Currently the default mount point is \texttt{/usr/lib/lxc/rootfs/lxc\_putold}. After changing successfully to the new root directory
-the old root directory in the path specified above is unmounted (conf.c in \texttt{setup\_rootfs\_pivot\_root}).
+\textit{Chroot} is not designed as a security feature and thus it is possible to break out of the current environment through
+repeated invocation of the \texttt{chdir(``..'')} system call (see \cite{chrootbreak} for a complete example).\\
+\textit{Lxc} uses the system call \texttt{pivot\_root} to change the root directory. This allows to unmount the host's rootfs after
+successfully changing to the new root environment and therefore making sure that it has become inaccessible even through the hack
+mentioned above.
+By default the old rootfs is temporarily mounted in \texttt{/usr/lib/lxc/rootfs/lxc\_putold}. Directly after changing the environment successfully
+it is unmounted \cite{pivotsetup}.
 
 \section{Namespaces}
 
 Namespaces\cite{namespaces} separate parts of the kernel from each other which are traditionally global. When spawning the container \textit{lxc} unshares
 the available namespaces from the host.\\
-There are 6 namespaces in use by \textit{lxc} at the moment:\\
+There are currently 6 namespaces in use by \textit{lxc}:\\
 \textit{mnt} - The mount namespace separates mountpoints and filesystems.\\
 \textit{pid} - The pid namespace creates separate environments each containing its own process hierarchy. Killing the process with PID 1
 in a container for example will not affect the host's init process in any way but rather end the process inside the container with PID 1
@@ -42,38 +41,30 @@ when calling \texttt{uname()}.\\
 \textit{user} - The user namespace provides a mapping of user ids and group ids from the host's to the new namespace. A user may have the uid 0
 (root) in the newly created namespace but uid 10000 in the host's namespace. So if this user ever manages to break the isolation of the
 container, he will never be root on the host because his id is mapped to uid 10000.\\
-In \textit{archlinux} and a few other distributions the user namespace is deactivated due to major concerns that this could open a broad
+In \textit{Arch Linux} and a few other distributions the user namespace is deactivated due to major concerns that this could open a broad
 attack surface to unprivileged users \cite{archuserns}.
 
 \section{Cgroups}
 
 \textit{Cgroups} (control groups) is a feature for limiting resources and access or simply supervising processes. The different cgroups exist as
 pseudo filesystems in \texttt{/sys/fs/cgroup}. They are in general hierarchially organized: In each group subdirectories can be created
-which inherit the settings of the parent control group. If done manually, settings are read by using the cat command on the relevant
+which inherit the settings of the parent control group. If done manually using a shell, settings are read by using the cat command on the relevant
 pseudofile and respectively set by using the echo command and diverting the output into the file. Processes are assigned to these groups
 by simply echoing the pid into the \texttt{tasks} file.\\
-The currently prevalent cgroups are:\\
-\textit{blkio} - this subsystem sets limits on input/output access to and from block devices such as physical drives (disk, solid state, USB, etc.).\\
+These are the cgroups currently used in the config template for the \texttt{lxc\_daemon}:\\
 \textit{cpu} - this subsystem uses the scheduler to provide cgroup tasks access to the CPU.\\
-\textit{cpuacct} - this subsystem generates automatic reports on CPU resources used by tasks in a cgroup.\\
-\textit{cpuset} - this subsystem assigns individual CPUs (on a multicore system) and memory nodes to tasks in a cgroup.\\
 \textit{devices} - this subsystem allows or denies access to devices by tasks in a cgroup. \\
-\textit{freezer} - this subsystem suspends or resumes tasks in a cgroup.\\
 \textit{memory} - this subsystem sets limits on memory use by tasks in a cgroup, and generates automatic reports on memory resources used by those tasks.\\
-\textit{net\_cls} - this subsystem tags network packets with a class identifier (classid) that allows the Linux traffic controller (tc) to identify
-packets originating from a particular cgroup task. \\
-\textit{net\_prio} - this subsystem provides a way to dynamically set the priority of network traffic per network interface.\\
-\textit{ns} - the namespace subsystem.\\
-\cite{cgroups}
+The Fedora documentation features a full list of the prevalent cgroups \cite{cgroups}.
 
 \section{Cgroup limits}
 
-Cgroups is the feature of choice when it comes to limiting machine resources and as such preventing dos attacks.
-Also it is not - except for the devices section - preconfigured by \textit{lxc} in any way, so this needs some accounting:\\
-First thing to do is to to limit the memory to prevent processes in the container from eating up the whole machine memory.
+Cgroups is effective when it comes to limiting machine resources and as such preventing DoS attacks.
+Also it is not -- except for the devices section -- preconfigured by \textit{lxc} in any way, so this needs some accounting:\\
+First thing to do is to limit the memory to prevent processes in the container from eating up the whole machine memory.
 When the memory consumtion reaches the specified threshold the cgroups memory resource controller tries to reclaim memory first,
 but if that fails it will kill the most memory consuming process in the container which should result in a return code of 9\cite{cgrpmem}.
-I have tested this with a minimal c program which consumes as much memory as possible.\\
+This has been tested with a minimal c program which consumes as much memory as possible.\\
 If the system has got swap memory this must also be limited. Otherwise it would just begin to swap out after the memory
 threshold has been reached. Since the kernel does not distinguish between swapped or unswapped memory the limit computes as follows:
 memory limit + swap limit.\\
@@ -89,7 +80,7 @@ the system freezes completely. Fortunately cgroups provides
 the \texttt{kmem} extension which is capable of limiting the kernel memory to a small amount. If set properly this will cause the \texttt{fork()}
 system call to fail way before freezing the system. In conclusion after some trial-and-error-testing 12 megabytes seems to be a
 stable amount of allowed kernel memory.\\
-Currently the \texttt{memory.kmem} feature is disabled in the default archlinux kernel due to memory reclaim not being implemented yet\cite{kmembug}.\\
+Currently the \texttt{memory.kmem} feature is disabled in the default \textit{Arch Linux} kernel due to memory reclaim not being implemented yet\cite{kmembug}.\\
 Cgroups also provides a feature for limiting the cpu usage. It is possible to adjust the amount of cpu shares the process gets compared to
 other processes in which 1024 is 100\% and 256 25\% respectively. 256 is the current priority assigned to all containers run by the \texttt{lxc\_daemon}.
 I have also provided a minimal cpu dos c-program which simply increments an integer in an infinite loop. Unfortunately this is hard to test
@@ -121,7 +112,7 @@ one of the containers to be able to mount anything by itself this has been deact
 
 \begin{figure}[htb]
 \begin{center}
-  \includegraphics[width=300pt]{fig/figure_1.png}
+  \includegraphics[width=300pt]{fig/figure_1.eps}
   \caption{start flowchart}
   \label{figure_1}
 \end{center}

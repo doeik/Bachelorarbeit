@@ -16,7 +16,7 @@ import subprocess
 import threading
 import traceback
 
-TIMEOUT = 30
+TIMEOUT = 60
 CONFIG_TEMPLATE = "/usr/local/share/lxc_daemon/config_template"
 UDS_FILE = "/run/uds_lxcdaemon"
 
@@ -204,7 +204,7 @@ def main():
         subprocess.call(["killall", "-9", "lxc_daemon"])
         return
     if options.group:
-        os.setgid(grp.getgrnam("info2_containers").gr_gid)
+        os.setgid(grp.getgrnam("lxc_containers").gr_gid)
     if options.background:
         sendToBackground()
     else:

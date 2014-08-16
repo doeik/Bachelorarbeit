@@ -12,12 +12,6 @@
 \newblock \url{http://www.spinics.net/lists/linux-containers/msg28929.html},
   Abruf: 13.08.2014.
 
-\bibitem[att]{attachwait}
-\emph{{The attach\_wait method}}.
-\newblock
-  \url{https://lists.linuxcontainers.org/pipermail/lxc-devel/2013-August/004898.html},
-  Abruf: 10.08.2014.
-
 \bibitem[bug]{bugreport}
 \emph{{attach\_wait bug report}}.
 \newblock
@@ -34,6 +28,15 @@
 \emph{{Cgroups memory controller}}.
 \newblock \url{https://www.kernel.org/doc/Documentation/cgroups/memory.txt},
   Abruf: 25.07.2014.
+
+\bibitem[chr]{chrootbreak}
+\emph{{Chroot break}}.
+\newblock \url{http://www.bpfh.net/simes/computing/chroot-break.html}, Abruf:
+  14.08.2014.
+
+\bibitem[deb]{debian}
+\emph{{Debian}}.
+\newblock \url{https://www.debian.org/}, Abruf: 16.08.2014.
 
 \bibitem[dev]{devicenumbers}
 \emph{{Device numbers}}.
@@ -77,11 +80,10 @@
   \url{https://www.kernel.org/doc/ols/2006/ols2006v1-pages-101-112.pdf}, Abruf:
   13.08.2014.
 
-\bibitem[per]{personality}
-\emph{{Lxc personalities}}.
-\newblock
-  \url{http://www.redhat.com/archives/libvir-list/2011-February/msg01040.html},
-  Abruf: 05.08.2014.
+\bibitem[piv]{pivotsetup}
+\emph{{setup\_rootfs\_pivot\_root in conf.c}}.
+\newblock \url{https://github.com/lxc/lxc/blob/master/src/lxc/conf.c}, Abruf:
+  14.08.2014.
 
 \bibitem[ptr]{ptrace}
 \emph{{Ptrace}}.

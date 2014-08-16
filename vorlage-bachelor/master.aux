@@ -28,16 +28,22 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Daemon structure}{3}{chapter.2}}
+\citation{debian}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Daemon design}{3}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Purpose}{3}{section.2.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Communication}{3}{section.2.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}The protocol}{4}{section.2.3}}
-\citation{attachwait}
-\citation{personality}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}The config template}{5}{section.2.4}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Container handling}{5}{section.2.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}The Container}{3}{section.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Communication}{4}{section.2.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Work flow}{4}{section.2.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces work flow}}{5}{figure.2.1}}
+\newlabel{figure_2}{{2.1}{5}{work flow}{figure.2.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}The protocol}{6}{section.2.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}The config template}{7}{section.2.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}The timeout}{7}{section.2.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}Exit code evaluation}{8}{section.2.8}}
+\citation{chrootbreak}
+\citation{pivotsetup}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Lxc security}{9}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -48,20 +54,20 @@
 \citation{archuserns}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Namespaces}{10}{section.3.2}}
 \citation{cgroups}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Cgroups}{11}{section.3.3}}
 \citation{cgrpmem}
 \citation{forkbomb}
 \citation{kmembug}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Cgroup limits}{12}{section.3.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Cgroups}{11}{section.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Cgroup limits}{11}{section.3.4}}
 \citation{devicenumbers}
 \citation{fuse}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Cgroup devices}{13}{section.3.5}}
 \citation{kernelcaps}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Cgroup devices}{13}{section.3.5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces start flowchart}}{14}{figure.3.1}}
 \newlabel{figure_1}{{3.1}{14}{start flowchart}{figure.3.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Capability dropping}{15}{section.3.6}}
-\newlabel{caps}{{3.6}{15}{Capability dropping}{section.3.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Mountpoints}{16}{section.3.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Capability dropping}{14}{section.3.6}}
+\newlabel{caps}{{3.6}{14}{Capability dropping}{section.3.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Mountpoints}{15}{section.3.7}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.8}Seccomp policies}{16}{section.3.8}}
 \newlabel{seccomp}{{3.8}{16}{Seccomp policies}{section.3.8}{}}
 \citation{gil}
@@ -78,21 +84,22 @@
 \bibstyle{alphadin}
 \bibdata{sources}
 \bibcite{archuserns}{arc}
-\bibcite{attachwait}{att}
 \bibcite{bugreport}{bug}
 \bibcite{cgroups}{cgra}
 \bibcite{cgrpmem}{cgrb}
+\bibcite{chrootbreak}{chr}
+\bibcite{debian}{deb}
 \bibcite{devicenumbers}{dev}
 \bibcite{docker}{doc}
 \bibcite{forkbomb}{for}
 \bibcite{fuse}{fus}
-\bibcite{gil}{gil}
 \@writefile{toc}{\contentsline {chapter}{\nonumberline Bibliography}{21}{chapter*.2}}
+\bibcite{gil}{gil}
 \bibcite{kernelcaps}{ker}
 \bibcite{kmembug}{kme}
 \bibcite{lxc}{lxc}
 \bibcite{namespaces}{nam}
-\bibcite{personality}{per}
+\bibcite{pivotsetup}{piv}
 \bibcite{ptrace}{ptr}
 \bibcite{qemu}{qem}
 \@input{declaration.aux}

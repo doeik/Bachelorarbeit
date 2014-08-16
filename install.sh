@@ -56,7 +56,7 @@ function debinstall() {
 
 
 function coreinstall() {
-  sudo groupadd info2_containers
+  sudo groupadd lxc_containers
   sudo cp ./lxc_daemon.py /usr/local/bin/
   sudo chmod 700 /usr/local/bin/lxc_daemon.py
   sudo mkdir /usr/local/share/lxc_daemon
@@ -69,7 +69,7 @@ function coreinstall() {
 
 
 function uninstall() {
-  sudo groupdel info2_containers
+  sudo groupdel lxc_containers
   sudo systemctl stop lxc_daemon.service
   sudo systemctl disable lxc_daemon.service
   sudo rm /usr/local/bin/lxc_daemon.py
@@ -91,7 +91,7 @@ if [ "$1" = "" ] || [ "$1" = "install" ]
 then
   $installfunction
   coreinstall
-  echo do not forget to add the user who wants to communicate with the daemon to group info2_containers
+  echo do not forget to add the user who wants to communicate with the daemon to group lxc_containers
 elif [ "$1" = "uninstall" ]
 then
   uninstall

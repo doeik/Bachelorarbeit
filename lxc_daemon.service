@@ -2,7 +2,7 @@
 Description=daemon for running linux containers
 After=syslog.target
 [Service]
-Group=info2_containers
+Group=lxc_containers
 ExecStart=/usr/local/bin/lxc_daemon.py
 Restart=on-abort
 [Install]
