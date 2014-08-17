@@ -15,12 +15,13 @@
 \contentsline {section}{\numberline {3.3}Cgroups}{11}{section.3.3}
 \contentsline {section}{\numberline {3.4}Cgroup limits}{11}{section.3.4}
 \contentsline {section}{\numberline {3.5}Cgroup devices}{13}{section.3.5}
-\contentsline {section}{\numberline {3.6}Capability dropping}{14}{section.3.6}
+\contentsline {section}{\numberline {3.6}Capability dropping}{13}{section.3.6}
 \contentsline {section}{\numberline {3.7}Mountpoints}{15}{section.3.7}
-\contentsline {section}{\numberline {3.8}Seccomp policies}{16}{section.3.8}
 \contentsline {chapter}{\numberline {4}Lxc issues}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lxc-python api and threads}{17}{section.4.1}
-\contentsline {chapter}{\numberline {5}Future work}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Unprivileged containers}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Daemon actions}{19}{section.5.2}
-\contentsline {chapter}{\nonumberline Bibliography}{21}{chapter*.2}
+\contentsline {section}{\numberline {4.1}Lxc-python API and threads}{17}{section.4.1}
+\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}
+\contentsline {chapter}{\numberline {6}Future work}{21}{chapter.6}
+\contentsline {section}{\numberline {6.1}Unprivileged containers}{21}{section.6.1}
+\contentsline {section}{\numberline {6.2}Further implementations}{21}{section.6.2}
+\contentsline {section}{\numberline {6.3}Qemu and Ptrace}{22}{section.6.3}
+\contentsline {chapter}{\nonumberline Bibliography}{23}{chapter*.2}

@@ -2,19 +2,32 @@
 
 \section{Unprivileged containers}
 
-\textit{Lxc} can also be run by a non root user which would make the \texttt{lxc\_daemon} obsolete.
-However the process is both internally and externally quite different from privileged execution.
-Container creation cannot be done with the standart templates because these use tools like
+\textit{Lxc} can also be run by a non-root user which would make the \texttt{lxc\_daemon} obsolete.
+However, the process is both internally and externally quite different from privileged execution.
+Container creation cannot be done with the standard templates because these use tools like
 \textit{debootstrap} which need to do some privileged operations. A solution to that is the \texttt{download} template
-which pulls any supported rootfs that is updated daily. Furthermore the config would need to
+which pulls any supported rootfs. These are maintained by the \textit{lxc} developers and updated daily.
+Furthermore the config would need to
 be adjusted to go with unprivileged containers, plus the user namespace would become essential
 although it is still not enabled in some distributions (\textit{Arch Linux} being one of them).
-Last but not least the owner of the rootfs needs to be changed to match the user who is executing
-the container which is still a privileged operation.
+Last but not least the owner of the rootfs needs to be changed to match the user, who is executing
+the container, which is still a privileged operation.
 
-\section{Daemon actions}
+\section{Further implementations}
 
 At the moment the daemon features only one single action. It would be convenient for practical use
 to be able to export files that are created during the process to the unprivileged peer.
 Also an action which does not run a program directly but rather passes it as a parameter to a different
-command (e.g. gcc) would come in handy.
+command (e.g. gcc) would come in handy.\\
+The mail server has to be implemented yet. It should be able to fetch mails (preferably via IMAP),
+read a script with testing instructions and send back an automated mail containing the results.
+Furthermore the install script could be enhanced to perform on distributions other than just
+\textit{Arch Linux} and \textit{Debian}. It could also offer to install the daemon with \textit{SysVinit}\cite{sysvinit}
+instead of \textit{Systemd}\cite{systemd}.
+It should be considered to write more test programs to check for additional vulnerabilities.
+Perhaps one of the allowed devices is exposed to exploitation (it has been possible to access the
+host's consoles in an earlier version of \textit{lxc}).
+
+\section{Qemu and Ptrace}
+
+This thesis did not comprise qemu and ptrace so these still need to be analyzed in detail.

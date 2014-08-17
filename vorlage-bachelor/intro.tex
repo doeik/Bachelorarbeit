@@ -8,7 +8,7 @@ There are several solutions trying to increase the security of the operating sys
 three of them being mentioned here:\\
 Container virtualization with \textit{linux containers}\cite{lxc}, a virtual machine like \textit{qemu}\cite{qemu} and \textit{ptrace}\cite{ptrace}.\\
 The first two both try to achieve security through isolating the potentially malicious program from the host system.
-\textit{Ptrace} instead is capable of inspecting and intercepting system calls. It is able to modify memory and registers of a process it is attached to.\\
+\textit{Ptrace} instead is capable of inspecting and intercepting system calls. It is able to modify memory and registers of a process that it is attached to.\\
 This thesis is focusing on analyzing container virtualization because it idealy provides an execution environment for
 potentially malicious code which is entirely isolated from the rest of the system while being comparatively
 lightweight. Unlike virtual machines which come with emulated hardware and a completely separate operating
@@ -16,11 +16,11 @@ system, container virtualization works with the host's kernel and a set of secur
 \textit{linux} kernel (see chapter \ref{features} for a full list of these).
 This same concept which provides a huge advantage over fully virtualized machines has also a major downside
 because it restricts -- unlike  \textit{VMs} -- an implementation to a single kernel (which has to provide sufficient
-security features of course). Nevertheless it takes just very few seconds to build and start a container.
+security features of course). Nevertheless, it takes just very few seconds to build and start a container.
 The \textit{Linux Container} project (\textit{lxc}) is one of the existing implementations for container virtualization,
-however it takes a notable amount of time to understand and configure it. With this in mind the intention was to create a program
+however it takes a notable amount of time to understand and configure it. With this in mind, the intention was to create a program
 which manages creation, execution and destruction automatically, is safely configured and easy to set up.\\
 Another project with almost similar goals is \textit{docker}\cite{docker} which also focuses on usability but
 additionally has grown into a multi platform application.
-This project shall be used for an automated system that runs tests on C-project files from students in the ``info 2'' module
+This project shall be used for an automated system that runs tests on C project files from students in the ``info 2'' module
 at \textit{Heinrich Heine University} in Düsseldorf.

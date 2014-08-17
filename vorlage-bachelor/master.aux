@@ -42,6 +42,10 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.6}The config template}{7}{section.2.6}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.7}The timeout}{7}{section.2.7}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.8}Exit code evaluation}{8}{section.2.8}}
+\citation{seccomp}
+\citation{apparmor}
+\citation{selinux}
+\citation{lsm}
 \citation{chrootbreak}
 \citation{pivotsetup}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Lxc security}{9}{chapter.3}}
@@ -53,36 +57,43 @@
 \citation{namespaces}
 \citation{archuserns}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Namespaces}{10}{section.3.2}}
+\newlabel{ns}{{3.2}{10}{Namespaces}{section.3.2}{}}
+\citation{libcgroup}
 \citation{cgroups}
 \citation{cgrpmem}
 \citation{forkbomb}
+\citation{kernelspace}
 \citation{kmembug}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Cgroups}{11}{section.3.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Cgroup limits}{11}{section.3.4}}
 \citation{devicenumbers}
-\citation{fuse}
 \citation{kernelcaps}
 \@writefile{toc}{\contentsline {section}{\numberline {3.5}Cgroup devices}{13}{section.3.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Capability dropping}{13}{section.3.6}}
+\newlabel{caps}{{3.6}{13}{Capability dropping}{section.3.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces start flowchart}}{14}{figure.3.1}}
 \newlabel{figure_1}{{3.1}{14}{start flowchart}{figure.3.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Capability dropping}{14}{section.3.6}}
-\newlabel{caps}{{3.6}{14}{Capability dropping}{section.3.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.7}Mountpoints}{15}{section.3.7}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.8}Seccomp policies}{16}{section.3.8}}
-\newlabel{seccomp}{{3.8}{16}{Seccomp policies}{section.3.8}{}}
 \citation{gil}
 \citation{bugreport}
 \@writefile{toc}{\contentsline {chapter}{\numberline {4}Lxc issues}{17}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Lxc-python api and threads}{17}{section.4.1}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Future work}{19}{chapter.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Lxc-python API and threads}{17}{section.4.1}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Unprivileged containers}{19}{section.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Daemon actions}{19}{section.5.2}}
+\citation{sysvinit}
+\citation{systemd}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Future work}{21}{chapter.6}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Unprivileged containers}{21}{section.6.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Further implementations}{21}{section.6.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Qemu and Ptrace}{22}{section.6.3}}
 \bibstyle{alphadin}
 \bibdata{sources}
+\bibcite{apparmor}{app}
 \bibcite{archuserns}{arc}
 \bibcite{bugreport}{bug}
 \bibcite{cgroups}{cgra}
@@ -92,14 +103,20 @@
 \bibcite{devicenumbers}{dev}
 \bibcite{docker}{doc}
 \bibcite{forkbomb}{for}
-\bibcite{fuse}{fus}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Bibliography}{21}{chapter*.2}}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Bibliography}{23}{chapter*.2}}
 \bibcite{gil}{gil}
-\bibcite{kernelcaps}{ker}
+\bibcite{kernelcaps}{kera}
+\bibcite{kernelspace}{kerb}
 \bibcite{kmembug}{kme}
+\bibcite{libcgroup}{lib}
+\bibcite{lsm}{lsm}
 \bibcite{lxc}{lxc}
 \bibcite{namespaces}{nam}
 \bibcite{pivotsetup}{piv}
 \bibcite{ptrace}{ptr}
 \bibcite{qemu}{qem}
+\bibcite{seccomp}{sec}
+\bibcite{selinux}{sel}
+\bibcite{systemd}{sysa}
+\bibcite{sysvinit}{sysb}
 \@input{declaration.aux}
