@@ -1,19 +1,19 @@
 \chapter{Introduction}
 
 Programs are capable of harming the operating system in various ways. They are able to constrain the system in a way that
-it may become inoperable through destroying crucial files, or simply deny its resources to other processes.
+it may become inoperable by destroying crucial files, or simply deny its resources to other processes.
 The latter is called \textit{Denial of Service} (DoS).
 They might furthermore try to gather sensitive information or use its resources for their own purposes.\\
 There are several solutions trying to increase the security of the operating system when executing untrusted software,
 three of them being mentioned here:\\
-Container virtualization with \textit{linux containers}\cite{lxc}, a virtual machine like \textit{qemu}\cite{qemu} and \textit{ptrace}\cite{ptrace}.\\
-The first two both try to achieve security through isolating the potentially malicious program from the host system.
+Container virtualization with \textit{Linux containers}\cite{lxc}, a virtual machine like \textit{qemu}\cite{qemu} and \textit{ptrace}\cite{ptrace}.\\
+The first two both try to achieve security by isolating the potentially malicious program from the host system.
 \textit{Ptrace} instead is capable of inspecting and intercepting system calls. It is able to modify memory and registers of a process that it is attached to.\\
-This thesis is focusing on analyzing container virtualization because it idealy provides an execution environment for
+This thesis is focusing on analyzing container virtualization because it ideally provides an execution environment for
 potentially malicious code which is entirely isolated from the rest of the system while being comparatively
 lightweight. Unlike virtual machines which come with emulated hardware and a completely separate operating
 system, container virtualization works with the host's kernel and a set of security features provided by the
-\textit{linux} kernel (see chapter \ref{features} for a full list of these).
+\textit{Linux} kernel (see chapter \ref{features} for a full list of these).
 This same concept which provides a huge advantage over fully virtualized machines has also a major downside
 because it restricts -- unlike  \textit{VMs} -- an implementation to a single kernel (which has to provide sufficient
 security features of course). Nevertheless, it takes just very few seconds to build and start a container.

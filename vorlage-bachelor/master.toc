@@ -2,8 +2,8 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Daemon design}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Purpose}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}The Container}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Communication}{4}{section.2.3}
+\contentsline {section}{\numberline {2.2}Communication}{3}{section.2.2}
+\contentsline {section}{\numberline {2.3}Container}{4}{section.2.3}
 \contentsline {section}{\numberline {2.4}Work flow}{4}{section.2.4}
 \contentsline {section}{\numberline {2.5}The protocol}{6}{section.2.5}
 \contentsline {section}{\numberline {2.6}The config template}{7}{section.2.6}
@@ -13,15 +13,15 @@
 \contentsline {section}{\numberline {3.1}Chroot}{9}{section.3.1}
 \contentsline {section}{\numberline {3.2}Namespaces}{10}{section.3.2}
 \contentsline {section}{\numberline {3.3}Cgroups}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Cgroup limits}{11}{section.3.4}
+\contentsline {section}{\numberline {3.4}Cgroup limits}{12}{section.3.4}
 \contentsline {section}{\numberline {3.5}Cgroup devices}{13}{section.3.5}
-\contentsline {section}{\numberline {3.6}Capability dropping}{13}{section.3.6}
-\contentsline {section}{\numberline {3.7}Mountpoints}{15}{section.3.7}
-\contentsline {chapter}{\numberline {4}Lxc issues}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lxc-python API and threads}{17}{section.4.1}
-\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}
-\contentsline {chapter}{\numberline {6}Future work}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Unprivileged containers}{21}{section.6.1}
-\contentsline {section}{\numberline {6.2}Further implementations}{21}{section.6.2}
-\contentsline {section}{\numberline {6.3}Qemu and Ptrace}{22}{section.6.3}
-\contentsline {chapter}{\nonumberline Bibliography}{23}{chapter*.2}
+\contentsline {section}{\numberline {3.6}Capability dropping}{14}{section.3.6}
+\contentsline {section}{\numberline {3.7}Mountpoints}{17}{section.3.7}
+\contentsline {chapter}{\numberline {4}Lxc issues}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lxc-python API and threads}{19}{section.4.1}
+\contentsline {chapter}{\numberline {5}Conclusion}{21}{chapter.5}
+\contentsline {chapter}{\numberline {6}Future work}{23}{chapter.6}
+\contentsline {section}{\numberline {6.1}Unprivileged containers}{23}{section.6.1}
+\contentsline {section}{\numberline {6.2}Further implementations}{23}{section.6.2}
+\contentsline {section}{\numberline {6.3}Qemu and Ptrace}{24}{section.6.3}
+\contentsline {chapter}{\nonumberline Bibliography}{25}{chapter*.2}

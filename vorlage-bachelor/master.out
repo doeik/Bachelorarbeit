@@ -4,8 +4,8 @@
 \BOOKMARK [0][-]{chapter.1}{1 Introduction}{}% 4
 \BOOKMARK [0][-]{chapter.2}{2 Daemon design}{}% 5
 \BOOKMARK [1][-]{section.2.1}{2.1 Purpose}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{2.2 The Container}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{2.3 Communication}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{2.2 Communication}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{2.3 Container}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.4}{2.4 Work flow}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.5}{2.5 The protocol}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.6}{2.6 The config template}{chapter.2}% 11

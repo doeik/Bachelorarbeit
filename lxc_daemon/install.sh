@@ -80,7 +80,9 @@ function uninstall() {
 
 function upgrade() {
   sudo cp ./lxc_daemon.py /usr/local/bin/lxc_daemon.py
+  sudo cp ./lxc_daemon.service /etc/systemd/system/
   sudo cp ./config_template /usr/local/share/lxc_daemon/config_template
+  sudo systemctl daemon-reload
   sudo systemctl restart lxc_daemon.service
 }
 

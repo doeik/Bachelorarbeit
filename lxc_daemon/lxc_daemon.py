@@ -25,6 +25,13 @@ def makeConfigFromTemplate(container):
     container_path = os.path.dirname(container.config_file_name)
     with io.open(CONFIG_TEMPLATE, "r") as config:
         content = config.readlines()
+    with io.open("/proc/swaps", "r") as swaps:
+        swaps_content = swaps.readlines()
+    if len(swaps_content) > 1:
+        for i, line in enumerate(content):
+            if line.find("#lxc.cgroup.memory.memsw.limit_in_bytes") != -1:
+                content[i] = line.replace("#lxc.cgroup", "lxc.cgroup")
+                break
     for i, line in enumerate(content):
         line = line.replace("{container}", container_path)
         line = line.replace("{name}", container.name)
@@ -76,7 +83,7 @@ def handleRunProgAction(request, container):
     (returncode, timeout_occured, info) = processLxc(
         request, container, program)
     if returncode != 255:
-        returncode = returncode % 255
+        returncode = returncode >> 8
     response = {
         "success": True,
         "timeout": timeout_occured,

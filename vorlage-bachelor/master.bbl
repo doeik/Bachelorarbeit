@@ -116,7 +116,7 @@
   \url{http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/prctl/seccomp_filter.txt?id=HEAD},
   Abruf: 16.08.2014.
 
-\bibitem[sel]{selinux}
+\bibitem[seL]{seLinux}
 \emph{{SELinux}}.
 \newblock \url{http://selinuxproject.org/page/Main_Page}, Abruf: 16.08.2014.
 

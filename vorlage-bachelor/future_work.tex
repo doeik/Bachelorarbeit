@@ -8,7 +8,7 @@ Container creation cannot be done with the standard templates because these use 
 \textit{debootstrap} which need to do some privileged operations. A solution to that is the \texttt{download} template
 which pulls any supported rootfs. These are maintained by the \textit{lxc} developers and updated daily.
 Furthermore the config would need to
-be adjusted to go with unprivileged containers, plus the user namespace would become essential
+be adjusted to work with unprivileged containers, plus the user namespace would become essential
 although it is still not enabled in some distributions (\textit{Arch Linux} being one of them).
 Last but not least the owner of the rootfs needs to be changed to match the user, who is executing
 the container, which is still a privileged operation.
@@ -30,4 +30,4 @@ host's consoles in an earlier version of \textit{lxc}).
 
 \section{Qemu and Ptrace}
 
-This thesis did not comprise qemu and ptrace so these still need to be analyzed in detail.
+This thesis did not comprise qemu and ptrace, so these still need to be analyzed in detail.
