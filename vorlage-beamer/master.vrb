@@ -1,0 +1,25 @@
+\frametitle{Tests}
+ Denial of Service (DoS) Tests:
+ \begin{itemize}
+  \item nicht terminierend
+  \item beliebig hoher Speicherverbrauch
+  \item volle CPU-Last
+  \begin{itemize}
+   \item 2 Container mit CPU-DoS-Programm
+   \item einer mit, einer ohne Limit
+   \item Beschränkung auf einen Kern bei Multicore-Systemen (cgroups)
+  \end{itemize}
+  \pause
+  \item Fork Bomb (erzeugt rekursiv Kind-Prozesse)
+ \end{itemize}
+ \begin{verbatim}
+  bomb() {
+  bomb | bomb &
+  }; bomb
+ \end{verbatim}
+ \pause
+ Capability Test:
+ \begin{itemize}
+  \item Ausgabe einer Liste mit vorhandenen Capabilities
+  \item $<$Label$>$: $<$Wert$>$
+ \end{itemize}

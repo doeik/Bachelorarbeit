@@ -1,0 +1,67 @@
+\section{Motivation}
+
+\begin{frame}
+  \frametitle{Motivation}
+  \begin{itemize}
+  \item Ziel: Schutz vor nicht vertrauenswürdigen Programmen
+  \begin{itemize}
+   \item Testumgebung
+   \item unbekannte Programme
+   \item Sicherheit für Server
+  \end{itemize}
+  \item sicheres, automatisches Testen der C-Projekte in Informatik 2
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Lösungen}
+  \begin{itemize}
+    \item{Virtual Machine}
+    \begin{itemize}
+      \item{Emulation von Hardware}
+      \item{separates Betriebssystem}
+    \end{itemize}
+    \item{Ptrace}
+    \begin{itemize}
+      \item{überwacht System Calls}
+    \end{itemize}
+    \item{Container Virtualization}
+    \begin{itemize}
+      \item separates Datenset
+      \item nutzt den Host-Kernel
+      \item isoliert durch Kernel-Funktionen
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\section{Grundlagen}
+
+\begin{frame}
+  \frametitle{Linux Containers (Lxc)}
+  \begin{itemize}
+    \item leichtgewichtig
+    \begin{itemize}
+      \item Erstellung etwa 10s
+      \item Start/Stop etwa 1s
+      \item Speicherverbrauch im Leerlauf etwa 3MB
+    \end{itemize}
+    \pause
+    \item existieren als \textit{rootfs} auf dem Host System
+    \begin{itemize}
+      \item rootfs enthält sämtliche Dateien zur Ausführung eines Betriebssystems
+      \item Ausnahme in Lxc: Kernel
+    \end{itemize}
+    \pause
+    \item isoliert auszuführende Programme vom Rest des Systems durch:
+    \begin{itemize}
+      \item Chroot
+      \item Kernel Namespaces (PID, mount...)
+      \item Cgroups (memory, cpu...)
+      \item Linux Capabilities (cap\_sys\_boot, cap\_sys\_chroot)
+      \item Linux Security Modules
+      \item Seccomp Policies
+    \end{itemize}
+  \end{itemize}
+\end{frame}
