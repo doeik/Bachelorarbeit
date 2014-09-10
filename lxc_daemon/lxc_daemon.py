@@ -61,8 +61,9 @@ def processLxc(request, container, program):
             fi_prog.write(program)
         os.chmod(prog_path, stat.S_IEXEC)
         params[0] = os.path.join("/", os.path.basename(params[0]))
-        returncode = container.attach_wait(
-            lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DEFAULT)
+        with io.open(os.path.join("/tmp", container.name), "w") as output:
+            returncode = container.attach_wait(
+                lxc.attach_run_command, params, attach_flags=lxc.LXC_ATTACH_DEFAULT, stdout=output)
     except Exception:
         returncode = 2
         info = traceback.format_exc()
@@ -82,13 +83,18 @@ def handleRunProgAction(request, container):
     program = base64.b64decode(request["b64_data"].encode("utf8"))
     (returncode, timeout_occured, info) = processLxc(
         request, container, program)
-    if returncode != 255:
-        returncode = returncode >> 8
     response = {
         "success": True,
         "timeout": timeout_occured,
-        "returncode": returncode,
+        "returncode": returncode >> 8,
+        "ret_lxc": returncode & 0x00FF,
     }
+    tmpoutput_fname = os.path.join("/tmp", container.name)
+    if os.path.exists(tmpoutput_fname):
+        with io.open(tmpoutput_fname, "r") as tmpoutput:
+            output = tmpoutput.readlines()
+        os.remove(tmpoutput_fname)
+        response["stdout"] = output
     if info != None:
         response["success"] = False
         response[

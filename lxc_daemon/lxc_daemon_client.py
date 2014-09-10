@@ -9,7 +9,7 @@ UDS_FILE = "/run/uds_lxcdaemon"
 
 
 def main():
-    dict_request = {"keep-alive": False, "action": "run_prog", "timeout": 30, "use_template_container": "test"}
+    dict_request = {"keep-alive": False, "action": "run_prog", "timeout": 10, "use_template_container": "test"}
     with io.open(sys.argv[1], "rb") as fi_program:
         program = base64.b64encode(fi_program.read())
     dict_request["b64_data"] = str(program, encoding="utf8")
@@ -29,7 +29,12 @@ def main():
         print("lxc_daemon_client:")
         if dict_response["success"] == True:
             print("returncode: " + str(dict_response["returncode"]))
+            print("returncode lxc: " + str(dict_response["ret_lxc"]))
             print("timeout: " + str(dict_response["timeout"]))
+            if "stdout" in dict_response:
+                print("stdout:")
+                for line in dict_response["stdout"]:
+                    print(" " + line, end="")
         else:
             print(dict_response["info"])
 

@@ -31,16 +31,7 @@ function archinstall() {
 
 
 function debinstall() {
-  sudo apt-get install -y gcc
-  sudo apt-get install -y debootstrap
-  sudo apt-get install -y python
-  sudo apt-get install -y python3-setproctitle
-  sudo apt-get install -y git
-  sudo apt-get install -y make
-  sudo apt-get install -y automake
-  sudo apt-get install -y pkg-config
-  sudo apt-get install -y linux-headers-amd64
-  sudo apt-get install -y libcap2
+  sudo apt-get install -y gcc debootstrap python python3-dev python3-setproctitle git make automake pkg-config linux-headers-amd64 libcap-dev libcap2 libcgmanager-dev
   currentdir=$(pwd)
   mkdir /tmp/lxc_on_github
   cd /tmp/lxc_on_github
